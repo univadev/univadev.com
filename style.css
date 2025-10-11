@@ -159,7 +159,7 @@ main {
     transition: background 0.3s ease;
 }
 
-.nav-menu .dropdown:hover .dropdown-menu {
+.dropdown:hover > .dropdown-menu {
     display: flex;
     flex-direction: column;
 }
