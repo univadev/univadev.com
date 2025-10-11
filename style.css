@@ -123,11 +123,48 @@ main {
     
     .nav-menu {
         gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
     }
     
     .nav-link {
         padding: 0.4rem 0.8rem;
         font-size: 0.9rem;
+    }
+
+    .navbar {
+        position: fixed;
+        bottom: 0;
+        top:auto;
+        width: 100%;
+        background: rgba(28,28,28,0.9);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: none;
+        padding: 0.8rem 0;
+        z-index: 1000;
+    }
+
+    body{ 
+        padding-bottom: 70px;
+    }
+
+    .footer {
+        background: none !important;
+        border-top: none !important;
+        box-shadow: none !important;
+        padding: 0.5rem 1rem !important;
+    }
+
+    .footer-links {
+        display: none !important;
+    }
+
+    .footer p {
+        display: block !important;
+        font-size: 0.8rem !important;
+        color: #aaa !important;
+        text-align: center !important;
+        margin: 0.5rem 0 !important;
     }
 }
 
