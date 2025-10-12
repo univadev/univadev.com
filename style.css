@@ -113,6 +113,13 @@ main {
     margin-top: 6rem;
 }
 
+.footer-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ecf0f1;
+    cursor: pointer;
+}
 
 @media (max-width: 768px) {
     .nav-container {
@@ -166,8 +173,23 @@ main {
         text-align: center !important;
         margin: 0.5rem 0 !important;
     }
-}
+        .footer-links {
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+        text-align: center;
+    }
 
+    .footer-toggle {
+        display: block;
+        margin: 0.5rem auto;
+    }
+
+    .footer-links.show {
+        display: flex;
+    }
+}
 
 .nav-menu .dropdown {
     position: relative;
