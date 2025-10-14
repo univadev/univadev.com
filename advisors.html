@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
+     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="index.html">
@@ -15,9 +15,12 @@
                     UnivaDev
                 </a>
             </div>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <div class="dropdown">
+            
+            <div class="nav-center">
+                <div class="nav-bubble">
+                    <a href="index.html" class="nav-link">Home</a>
+                </div>
+                <div class="nav-bubble dropdown">
                     <a href="about.html" class="nav-link">About Us ▾</a>
                     <div class="dropdown-menu">
                         <a href="about.html">About us</a>
@@ -25,15 +28,19 @@
                         <a href="advisors.html">Advisors</a>
                     </div>
                 </div>
-                <a href="chapters.html" class="nav-link">Chapter Registration</a>
-                <a href="resources.html" class="nav-link">Resources</a>
-                <div class="dropdown">
+                <div class="nav-bubble">
+                    <a href="chapters.html" class="nav-link">Chapters</a>
+                </div>
+                <div class="nav-bubble">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </div>
+                <div class="nav-bubble dropdown">
                     <a href="projects.html" class="nav-link">Projects ▾</a>
-                    <div class ="dropdown-menu">
+                    <div class="dropdown-menu">
                         <a href="projects.html">RavenHacks</a>
                     </div>
                 </div>
-                <div class="dropdown">
+                <div class="nav-bubble dropdown">
                     <a href="sponsor.html" class="nav-link">Sponsors ▾</a>
                     <div class="dropdown-menu">
                         <a href="sponsor.html">Sponsors</a>
@@ -41,14 +48,91 @@
                     </div>
                 </div>
             </div>
+
+            <div class="social-links">
+                <a href="https://instagram.com/univadev" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                    <img src="img/instagram-logo.png" alt="Instagram">
+                </a>
+                <a href="https://linkedin.com/company/univadev" target="_blank" class="social-icon linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                    <img src="img/linkedin-logo.png" alt="LinkedIn">
+                </a>
+            </div>
+
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-item">
+            <div class="mobile-nav-bubble">
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+        </div>
+        <div class="mobile-nav-item">
+            <div class="mobile-nav-bubble">
+                <a href="about.html" class="nav-link" onclick="toggleMobileDropdown(event, 'about')">About Us ▾</a>
+            </div>
+            <div class="mobile-dropdown-content" id="about">
+                <a href="about.html">About us</a>
+                <a href="team.html">Our Team</a>
+                <a href="advisors.html">Advisors</a>
+            </div>
+        </div>
+        <div class="mobile-nav-item">
+            <div class="mobile-nav-bubble">
+                <a href="chapters.html" class="nav-link">Chapters</a>
+            </div>
+        </div>
+        <div class="mobile-nav-item">
+            <div class="mobile-nav-bubble">
+                <a href="resources.html" class="nav-link">Resources</a>
+            </div>
+        </div>
+        <div class="mobile-nav-item">
+            <div class="mobile-nav-bubble">
+                <a href="projects.html" class="nav-link" onclick="toggleMobileDropdown(event, 'projects')">Projects ▾</a>
+            </div>
+            <div class="mobile-dropdown-content" id="projects">
+                <a href="projects.html">RavenHacks</a>
+            </div>
+        </div>
+        <div class="mobile-nav-item">
+            <div class="mobile-nav-bubble">
+                <a href="sponsor.html" class="nav-link" onclick="toggleMobileDropdown(event, 'sponsors')">Sponsors ▾</a>
+            </div>
+            <div class="mobile-dropdown-content" id="sponsors">
+                <a href="sponsor.html">Sponsors</a>
+                <a href="sponsorus.html">Sponsor Us</a>
+            </div>
+        </div>
+    </div>
     
     <main>
         <div class="content-section">
             <h1>Advisors</h1>
         </div>
     </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>© 2025 UnivaDev</p>
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="team.html">Our Team</a>
+                <a href="advisors.html">Advisors</a>
+                <a href="chapters.html">Chapter Registration</a>
+                <a href="resources.html">Resources</a>
+                <a href="projects.html">Projects</a>
+                <a href="sponsor.html">Sponsors</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
-<script src="script.js"></script>
+<script src="script.js"></script>    
