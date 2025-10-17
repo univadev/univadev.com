@@ -22,8 +22,16 @@ mobileMenuToggle.addEventListener('click', function() {
     mobileMenu.classList.toggle('active');
 });
 
+// Close mobile menu when clicking a non-dropdown link
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-bubble > .nav-link:not([onclick])');
+mobileNavLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        mobileMenu.classList.remove('active');
+    });
+});
+
 function toggleMobileDropdown(event, id) {
     event.preventDefault();
     const dropdown = document.getElementById(id);
-        ropdown.classList.toggle('active');
+    dropdown.classList.toggle('active');
 }
