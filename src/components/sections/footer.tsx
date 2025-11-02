@@ -25,41 +25,45 @@ const Footer = () => {
 
           <div className="md:col-span-1 lg:col-start-6 lg:col-span-4 grid grid-cols-2 gap-8">
             <div>
-              <h3 className="font-semibold text-base mb-6">Title 1</h3>
+              <h3 className="font-semibold text-base mb-6">Company</h3>
               <ul className="space-y-4">
                 <li>
                   <a href="#" className="text-base hover:underline">
-                    Link 1
+                    About Us
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-base hover:underline">
-                    Link 2
+                    Meet the Team
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-base hover:underline">
-                    Link 3
+                    Careers
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-base mb-6">Title 2</h3>
+              <h3 className="font-semibold text-base mb-6">Get Invovled</h3>
               <ul className="space-y-4">
                 <li>
-                  <a href="#" className="text-base hover:underline">
-                    Link 1
+                  <a href="/ravenhacks" className="text-base hover:underline">
+                    Raven Hacks
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/chapter-registration"
+                    className="text-base hover:underline"
+                  >
+                    Start a Chapter
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-base hover:underline">
-                    Link 2
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-base hover:underline">
-                    Link 3
+                  <a href="/community" className="text-base hover:underline">
+                    Community
                   </a>
                 </li>
               </ul>
@@ -83,7 +87,7 @@ const Footer = () => {
                 ))}
               </div>
               <p className="text-sm">
-                <span className="font-semibold">TrustScore 5.0</span> | 670,670
+                <span className="font-semibold">TrustScore 5.0</span> | 63
                 reviews
               </p>
             </a>
@@ -105,25 +109,28 @@ const Footer = () => {
             Copyright © 2025 Univa Dev
           </p>
           <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm order-2 lg:order-2">
-            <a href="#" className="hover:underline">
+            <a href="/terms-and-conditions" className="hover:underline">
               Terms & Conditions
             </a>
-            <a href="#" className="hover:underline">
+            <a href="/privacy-policy" className="hover:underline">
               Privacy Policy
             </a>
-            <a href="#" className="hover:underline">
+            <a href="/cookie-notice" className="hover:underline">
               Cookie Notice
             </a>
-            <a href="#" className="hover:underline">
+            <a href="/code-of-conduct" className="hover:underline">
               Code of Conduct
             </a>
           </nav>
           <div className="flex items-center gap-6 order-1 lg:order-3">
-            <a href="https://" aria-label="Instagram">
+            <a href="https://instagram.com/univadev" aria-label="Instagram">
               <Instagram className="h-6 w-6" />
             </a>
 
-            <a href="#" aria-label="LinkedIn">
+            <a
+              href="https://linkedin.com/company/univa-dev"
+              aria-label="LinkedIn"
+            >
               <Linkedin className="h-6 w-6" />
             </a>
           </div>
