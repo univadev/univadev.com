@@ -12,40 +12,30 @@ const InfoIcon = () => (
 
 const SavingsFeature = () => {
   return (
-    <section className="bg-white py-20 md:py-32">
-      <div className="container">
-        <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-12 gap-x-4 sm:gap-x-10 md:gap-x-4 items-center">
-          <div className="col-span-full md:col-span-7 relative">
-            <figure className="aspect-square">
-              <Image
-                src="/abt.png"
-                alt="Image description"
-                width={588}
-                height={588}
-                className="object-cover object-left-top h-full w-full rounded-[30px]"
-              />
-            </figure>
-            <div className="absolute w-[60%] sm:w-[50%] md:w-[60%] bottom-0 right-0 sm:right-6 md:right-0">
-              <Image
-                src="univadev.svg"
-                alt="Image description"
-                width={374}
-                height={288}
-                className="w-full h-auto"
-              />
-            </div>
+    <section className="bg-white py-20 lg:py-[120px] font-sans">
+      <div className="container max-w-[1280px] mx-auto px-5 md:px-8 lg:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-y-12 lg:gap-x-20">
+          {/* Image Column */}
+          <div>
+            <Image
+              src="/globalcommunity.png"
+              alt="Image description"
+              width={584}
+              height={389}
+              className="rounded-2xl w-full h-auto"
+            />
           </div>
 
-          <div className="col-span-full md:col-start-9 md:col-span-4 mt-8 md:mt-0">
-            <p className="text-sm font-semibold tracking-wider uppercase text-black mb-4">
+          {/* Text Column */}
+          <div className="text-center lg:text-left">
+            <p className="text-[14px] font-semibold text-black tracking-[0.05em] uppercase mb-4">
               COMMUNITY
             </p>
-            <h2 className="text-[32px] md:text-[48px] font-bold text-black leading-[1.2] tracking-[-0.01em] mb-4">
-              Join 10,000+
-              <br />
-              student innovators
+
+            <h2 className="text-[32px] leading-[1.2] lg:text-[48px] font-bold text-black tracking-[-0.01em] mb-6">
+              Join 10,000+ innovators
             </h2>
-            <p className="text-lg text-black leading-relaxed">
+            <p className="text-lg text-black max-w-[450px] mx-auto lg:mx-0 mb-8 leading-relaxed">
               Connect with ambitious students from around the world. Collaborate
               on projects, share knowledge, and build lasting relationships in
               our global STEM community.

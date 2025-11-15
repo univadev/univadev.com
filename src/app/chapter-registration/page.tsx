@@ -107,9 +107,9 @@ export default function ChapterRegistration() {
           <div className="container mx-auto px-5 sm:px-8 md:px-12">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-[42px] md:text-[72px] lg:text-[80px] font-medium leading-[0.9] tracking-tighter mb-8">
-                Launch a Youth AI Chapter.
+                Univa Dev Chapters
                 <br />
-                Transform Your Community.
+                Transform Your Community
               </h1>
               <p className="text-lg md:text-xl font-medium text-gray-700 mb-6 max-w-3xl mx-auto">
                 Join the world's largest youth STEM movement — powered by
@@ -177,7 +177,7 @@ export default function ChapterRegistration() {
         </section>
 
         {/* What Chapters Receive */}
-        <section className="py-24 lg:py-32 bg-gradient-to-b from-neutral-50 to-white">
+        <section className="py-24 lg:py-32 bg-gradient-to-t from-neutral-100 to-white">
           <div className="container mx-auto px-5 sm:px-8 lg:px-12">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-16">
@@ -189,7 +189,7 @@ export default function ChapterRegistration() {
                 </p>
               </div>
 
-              <div className="bg-white border-2 border-neutral-900 rounded-3xl p-10 md:p-14 shadow-2xl">
+              <div className="rounded-3xl border-2 border-neutral-300 p-10 md:p-14">
                 <p className="text-xl text-neutral-700 mb-10 font-medium">
                   Every approved chapter receives:
                 </p>
@@ -197,7 +197,7 @@ export default function ChapterRegistration() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {chapterBenefits.map((benefit, idx) => (
                     <div key={idx} className="flex items-start gap-4">
-                      <div className="mt-1 p-1.5 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full flex-shrink-0">
+                      <div className="mt-1 p-0.5 bg-gradient-to-b from-black to-gray-600 rounded-full flex-shrink-0">
                         <CheckCircle2 className="h-5 w-5 text-white" />
                       </div>
                       <span className="text-lg text-neutral-700 leading-relaxed">
@@ -205,13 +205,6 @@ export default function ChapterRegistration() {
                       </span>
                     </div>
                   ))}
-                </div>
-
-                <div className="mt-12 p-8 bg-gradient-to-br from-neutral-900 to-neutral-800 rounded-2xl">
-                  <p className="text-center text-neutral-100 text-lg font-medium">
-                    Your organization looks legitimate, structured, and
-                    scalable.
-                  </p>
                 </div>
               </div>
             </div>
@@ -236,9 +229,9 @@ export default function ChapterRegistration() {
                   <AccordionItem
                     key={idx}
                     value={`item-${idx}`}
-                    className="bg-neutral-50 border-2 border-neutral-200 rounded-xl px-6 hover:border-neutral-300 transition-colors"
+                    className="bg-neutral-50 border-2 border-neutral-100 rounded-xl px-6 hover:border-neutral-300 transition-colors"
                   >
-                    <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-neutral-900 py-6">
+                    <AccordionTrigger className="cursor-pointer text-left text-lg font-semibold hover:no-underline text-neutral-900 py-6">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-neutral-600 text-base leading-relaxed pb-6">
@@ -254,15 +247,12 @@ export default function ChapterRegistration() {
         {/* Final CTA */}
         <section
           id="apply"
-          className="relative py-28 lg:py-40 bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 overflow-hidden"
+          className="relative py-28 lg:py-40 bg-gray-800 overflow-hidden"
         >
           {/* Subtle pattern overlay */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(255,255,255,0.05),transparent_50%)]" />
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('/univadev.svg')] bg-cover bg-center mix-blend-multiply" />
           <div className="container mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center justify-center p-5 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl mb-8 shadow-2xl">
-                <Rocket className="h-14 w-14 text-white" />
-              </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white leading-tight">
                 Ready to Start?
               </h2>
@@ -270,8 +260,7 @@ export default function ChapterRegistration() {
                 Apply Now to Launch Your Chapter
               </p>
               <p className="text-lg md:text-xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Bring world-class STEM and AI education to your community — and
-                join a global network shaping the future.
+                Bring world-class STEM and AI education to your community!
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center">
                 <Button
@@ -289,9 +278,7 @@ export default function ChapterRegistration() {
                   id="contact"
                   asChild
                 >
-                  <a href="mailto:chapters@univadev.org">
-                    Schedule an Info Call
-                  </a>
+                  <a href="mailto:univadev0@gmail.com">Schedule an Info Call</a>
                 </Button>
               </div>
             </div>

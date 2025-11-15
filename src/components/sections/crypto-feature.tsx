@@ -7,7 +7,7 @@ const CryptoFeature = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 md:items-center gap-12 lg:gap-20">
           <div className="md:col-span-7 order-first md:order-last">
             <Image
-              src="/abt.png"
+              src="/techskills.png"
               alt="Image description"
               width={1400}
               height={1000}

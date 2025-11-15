@@ -23,17 +23,17 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="md:col-span-1 lg:col-start-6 lg:col-span-4 grid grid-cols-2 gap-8">
+          <div className="md:col-span-1 lg:col-start-10 lg:col-span-4 grid grid-cols-2 gap-8">
             <div>
               <h3 className="font-semibold text-base mb-6">Company</h3>
               <ul className="space-y-4">
                 <li>
-                  <a href="#" className="text-base hover:underline">
+                  <a href="/about" className="text-base hover:underline">
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-base hover:underline">
+                  <a href="/team" className="text-base hover:underline">
                     Meet the Team
                   </a>
                 </li>
@@ -45,7 +45,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-base mb-6">Get Invovled</h3>
+              <h3 className="font-semibold text-base mb-6">Get Involved</h3>
               <ul className="space-y-4">
                 <li>
                   <a href="/ravenhacks" className="text-base hover:underline">
@@ -70,7 +70,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="md:col-start-2 md:row-start-1 lg:col-start-10 lg:col-span-3 flex flex-col items-start md:items-end gap-6">
+          {/*<div className="md:col-start-2 md:row-start-1 lg:col-start-10 lg:col-span-3 flex flex-col items-start md:items-end gap-6">
             <a
               href="#"
               className="bg-[#f7f7f7] p-4 rounded-lg w-full max-w-xs md:w-[220px] text-left"
@@ -99,7 +99,7 @@ const Footer = () => {
                 GDPR Compliant
               </span>
             </a>
-          </div>
+          </div>*/}
         </div>
 
         <div className="border-t border-[#e2e2e2] mt-10 mb-8"></div>

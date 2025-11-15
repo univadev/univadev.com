@@ -32,15 +32,6 @@ const slides = [
       "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
   },
   {
-    headline: ["Free opportunities", "for all students"],
-    subtext: "High-quality programs accessible to everyone",
-    hasInfo: true,
-    desktopImage:
-      "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
-    mobileImage:
-      "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
-  },
-  {
     headline: ["Join a global", "community of innovators"],
     subtext: "Connect with students and professionals worldwide",
     hasInfo: true,

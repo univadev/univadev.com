@@ -54,12 +54,14 @@ const PaycheckFeatures = () => {
                 <p className="text-base text-muted-foreground leading-[1.6] flex-grow mb-0">
                   {feature.description}
                 </p>
-                <a
+
+                {/* <a
                   href="#"
                   className="mt-8 block text-center text-base font-semibold text-black border-2 border-black rounded-full py-3 px-8 transition-colors duration-300 hover:bg-black hover:text-white"
                 >
                   Learn More
                 </a>
+                  */}
               </div>
             </div>
           ))}

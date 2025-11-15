@@ -10,7 +10,7 @@ const CreditBuildingSection = () => {
           {/* Image Column */}
           <div className="lg:col-span-6">
             <Image
-              src="https://cdn.mos.cms.futurecdn.net/CbivdLKKTLVsjak9RDT9J5.jpg"
+              src="/empoweringstudents.png"
               alt="Image description"
               width={592}
               height={592}
@@ -29,12 +29,11 @@ const CreditBuildingSection = () => {
             </h2>
             <p className="text-lg text-black mb-10 flex items-center flex-wrap !whitespace-pre-line">
               We provide world-class technical training, leadership development,
-              and career guidance—completely free and accessible to students of
-              all backgrounds.
+              career guidance, and more.
             </p>
             <div>
               <a
-                href="#"
+                href="/about"
                 className="inline-block px-8 py-3 border-2 border-black rounded-full font-semibold text-base text-black bg-white hover:bg-black hover:text-white transition-colors duration-200"
               >
                 Learn More

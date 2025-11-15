@@ -402,7 +402,7 @@ export default function Events() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="text-lg px-8" asChild>
-                  <a href="mailto:partnerships@univadev.org">
+                  <a href="mailto:univadev0@gmail.com">
                     Contact Partnerships Team
                   </a>
                 </Button>

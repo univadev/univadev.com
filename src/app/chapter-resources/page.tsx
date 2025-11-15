@@ -61,7 +61,7 @@ export default function ChapterResources() {
           <div className="container mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <div className="mb-10 flex justify-center">
-                <div className="p-6 bg-white/5 backdrop-blur-md border-2 border-white/20 rounded-2xl shadow-2xl">
+                <div className="p-6">
                   <Lock className="h-16 w-16 text-white" />
                 </div>
               </div>
@@ -91,21 +91,13 @@ export default function ChapterResources() {
                     <ArrowRight className="h-5 w-5" />
                   </a>
                 </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="text-lg px-12 py-7 border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 font-semibold backdrop-blur-sm transition-all"
-                  asChild
-                >
-                  <a href="/chapter-registration">Start a Chapter</a>
-                </Button>
               </div>
             </div>
           </div>
         </section>
 
         {/* A Glimpse Into the Portal */}
-        <section className="py-24 lg:py-32 bg-neutral-900">
+        <section className="py-24 lg:py-32 bg-black">
           <div className="container mx-auto px-5 sm:px-8 lg:px-12">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-20">
@@ -137,19 +129,6 @@ export default function ChapterResources() {
                     </div>
                   );
                 })}
-              </div>
-
-              <div className="mt-20 text-center">
-                <div className="inline-block p-8 bg-white/5 backdrop-blur-md border-2 border-white/10 rounded-2xl max-w-2xl">
-                  <p className="text-lg text-neutral-200 font-light leading-relaxed">
-                    None of this content is visible here…
-                    <br />
-                    <span className="text-white font-medium">
-                      but all of it becomes available the moment your chapter is
-                      approved.
-                    </span>
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -238,20 +217,6 @@ export default function ChapterResources() {
 
           <div className="container mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-16">
-                <div className="mb-10 flex justify-center">
-                  <div className="p-8 bg-white/5 backdrop-blur-md border-2 border-white/20 rounded-3xl shadow-2xl">
-                    <Lock className="h-20 w-20 text-white" />
-                  </div>
-                </div>
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white leading-tight">
-                  What's Inside Remains Hidden
-                </h2>
-                <p className="text-xl text-neutral-400 font-light">
-                  Reserved exclusively for verified chapter leaders
-                </p>
-              </div>
-
               <div className="bg-white/5 backdrop-blur-md border-2 border-white/10 rounded-3xl p-10 md:p-14 shadow-2xl">
                 <p className="text-xl text-neutral-200 mb-8 leading-relaxed font-light">
                   Out of respect for our leaders, chapter materials are not
@@ -264,7 +229,7 @@ export default function ChapterResources() {
 
                 <ul className="space-y-5 mb-12">
                   <li className="flex items-start gap-4">
-                    <div className="mt-1.5 p-2 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full flex-shrink-0">
+                    <div className="mt-1.5 p-2 bg-gradient-to-br from-yellow-600 to-orange-600 rounded-full flex-shrink-0">
                       <div className="h-2 w-2 bg-white rounded-full" />
                     </div>
                     <span className="text-xl text-white font-medium">
@@ -272,7 +237,7 @@ export default function ChapterResources() {
                     </span>
                   </li>
                   <li className="flex items-start gap-4">
-                    <div className="mt-1.5 p-2 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full flex-shrink-0">
+                    <div className="mt-1.5 p-2 bg-gradient-to-br from-yellow-600 to-orange-600 rounded-full flex-shrink-0">
                       <div className="h-2 w-2 bg-white rounded-full" />
                     </div>
                     <span className="text-xl text-white font-medium">
@@ -280,7 +245,7 @@ export default function ChapterResources() {
                     </span>
                   </li>
                   <li className="flex items-start gap-4">
-                    <div className="mt-1.5 p-2 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full flex-shrink-0">
+                    <div className="mt-1.5 p-2 bg-gradient-to-br from-yellow-600 to-orange-600 rounded-full flex-shrink-0">
                       <div className="h-2 w-2 bg-white rounded-full" />
                     </div>
                     <span className="text-xl text-white font-medium">
@@ -288,40 +253,6 @@ export default function ChapterResources() {
                     </span>
                   </li>
                 </ul>
-
-                <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
-                  <p className="text-lg text-neutral-300 text-center font-light">
-                    If you're not one yet —{" "}
-                    <span className="text-white font-medium">
-                      start your chapter today
-                    </span>
-                    .
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-14 flex flex-col sm:flex-row gap-5 justify-center">
-                <Button
-                  size="lg"
-                  className="text-lg px-12 py-7 bg-white text-neutral-900 hover:bg-neutral-100 font-semibold shadow-2xl hover:shadow-3xl transition-all"
-                  asChild
-                >
-                  <a
-                    href="https://portal.univadev.org"
-                    className="flex items-center gap-2"
-                  >
-                    Access Chapter Resources
-                    <ArrowRight className="h-5 w-5" />
-                  </a>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="text-lg px-12 py-7 border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 font-semibold backdrop-blur-sm transition-all"
-                  asChild
-                >
-                  <a href="/chapter-registration">Start a Chapter</a>
-                </Button>
               </div>
             </div>
           </div>
@@ -330,15 +261,15 @@ export default function ChapterResources() {
         {/* Final Curiosity Hook */}
         <section className="relative py-28 lg:py-40 bg-gradient-to-b from-black via-neutral-950 to-black overflow-hidden">
           {/* Animated gradient orbs */}
-          <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/3 right-1/3 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/3 right-1/3 w-96 h-96 bg-cyan-600/20 rounded-full blur-3xl" />
 
           <div className="container mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-[1.1]">
-                <span className="text-white">Unlock Everything.</span>
+                <span className="text-gray-400">Unlock Everything.</span>
                 <br />
-                <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="text-white text-transparent">
                   Lead Something Bigger.
                 </span>
               </h2>
@@ -346,43 +277,22 @@ export default function ChapterResources() {
                 The next generation of AI innovators, builders, and leaders
                 starts here.
               </p>
-              <p className="text-lg text-neutral-400 mb-16 max-w-2xl mx-auto leading-relaxed">
-                Behind this portal is everything a chapter needs to spark
-                transformation.
-              </p>
 
-              <div className="mb-16 flex flex-wrap justify-center gap-6 md:gap-12">
-                <div className="px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
-                  <p className="text-base text-neutral-300 font-medium">
-                    One click.
-                  </p>
-                </div>
-                <div className="px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
-                  <p className="text-base text-neutral-300 font-medium">
-                    One chapter.
-                  </p>
-                </div>
-                <div className="px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
-                  <p className="text-base text-neutral-300 font-medium">
-                    Unlimited global impact.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-5 justify-center">
+              <div className="mt-14 flex flex-col sm:flex-row gap-5 justify-center">
                 <Button
                   size="lg"
                   className="text-lg px-12 py-7 bg-white text-neutral-900 hover:bg-neutral-100 font-semibold shadow-2xl hover:shadow-3xl transition-all"
                   asChild
                 >
-                  <a href="https://portal.univadev.org">
+                  <a href="#!" className="flex items-center gap-2">
                     Access Chapter Resources
+                    <ArrowRight className="h-5 w-5" />
                   </a>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="text-lg px-12 py-7 border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 font-semibold backdrop-blur-sm transition-all"
+                  className="text-lg px-12 py-7 border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 font-semibold backdrop-blur-sm transition-all text-black hover:text-white"
                   asChild
                 >
                   <a href="/chapter-registration">Start a Chapter</a>

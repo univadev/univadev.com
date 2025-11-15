@@ -9,7 +9,7 @@ const TeenBankingSection = () => {
           {/* Image Column */}
           <div>
             <Image
-              src="/abt.png"
+              src="/vision.png"
               alt="Image description"
               width={584}
               height={389}
@@ -31,12 +31,12 @@ const TeenBankingSection = () => {
               projects and make a positive impact on the world through
               technology—regardless of background or resources.
             </p>
-            <a
+            {/*<a
               href="/about"
               className="inline-block px-8 py-3 text-base font-semibold text-black border-2 border-black rounded-full transition-colors duration-300 ease-in-out hover:bg-black hover:text-white"
             >
               Learn More
-            </a>
+            </a>*/}
           </div>
         </div>
       </div>
