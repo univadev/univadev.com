@@ -16,20 +16,21 @@ const CryptoFeature = () => {
           </div>
           <div className="md:col-span-5 text-center md:text-left">
             <p className="text-sm font-semibold tracking-wider text-black uppercase mb-4">
-              Build
+              TECHNICAL EXCELLENCE
             </p>
             <h2 className="text-[32px] md:text-[48px] font-bold tracking-[-0.01em] leading-[1.2] text-black mb-4">
-              Build your skills
+              Master the skills that matter
             </h2>
             <p className="text-lg text-black leading-relaxed max-w-md mx-auto md:mx-0 mb-8">
-              Really fitting text that resonates with a global audience and
-              highlights our values
+              From AI and machine learning to software development and data
+              science—build expertise through hands-on projects and expert-led
+              workshops that prepare you for the future of tech.
             </p>
             <a
-              href="#"
+              href="/events"
               className="inline-block px-8 py-3 text-base font-semibold text-black bg-white border-2 border-black rounded-full transition-colors duration-300 hover:bg-black hover:text-white"
             >
-              Learn More
+              View Events
             </a>
           </div>
         </div>

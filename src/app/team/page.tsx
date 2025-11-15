@@ -1,38 +1,8 @@
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Linkedin, Github, Mail } from "lucide-react";
-
-const team = [
-  {
-    name: "Alex Morgan",
-    role: "Founder & CEO",
-    image: "",
-    bio: "Alex leads strategy and partnerships, helping chapters scale and run high-impact events.",
-    links: { linkedin: "#", github: "#", email: "mailto:alex@univadev.org" },
-  },
-  {
-    name: "Priya Patel",
-    role: "Head of Programs",
-    image: "",
-    bio: "Priya designs our learning tracks and mentors chapter leads on curriculum and events.",
-    links: { linkedin: "#", github: "#", email: "mailto:priya@univadev.org" },
-  },
-  {
-    name: "Jordan Lee",
-    role: "Director of Engineering",
-    image: "",
-    bio: "Jordan oversees our technical platform and supports student projects across chapters.",
-    links: { linkedin: "#", github: "#", email: "mailto:jordan@univadev.org" },
-  },
-  {
-    name: "Samira Gomez",
-    role: "Community Lead",
-    image: "",
-    bio: "Samira helps chapters grow sustainably through outreach, events, and mentorship programs.",
-    links: { linkedin: "#", github: "#", email: "mailto:samira@univadev.org" },
-  },
-];
+import Image from "next/image";
+import Link from "next/link";
+import { team } from "@/data/team";
 
 export default function Team() {
   return (
@@ -53,59 +23,31 @@ export default function Team() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {team.map((member) => (
-              <article
-                key={member.name}
-                className="bg-white/5 border border-border rounded-lg p-6 flex flex-col items-center text-center transition-transform transform hover:-translate-y-1 hover:shadow-lg"
+              <Link
+                key={member.slug}
+                href={`/team/${member.slug}`}
+                className="group block"
               >
-                <Avatar className="mb-4">
-                  {member.image ? (
-                    <AvatarImage src={member.image} alt={member.name} />
-                  ) : (
-                    <AvatarFallback>
-                      {member.name
-                        .split(" ")
-                        .map((n) => n[0])
-                        .slice(0, 2)
-                        .join("")}
-                    </AvatarFallback>
-                  )}
-                </Avatar>
-
-                <h3 className="text-lg font-semibold">{member.name}</h3>
-                <p className="text-sm text-muted-foreground mb-3">{member.role}</p>
-
-                <p className="text-sm text-muted-foreground mb-4">{member.bio}</p>
-
-                <div className="flex items-center gap-3 mt-auto">
-                  <a
-                    href={member.links.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${member.name} LinkedIn`}
-                    className="text-muted-foreground hover:text-white transition-colors"
-                  >
-                    <Linkedin className="h-5 w-5" />
-                  </a>
-
-                  <a
-                    href={member.links.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${member.name} GitHub`}
-                    className="text-muted-foreground hover:text-white transition-colors"
-                  >
-                    <Github className="h-5 w-5" />
-                  </a>
-
-                  <a
-                    href={member.links.email}
-                    aria-label={`Email ${member.name}`}
-                    className="text-muted-foreground hover:text-white transition-colors"
-                  >
-                    <Mail className="h-5 w-5" />
-                  </a>
-                </div>
-              </article>
+                <article className="bg-white/5 border border-border rounded-lg overflow-hidden transition-transform transform hover:-translate-y-1 hover:shadow-lg cursor-pointer">
+                  <div className="relative w-full aspect-square">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-4 text-center">
+                    <h3 className="text-lg font-semibold mb-1">
+                      {member.name}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {member.role}
+                    </p>
+                  </div>
+                </article>
+              </Link>
             ))}
           </div>
         </div>

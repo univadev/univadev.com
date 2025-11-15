@@ -17,11 +17,11 @@ const FinalCta = () => {
         <div className="grid grid-cols-4 md:grid-cols-12 gap-x-4 gap-y-10 items-center">
           <div className="col-span-full md:col-span-6">
             <h2 className="text-[32px] md:text-[48px] font-bold tracking-[-2px] leading-tight text-white">
-              Your journey starts here
+              Ready to lead the future of STEM?
             </h2>
             <p className="text-s mt-4 tracking-tight text-white">
-              Sign up for our mailing list to be the first to hear about Univa
-              Dev events.
+              Join thousands of students building meaningful projects, competing
+              in global hackathons, and developing the skills that matter.
             </p>
           </div>
           <div className="col-span-full md:col-start-8 md:col-span-5 flex flex-col gap-4">

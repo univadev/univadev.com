@@ -63,19 +63,19 @@ const IconLocations = () => (
 const features = [
   {
     icon: <IconSupport />,
-    text: "$1,900,000 in prizes",
+    text: "$1.9M+ in prizes awarded",
   },
   {
     icon: <IconAtms />,
-    text: "40,223 members",
+    text: "10,000+ active members",
   },
   {
     icon: <IconCashDeposits />,
-    text: "532 chapters",
+    text: "500+ chapters worldwide",
   },
   {
     icon: <IconLocations />,
-    text: "53 advisors",
+    text: "50+ countries represented",
   },
 ];
 

@@ -20,17 +20,19 @@ const TeenBankingSection = () => {
           {/* Text Column */}
           <div className="text-center lg:text-left">
             <p className="text-[14px] font-semibold text-black tracking-[0.05em] uppercase mb-4">
-              GROW
+              OUR VISION
             </p>
 
             <h2 className="text-[32px] leading-[1.2] lg:text-[48px] font-bold text-black tracking-[-0.01em] mb-6">
-              Helping you grow
+              A future where every student can innovate
             </h2>
             <p className="text-lg text-black max-w-[450px] mx-auto lg:mx-0 mb-8 leading-relaxed">
-              Really fitting text that resonates with the global audience
+              We believe every student deserves the chance to build meaningful
+              projects and make a positive impact on the world through
+              technology—regardless of background or resources.
             </p>
             <a
-              href="#"
+              href="/about"
               className="inline-block px-8 py-3 text-base font-semibold text-black border-2 border-black rounded-full transition-colors duration-300 ease-in-out hover:bg-black hover:text-white"
             >
               Learn More

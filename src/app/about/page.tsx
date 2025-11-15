@@ -1,6 +1,7 @@
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
 import FinalCta from "@/components/sections/final-cta";
+import Image from "next/image";
 
 const metrics = [
   { label: "Students served", value: "12k+" },
@@ -26,6 +27,20 @@ export default function About() {
             Some of our programs include Raven Hacks — a hybrid hackathon with
             significant prizes and wide participation.
           </p>
+
+          {/* Responsive Image */}
+          <div className="max-w-4xl mx-auto my-12">
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
+              <Image
+                src="/abt.png"
+                alt="Univa Dev Team"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
 
           <h2 className="text-3xl font-bold text-center mt-12 mb-4">
             Our impact
@@ -62,7 +77,9 @@ export default function About() {
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold mb-2">Learning by building</h3>
+              <h3 className="text-2xl font-semibold mb-2">
+                Learning by building
+              </h3>
               <p className="text-base text-muted-foreground">
                 Members learn through real projects, workshops, and challenges
                 with tangible outcomes for resumes and portfolios.
@@ -70,7 +87,9 @@ export default function About() {
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold mb-2">Long-term outcomes</h3>
+              <h3 className="text-2xl font-semibold mb-2">
+                Long-term outcomes
+              </h3>
               <p className="text-base text-muted-foreground">
                 We track alumni outcomes and continuously iterate on programs
                 that improve career readiness and community impact.

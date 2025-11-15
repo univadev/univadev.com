@@ -21,14 +21,16 @@ const CreditBuildingSection = () => {
           {/* Text Column */}
           <div className="lg:col-span-6 flex flex-col justify-center">
             <p className="font-semibold text-black text-xs tracking-wider uppercase mb-4 !whitespace-pre-line">
-              FUTURE READY
+              OUR MISSION
             </p>
             <h2 className="font-bold text-black text-[32px] lg:text-5xl leading-[1.2] tracking-tight mb-6 !whitespace-pre-line">
-              Preparing youth to succeed in STEM
+              Empowering students with the skills to succeed in the future of
+              STEM
             </h2>
             <p className="text-lg text-black mb-10 flex items-center flex-wrap !whitespace-pre-line">
-              As AI becomes more and more advanced, it is fundamental to stay
-              present and current.
+              We provide world-class technical training, leadership development,
+              and career guidance—completely free and accessible to students of
+              all backgrounds.
             </p>
             <div>
               <a

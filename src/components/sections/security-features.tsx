@@ -3,21 +3,24 @@ import Image from "next/image";
 const features = [
   {
     iconSrc: "univadev.svg",
-    iconAlt: "Illustration",
-    title: "Benefit 1",
-    description: "Really fitting text that resonates",
+    iconAlt: "Student-led organization",
+    title: "Student-Led",
+    description:
+      "Run by students, for students—with guidance from industry professionals",
   },
   {
     iconSrc: "univadev.svg",
-    iconAlt: "Illustration",
-    title: "Benefit 2",
-    description: "Really fitting text that resonates",
+    iconAlt: "Free and accessible",
+    title: "Free & Accessible",
+    description:
+      "High-quality opportunities available to students of all backgrounds",
   },
   {
     iconSrc: "univadev.svg",
-    iconAlt: "Illustration",
-    title: "Benefit 3",
-    description: "Really fitting text that resonates",
+    iconAlt: "World-class standards",
+    title: "World-Class Standards",
+    description:
+      "Programs that match the quality of leading tech and education organizations",
   },
 ];
 
@@ -27,7 +30,7 @@ const SecurityFeatures = () => {
       <div className="container mx-auto">
         <div className="mb-10 text-center md:mb-20">
           <h2 className="font-display text-[32px] font-bold leading-[1.2] tracking-[-0.01em] text-black md:text-[48px]">
-            The best you can imagine
+            Why Univa Dev?
           </h2>
         </div>
         <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 md:grid-cols-3 sm:gap-x-12">

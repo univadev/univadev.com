@@ -38,22 +38,23 @@ const SavingsFeature = () => {
 
           <div className="col-span-full md:col-start-9 md:col-span-4 mt-8 md:mt-0">
             <p className="text-sm font-semibold tracking-wider uppercase text-black mb-4">
-              Connect
+              COMMUNITY
             </p>
             <h2 className="text-[32px] md:text-[48px] font-bold text-black leading-[1.2] tracking-[-0.01em] mb-4">
-              Connect with 1M+
+              Join 10,000+
               <br />
-              ambitious youth
+              student innovators
             </h2>
             <p className="text-lg text-black leading-relaxed">
-              Really fitting text that resonates with a global audience and
-              highlights our values
+              Connect with ambitious students from around the world. Collaborate
+              on projects, share knowledge, and build lasting relationships in
+              our global STEM community.
             </p>
             <a
-              href="/save"
+              href="/impact"
               className="inline-block py-3 px-8 text-base font-semibold text-black bg-transparent border-2 border-black rounded-full transition-colors duration-300 hover:bg-black hover:text-white mt-8"
             >
-              Learn More
+              Join Community
             </a>
           </div>
         </div>

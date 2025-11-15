@@ -6,16 +6,16 @@ import { Info } from "lucide-react";
 
 const slides = [
   {
-    headline: ["Introducing", "Univa Dev"],
-    subtext: "The most innovative organization for youth",
+    headline: ["Empowering the next", "generation of STEM leaders"],
+    subtext: "Student-led. Professionally guided. Globally connected.",
     desktopImage:
       "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
     mobileImage:
       "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
   },
   {
-    headline: ["Creating", "generational wealth"],
-    subtext: "Don't miss out",
+    headline: ["World-class", "hackathons & competitions"],
+    subtext: "Compete for real prizes and recognition",
     hasInfo: true,
     desktopImage:
       "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
@@ -23,8 +23,8 @@ const slides = [
       "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
   },
   {
-    headline: ["Compete for", "real prizes"],
-    subtext: "Over 4.3M in funding",
+    headline: ["Build skills that", "shape the future"],
+    subtext: "Technical excellence meets leadership development",
     hasInfo: true,
     desktopImage:
       "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
@@ -32,8 +32,8 @@ const slides = [
       "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
   },
   {
-    headline: ["Build your", "portfolio"],
-    subtext: "Stand out to big tech companies in the age of AI",
+    headline: ["Free opportunities", "for all students"],
+    subtext: "High-quality programs accessible to everyone",
     hasInfo: true,
     desktopImage:
       "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
@@ -41,8 +41,8 @@ const slides = [
       "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
   },
   {
-    headline: ["The place for", "hackathons"],
-    subtext: "Univa Dev ensures that",
+    headline: ["Join a global", "community of innovators"],
+    subtext: "Connect with students and professionals worldwide",
     hasInfo: true,
     desktopImage:
       "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
@@ -155,8 +155,8 @@ const HeroSection = () => {
                 </button>
               </div>
               <p className="text-xs text-gray-500 mt-3 px-4">
-                Sign up for our mailing list to be the first to hear about Univa
-                Dev events.
+                Join our mailing list for exclusive updates on hackathons,
+                workshops, and leadership programs.
               </p>
             </form>
           </div>

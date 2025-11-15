@@ -13,31 +13,19 @@ import { Apple, Star } from "lucide-react";
 
 const testimonials = [
   {
-    quote: `Really fitting text that resonates with a global audience and
-              highlights our values Really fitting text that resonates with a global audience and
-              highlights our values Really fitting text that resonates with a global audience and
-              highlights our values`,
+    quote: `Univa Dev gave me the opportunity to lead a team, build real projects, and connect with students from around the world. The skills I gained here directly helped me land my dream internship.`,
     source: "University of Waterloo CS '24",
   },
   {
-    quote: `Really fitting text that resonates with a global audience and
-              highlights our values Really fitting text that resonates with a global audience and
-              highlights our values Really fitting text that resonates with a global audience and
-              highlights our values`,
+    quote: `The hackathons and workshops are world-class. I've learned more practical skills through Univa Dev than in any classroom. Plus, the community is incredibly supportive and inspiring.`,
     source: "Imperial College London BSc '26",
   },
   {
-    quote: `Really fitting text that resonates with a global audience and
-              highlights our values Really fitting text that resonates with a global audience and
-              highlights our values Really fitting text that resonates with a global audience and
-              highlights our values`,
+    quote: `What sets Univa Dev apart is the focus on both technical excellence and leadership. I'm not just learning to code—I'm learning to lead teams and drive innovation.`,
     source: "Stanford CS '28",
   },
   {
-    quote: `Really fitting text that resonates with a global audience and
-              highlights our values Really fitting text that resonates with a global audience and
-              highlights our values Really fitting text that resonates with a global audience and
-              highlights our values`,
+    quote: `Being part of Univa Dev opened doors I didn't know existed. The mentorship, resources, and opportunities are unmatched. This organization truly invests in student success.`,
     source: "MIT Eng '28",
   },
 ];
@@ -47,7 +35,7 @@ const TestimonialsCarousel = () => {
     <section className="bg-background py-20 lg:py-32">
       <div className="container mx-auto px-5 md:px-8">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-foreground mb-12 md:mb-20 tracking-tight !whitespace-pre-line">
-          Backed by the best.
+          Trusted by students worldwide
         </h2>
 
         <Carousel

@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="lg:col-span-3">
             <a href="/">
               <Image
-                src="univadev.svg"
+                src="/univadev.svg"
                 alt="Univa Dev logo"
                 width={114}
                 height={32}
