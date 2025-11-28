@@ -7,26 +7,8 @@ export interface Advisor {
 
 export const advisors: Advisor[] = [
   {
-    name: "Dr. Sarah Johnson",
-    role: "Tech Industry Advisor",
-    image: "/abt.png",
-    linkedin: "#",
-  },
-  {
-    name: "Michael Chen",
-    role: "Education Advisor",
-    image: "/abt.png",
-    linkedin: "#",
-  },
-  {
-    name: "Emily Rodriguez",
-    role: "Nonprofit Strategy Advisor",
-    image: "/abt.png",
-    linkedin: "#",
-  },
-  {
-    name: "David Kim",
-    role: "Engineering Advisor",
+    name: "Ryan Sun",
+    role: "Computer Engineering @ UofT",
     image: "/abt.png",
     linkedin: "#",
   },
