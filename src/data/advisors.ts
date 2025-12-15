@@ -10,7 +10,7 @@ export const advisors: Advisor[] = [
     name: "Ryan Sun",
     role: "Computer Engineering @ UofT",
     image: "/abt.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/ryanyizhesun/",
   },
 ];
 
