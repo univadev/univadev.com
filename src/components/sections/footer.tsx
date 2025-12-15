@@ -62,7 +62,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/community" className="text-base hover:underline">
+                  <a href="/impact" className="text-base hover:underline">
                     Community
                   </a>
                 </li>

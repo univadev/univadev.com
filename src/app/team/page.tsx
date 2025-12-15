@@ -15,7 +15,7 @@ export default function Team() {
           </h1>
 
           <p className="max-w-3xl mx-auto text-lg text-center text-muted-foreground mb-10">
-            A diverse group of students, mentors, and professionals who build
+            A talented group of students, mentors, and professionals who build
             programs, run events, and support chapter success around the world.
             Our team is committed to accessibility, professionalism, and
             high-quality student experiences.

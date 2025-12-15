@@ -1,81 +1,22 @@
 import React from "react";
-
-const IconSupport = () => (
-  <svg
-    width="48"
-    height="48"
-    viewBox="0 0 48 48"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <rect
-      width="42"
-      height="36"
-      rx="8"
-      fill="#5EEAD4"
-      transform="translate(3 6)"
-    />
-  </svg>
-);
-
-const IconAtms = () => (
-  <svg
-    width="48"
-    height="48"
-    viewBox="0 0 48 48"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <rect x="6" y="12" width="36" height="30" rx="4" fill="#4169E1" />
-  </svg>
-);
-
-const IconCashDeposits = () => (
-  <svg
-    width="48"
-    height="48"
-    viewBox="0 0 48 48"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <rect x="4" y="24" width="40" height="16" rx="4" fill="#32CD32" />
-    <rect x="4" y="18" width="40" height="16" rx="4" fill="#32CD32" />
-    <rect x="4" y="12" width="40" height="16" rx="4" fill="#32CD32" />
-  </svg>
-);
-
-const IconLocations = () => (
-  <svg
-    width="48"
-    height="48"
-    viewBox="0 0 48 48"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M24 45C24 45 40 33.12 40 21C40 12.16 32.84 5 24 5C15.16 5 8 12.16 8 21C8 33.12 24 45 24 45Z"
-      fill="#FFD600"
-    />
-    <circle cx="24" cy="21" r="10" fill="#32CD32" />
-  </svg>
-);
+import { Trophy, Users, Code, Globe } from "lucide-react";
 
 const features = [
   {
-    icon: <IconSupport />,
-    text: "$1.9M+ in prizes awarded",
+    icon: <Trophy className="w-full h-full text-[#5EEAD4]" />,
+    text: "$100k+ in prizes awarded",
   },
   {
-    icon: <IconAtms />,
-    text: "10,000+ active members",
+    icon: <Users className="w-full h-full text-[#4169E1]" />,
+    text: "1,000+ active members",
   },
   {
-    icon: <IconCashDeposits />,
-    text: "500+ chapters worldwide",
+    icon: <Code className="w-full h-full text-[#32CD32]" />,
+    text: "1M+ lines of code written",
   },
   {
-    icon: <IconLocations />,
-    text: "50+ countries represented",
+    icon: <Globe className="w-full h-full text-[#FFD600]" />,
+    text: "10+ countries represented",
   },
 ];
 

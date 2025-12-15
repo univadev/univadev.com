@@ -4,9 +4,9 @@ import FinalCta from "@/components/sections/final-cta";
 import Image from "next/image";
 
 const metrics = [
-  { label: "Students served", value: "12k+" },
-  { label: "Chapters launched", value: "150+" },
-  { label: "Funds raised", value: "$1.2M+" },
+  { label: "Students served", value: "10k+" },
+  { label: "Lines of code", value: "1M+" },
+  { label: "Prizes raised", value: "$100k+" },
 ];
 
 export default function About() {
