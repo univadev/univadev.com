@@ -78,9 +78,9 @@ const engagementOptions = [
   {
     icon: MessageCircle,
     title: "Join Our Discord",
-    description: "Connect with thousands of members in real-time",
+    description: "Our online community for networking and collaboration",
     cta: "Join Discord",
-    link: "https://discord.gg/univadev",
+    link: "https://discord.gg/PRndM3ha66",
   },
   {
     icon: Share2,
@@ -284,7 +284,9 @@ export default function Impact() {
                   className="bg-white text-black rounded-full h-[58px] px-10 text-base font-bold hover:bg-gray-100 transition-colors"
                   asChild
                 >
-                  <a href="#join">Join the Community</a>
+                  <a href="https://discord.gg/PRndM3ha66" target="_blank">
+                    Join the Community
+                  </a>
                 </Button>
                 <Button
                   size="lg"
