@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Linkedin } from "lucide-react";
 import { team } from "@/data/team";
+import { use } from "react";
 
 export async function generateStaticParams() {
   return team.map((member) => ({
@@ -19,7 +20,8 @@ interface TeamMemberPageProps {
 }
 
 export default function TeamMemberPage({ params }: TeamMemberPageProps) {
-  const member = team.find((m) => m.slug === params.slug);
+  const { slug } = use(params); // Use React's `use` to unwrap the Promise
+  const member = team.find((m) => m.slug === slug);
 
   if (!member) {
     notFound();

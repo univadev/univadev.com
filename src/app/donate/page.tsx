@@ -62,7 +62,9 @@ export default function Donate() {
                 className="bg-black text-white rounded-full h-[58px] px-10 text-base font-bold hover:bg-gray-900 transition-colors"
                 asChild
               >
-                <a href="https://paypal.me/univadev">Donate Now</a>
+                <a href="https://hcb.hackclub.com/donations/start/univa-dev">
+                  Donate Now
+                </a>
               </Button>
             </div>
           </div>
@@ -130,7 +132,9 @@ export default function Donate() {
                 className="bg-white text-black rounded-full h-[58px] px-10 text-base font-bold hover:bg-gray-100 transition-colors"
                 asChild
               >
-                <a href="https://paypal.me/univadev">Donate Now</a>
+                <a href="https://hcb.hackclub.com/donations/start/univa-dev">
+                  Donate Now
+                </a>
               </Button>
             </div>
           </div>
