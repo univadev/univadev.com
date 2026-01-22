@@ -6,39 +6,39 @@ import { Info } from "lucide-react";
 
 const slides = [
   {
-    headline: ["Empowering the next", "generation of STEM leaders"],
+    headline: ["Empowering the next generation of STEM leaders"],
     subtext: "Student-led. Professionally guided. Globally connected.",
     desktopImage:
-      "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
+      "standout.svg",
     mobileImage:
-      "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
+      "standout.svg",
   },
   {
     headline: ["World-class", "hackathons & competitions"],
     subtext: "Compete for real prizes and recognition",
     hasInfo: true,
     desktopImage:
-      "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
+      "hackathon.svg",
     mobileImage:
-      "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
+      "hackathon.svg",
   },
   {
     headline: ["Build skills that", "shape the future"],
     subtext: "Technical excellence meets leadership development",
     hasInfo: true,
     desktopImage:
-      "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
+      "accomplishments.svg",
     mobileImage:
-      "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
+      "accomplishments.svg",
   },
   {
     headline: ["Join a global", "community of innovators"],
     subtext: "Connect with students and professionals worldwide",
     hasInfo: true,
     desktopImage:
-      "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
+      "community.svg",
     mobileImage:
-      "https://cdn.indesignlive.com/wp-content/uploads/1.Featureimage.jpg",
+      "community.svg",
   },
 ];
 
@@ -115,13 +115,15 @@ const HeroSection = () => {
 
             {/* Animated Text */}
             <div className="min-h-[190px] md:min-h-[220px] lg:min-h-[260px]">
-              {activeSlide.headline.map((line, lineIndex) => (
-                <div key={`${activeIndex}-${lineIndex}`} className="">
-                  <h1 className="text-[42px] md:text-[72px] lg:text-[80px] font-medium leading-[0.9] tracking-tighter animate-slide-up !whitespace-pre-line mt-3">
-                    {line}
-                  </h1>
-                </div>
-              ))}
+              <div className="flex flex-col gap-2">
+                {activeSlide.headline.map((line, lineIndex) => (
+                  <div key={`${activeIndex}-${lineIndex}`}>
+                    <h1 className="text-[42px] md:text-[72px] lg:text-[80px] font-medium leading-[1.1] tracking-tighter animate-slide-up !whitespace-pre-line">
+                      {line}
+                    </h1>
+                  </div>
+                ))}
+              </div>
               <div className="mt-6">
                 <p className="text-lg md:text-xl font-medium flex items-center animate-slide-up-delay">
                   {activeSlide.subtext}

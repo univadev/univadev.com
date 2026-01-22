@@ -32,7 +32,7 @@ export default function About() {
           <div className="max-w-4xl mx-auto my-12">
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden">
               <Image
-                src="/abt.png"
+                src="/worktogether.svg"
                 alt="Univa Dev Team"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"

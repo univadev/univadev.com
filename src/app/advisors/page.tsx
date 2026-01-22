@@ -52,9 +52,7 @@ export default function Advisors() {
 
             {/* Become an Advisor Card */}
             <a
-              href="https://forms.google.com/your-form-id"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:univadev0@gmail.com"
               className="group block"
             >
               <article className="bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/30 rounded-lg overflow-hidden transition-all transform hover:-translate-y-1 hover:shadow-lg hover:border-primary cursor-pointer h-full flex flex-col items-center justify-center p-8 min-h-[300px]">
@@ -63,9 +61,12 @@ export default function Advisors() {
                     <UserPlus className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold mb-2">Become an Advisor</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-muted-foreground mb-4">
                     Share your expertise and help shape the future of STEM
                     education
+                  </p>
+                  <p className="text-xs text-primary font-medium">
+                    univadev0@gmail.com
                   </p>
                 </div>
               </article>

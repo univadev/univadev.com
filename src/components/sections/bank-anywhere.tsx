@@ -3,19 +3,19 @@ import { Trophy, Users, Code, Globe } from "lucide-react";
 
 const features = [
   {
-    icon: <Trophy className="w-full h-full text-[#5EEAD4]" />,
+    icon: <Trophy className="w-full h-full text-[#ff7f50]" />,
     text: "$100k+ in prizes awarded",
   },
   {
-    icon: <Users className="w-full h-full text-[#4169E1]" />,
+    icon: <Users className="w-full h-full text-[#ff7f50]" />,
     text: "1,000+ active members",
   },
   {
-    icon: <Code className="w-full h-full text-[#32CD32]" />,
+    icon: <Code className="w-full h-full text-[#ff7f50]" />,
     text: "1M+ lines of code written",
   },
   {
-    icon: <Globe className="w-full h-full text-[#FFD600]" />,
+    icon: <Globe className="w-full h-full text-[#ff7f50]" />,
     text: "10+ countries represented",
   },
 ];

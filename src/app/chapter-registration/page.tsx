@@ -1,6 +1,7 @@
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import {
   Globe,
   Cpu,
@@ -120,7 +121,7 @@ export default function ChapterRegistration() {
                 Help bring advanced AI education to your school, region, and
                 country. Become a catalyst for innovation.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Button
                   size="lg"
                   className="bg-black text-white rounded-full h-[58px] px-10 text-base font-bold hover:bg-gray-900 transition-colors"
@@ -135,6 +136,16 @@ export default function ChapterRegistration() {
                 >
                   <a href="#contact">Schedule an Info Call</a>
                 </Button>
+              </div>
+              <div className="max-w-3xl mx-auto">
+                <Image
+                  src="/chapters.svg"
+                  alt="Univa Dev Chapters"
+                  width={800}
+                  height={522}
+                  className="w-full h-auto"
+                  priority
+                />
               </div>
             </div>
           </div>

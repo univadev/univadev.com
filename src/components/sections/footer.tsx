@@ -106,7 +106,7 @@ const Footer = () => {
 
         <div className="flex flex-col lg:flex-row items-center justify-between gap-y-8 gap-x-4">
           <p className="text-sm text-[#525252] order-3 lg:order-1">
-            Copyright © 2025 Univa Dev
+            Copyright © 2026 Univa Dev
           </p>
           <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm order-2 lg:order-2">
             <a href="/terms-and-conditions" className="hover:underline">
