@@ -15,7 +15,7 @@ export default function Advisors() {
           </h1>
 
           <p className="max-w-3xl mx-auto text-lg text-center text-muted-foreground mb-10">
-            Meet the experienced professionals who guide our mission and help us
+            Meet the advisors who guide our mission and help us
             deliver exceptional programs to students worldwide.
           </p>
 

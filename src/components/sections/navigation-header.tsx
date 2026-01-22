@@ -33,8 +33,8 @@ const navLinks = [
 ];
 
 const utilityLinks = [
+  { href: "/services/", label: "Services" },
   { href: "/donate/", label: "Donate" },
-
   { href: "/impact/", label: "Community" },
 ];
 

@@ -4,6 +4,7 @@ import PaycheckFeatures from '@/components/sections/paycheck-features';
 import CreditBuildingSection from '@/components/sections/credit-building';
 import TestimonialsCarousel from '@/components/sections/testimonials-carousel';
 import BankAnywhere from '@/components/sections/bank-anywhere';
+import ServicesSection from '@/components/sections/services-section';
 import SavingsFeature from '@/components/sections/savings-feature';
 import CryptoFeature from '@/components/sections/crypto-feature';
 import TeenBankingSection from '@/components/sections/teen-banking';
@@ -21,6 +22,7 @@ export default function Home() {
         <CreditBuildingSection />
         <TestimonialsCarousel />
         <BankAnywhere />
+        <ServicesSection />
         <SavingsFeature />
         <CryptoFeature />
         <TeenBankingSection />
