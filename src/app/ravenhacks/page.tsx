@@ -70,7 +70,7 @@ export default function RavenHacks() {
                   <Calendar className="h-8 w-8 text-[#ff7f50] mb-3 mx-auto" />
                   <div className="text-sm text-gray-600 mb-1">Dates</div>
                   <div className="text-lg font-bold text-gray-900">
-                    Feb 10 – 18, 2026
+                    Mar 14 – 22, 2026
                   </div>
                 </div>
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
@@ -155,7 +155,7 @@ export default function RavenHacks() {
                     <h3 className="font-bold text-lg mb-3 text-gray-900">
                       Dates
                     </h3>
-                    <p className="text-gray-700">February 10-17, 2026</p>
+                    <p className="text-gray-700">March 14 - 11:59PM March 22, 2026</p>
                   </div>
                   <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
                     <h3 className="font-bold text-lg mb-3 text-gray-900">
@@ -189,7 +189,7 @@ export default function RavenHacks() {
               </h2>
               <p className="text-xl text-gray-700 mb-10 text-center">
                 To submit your project, use the DevPost submission form by the
-                deadline (February 17, 2026, 11:59 PM Eastern Time). Include:
+                deadline (11:59 PM March 22, 2026 Eastern Time). Include:
               </p>
 
               <div className="space-y-6">
