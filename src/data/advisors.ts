@@ -18,5 +18,11 @@ export const advisors: Advisor[] = [
     image: "/univadev.svg",
     linkedin: "https://www.linkedin.com/in/liam-kinnett-29860532b/",
   },
+  {
+    name: "Farhaan Ali",
+    role: "CS @ Queens",
+    image: "/univadev.svg",
+    linkedin: "https://www.linkedin.com/in/farhaan-ali/",
+  },
 ];
 
