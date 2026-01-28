@@ -34,7 +34,8 @@ export default function EmailSignupForm({
         onSubmit={() => {
           // Optimistic success (can't reliably confirm cross-origin response).
           setIsSuccessOpen(true);
-          setEmailValue("");
+          // Defer clear so the browser serializes the form (with email) before React re-renders.
+          setTimeout(() => setEmailValue(""), 0);
         }}
         className={className}
       >
