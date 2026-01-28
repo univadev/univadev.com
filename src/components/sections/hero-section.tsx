@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Info } from "lucide-react";
+import EmailSignupForm from "@/components/forms/email-signup-form";
 
 const slides = [
   {
@@ -132,26 +133,36 @@ const HeroSection = () => {
             </div>
 
             {/* CTA Form */}
-            <form className="mt-8 lg:mt-10 w-full max-w-md">
-              <div className="flex items-center bg-gray-200 rounded-full p-1 relative transition-all focus-within:ring-2 focus-within:ring-black">
-                <input
-                  type="tel"
-                  placeholder="Enter your email"
-                  className="flex-grow bg-transparent border-none text-base font-medium placeholder-gray-500 pl-5 pr-2 py-3 focus:ring-0 outline-none"
-                />
+            <div className="mt-8 lg:mt-10 w-full max-w-md">
+              <EmailSignupForm
+                className="w-full"
+              >
+                {({ emailValue, setEmailValue, inputName }) => (
+                  <div className="flex items-center bg-gray-200 rounded-full p-1 relative transition-all focus-within:ring-2 focus-within:ring-black">
+                    <input
+                      type="email"
+                      name={inputName}
+                      required
+                      placeholder="Enter your email"
+                      value={emailValue}
+                      onChange={(e) => setEmailValue(e.target.value)}
+                      className="flex-grow bg-transparent border-none text-base font-medium placeholder-gray-500 pl-5 pr-2 py-3 focus:ring-0 outline-none"
+                    />
 
-                <button
-                  type="submit"
-                  className="bg-black text-white rounded-full text-base font-semibold px-6 py-3 whitespace-nowrap transition-transform hover:scale-105 active:scale-100"
-                >
-                  Get Started
-                </button>
-              </div>
+                    <button
+                      type="submit"
+                      className="bg-black text-white rounded-full text-base font-semibold px-6 py-3 whitespace-nowrap transition-transform hover:scale-105 active:scale-100"
+                    >
+                      Get Started
+                    </button>
+                  </div>
+                )}
+              </EmailSignupForm>
               <p className="text-xs text-gray-500 mt-3 px-4">
                 Join our mailing list for exclusive updates on hackathons,
                 workshops, and leadership programs.
               </p>
-            </form>
+            </div>
           </div>
 
           {/* Desktop Image Carousel */}

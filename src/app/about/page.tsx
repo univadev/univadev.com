@@ -4,9 +4,9 @@ import FinalCta from "@/components/sections/final-cta";
 import Image from "next/image";
 
 const metrics = [
-  { label: "Students served", value: "10k+" },
-  { label: "Lines of code", value: "1M+" },
-  { label: "Prizes raised", value: "$100k+" },
+  { label: "Projects completed", value: "10" },
+  { label: "Hackathon partners", value: "4" },
+  { label: "Monthly views", value: "100k" },
 ];
 
 export default function About() {
@@ -19,13 +19,9 @@ export default function About() {
             About Univa Dev
           </h1>
           <p className="max-w-3xl mx-auto text-xl text-center text-muted-foreground mb-6">
-            Univa Dev is a multinational, federally registered, student-led
-            nonprofit organization that empowers the next generation of leaders
-            in Science, Technology, Engineering, and Mathematics. We stand out
-            for higher-quality products delivered in the most professional way
-            possible. We are open to anyone, regardless of income or ethnicity.
-            Some of our programs include Raven Hacks — a hybrid hackathon with
-            significant prizes and wide participation.
+            Univa Dev is a multinational student-led
+            nonprofit organization backed by Hack Club that empowers the next generation of leaders
+            in Science, Technology, Engineering, and Mathematics. 
           </p>
 
           {/* Responsive Image */}
@@ -46,9 +42,7 @@ export default function About() {
             Our impact
           </h2>
           <p className="text-center max-w-2xl mx-auto mb-10">
-            Since our founding, we've focused on measurable student outcomes —
-            growing chapter communities, creating funded opportunities, and
-            helping members land internships and jobs.
+            We've grown rapidly since our inception in Fall 2025.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">

@@ -33,7 +33,7 @@ const SavingsFeature = () => {
             </p>
 
             <h2 className="text-[32px] leading-[1.2] lg:text-[48px] font-bold text-black tracking-[-0.01em] mb-6">
-              Join 10,000+ innovators
+              Join our community of innovators
             </h2>
             <p className="text-lg text-black max-w-[450px] mx-auto lg:mx-0 mb-8 leading-relaxed">
               Connect with ambitious students from around the world. Collaborate

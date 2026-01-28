@@ -1,6 +1,6 @@
 "use client";
 
-import { Input } from "@/components/ui/input";
+import EmailSignupForm from "@/components/forms/email-signup-form";
 
 const FinalCta = () => {
   return (
@@ -25,19 +25,27 @@ const FinalCta = () => {
             </p>
           </div>
           <div className="col-span-full md:col-start-8 md:col-span-5 flex flex-col gap-4">
-            <form className="flex flex-col sm:flex-row items-center gap-4 sm:gap-0">
-              <Input
-                type="tel"
-                placeholder="Enter your email"
-                className="bg-white text-black placeholder:text-gray-500 rounded-full pl-5 h-[58px] w-full sm:mr-4 border-none ring-offset-black focus-visible:ring-2 focus-visible:ring-white"
-              />
-              <button
-                type="submit"
-                className="bg-black text-white rounded-full h-[58px] px-8 text-base font-bold border-2 border-white hover:bg-white hover:text-black transition-colors w-full sm:w-auto flex-shrink-0 cursor-pointer"
-              >
-                Get Started
-              </button>
-            </form>
+            <EmailSignupForm className="flex flex-col sm:flex-row items-center gap-4 sm:gap-0">
+              {({ emailValue, setEmailValue, inputName }) => (
+                <>
+                  <input
+                    type="email"
+                    name={inputName}
+                    required
+                    placeholder="Enter your email"
+                    value={emailValue}
+                    onChange={(e) => setEmailValue(e.target.value)}
+                    className="bg-white text-black placeholder:text-gray-500 rounded-full pl-5 h-[58px] w-full sm:mr-4 border-none ring-offset-black focus-visible:ring-2 focus-visible:ring-white outline-none"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-black text-white rounded-full h-[58px] px-8 text-base font-bold border-2 border-white hover:bg-white hover:text-black transition-colors w-full sm:w-auto flex-shrink-0 cursor-pointer"
+                  >
+                    Get Started
+                  </button>
+                </>
+              )}
+            </EmailSignupForm>
           </div>
         </div>
       </div>
