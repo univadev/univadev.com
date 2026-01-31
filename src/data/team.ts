@@ -45,7 +45,7 @@ export const team: TeamMember[] = [
     slug: "alireza-nouhehkhan",
     role: "Chief Science Officer",
     image: "/univadev.svg",
-    bio: "",
+    bio: "Alireza Nouhehkhan is a Grade 11 student at Longfields-Davidson Heights Secondary School with a strong commitment to STEM, particularly biomedical data analysis and computational research. He serves as Chief Science Officer at Univa Dev, contributing to data-driven and technical initiatives, and works as an Independent Biomedical Data Analysis Researcher, conducting project-based analyses in ophthalmology and vision science using Python, statistical reasoning, and data visualization. Through hands-on professional experience in fast-paced, team-oriented environments and leadership roles, he has developed a disciplined, motivated approach to problem-solving, collaboration, and continuous learning.",
     linkedin: "https://www.linkedin.com/in/alireza-n-00a993324/",
   },
   {
