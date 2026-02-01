@@ -94,11 +94,11 @@
   --color-button-black: #000000;
   --color-link-interactive: #000000;
 
-  --font-sans: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+  --font-sans: "Inclusive Sans", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
     Arial, sans-serif;
-  --font-display: "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  --font-display: "Space Grotesk", "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Helvetica, Arial, sans-serif;
-  --font-body: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+  --font-body: "Google Sans Flex", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
     Arial, sans-serif;
 }
 
