@@ -66,9 +66,9 @@ const TestimonialsCarousel = () => {
             ))}
           </CarouselContent>
 
-          <div className="absolute right-0 -bottom-20 flex">
-            <CarouselPrevious className="relative w-12 h-12 rounded-full border-2 border-foreground bg-background text-foreground hover:bg-foreground hover:text-background [&>svg]:text-foreground [&>svg]:hover:text-background -mr-1" />
-            <CarouselNext className="relative w-12 h-12 rounded-full border-2 border-foreground bg-background text-foreground hover:bg-foreground hover:text-background [&>svg]:text-foreground [&>svg]:hover:text-background" />
+          <div className="absolute left-5 md:left-auto md:right-0 -bottom-20 flex items-center gap-0.5">
+            <CarouselPrevious className="!left-0 !top-auto !-translate-y-0 relative w-12 h-12 rounded-full border-2 border-foreground bg-background text-foreground hover:bg-foreground hover:text-background [&>svg]:text-foreground [&>svg]:hover:text-background" />
+            <CarouselNext className="!right-0 !left-auto !top-auto !-translate-y-0 relative w-12 h-12 rounded-full border-2 border-foreground bg-background text-foreground hover:bg-foreground hover:text-background [&>svg]:text-foreground [&>svg]:hover:text-background" />
           </div>
         </Carousel>
       </div>
