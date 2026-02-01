@@ -1,3 +1,4 @@
+import Image from "next/image";
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
 import { Button } from "@/components/ui/button";
@@ -112,6 +113,47 @@ export default function RavenHacks() {
                   https://discord.gg/PRndM3ha66
                 </a>
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Sponsors Section */}
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container mx-auto px-5 sm:px-8 lg:px-12">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-10 text-gray-900 text-center">
+                Sponsors
+              </h2>
+              <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16">
+                <a
+                  href="https://featherless.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity"
+                >
+                  <Image
+                    src="/featherlessai-transparent.png"
+                    alt="featherless.ai"
+                    width={200}
+                    height={60}
+                    className="h-12 w-auto object-contain md:h-14"
+                  />
+                </a>
+                <a
+                  href="https://elevenlabs.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity"
+                >
+                  <Image
+                    src="/elevenlabs-logo-black.svg"
+                    alt="ElevenLabs"
+                    width={200}
+                    height={60}
+                    className="h-12 w-auto object-contain md:h-14"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </section>

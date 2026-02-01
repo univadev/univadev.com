@@ -12,7 +12,6 @@ import {
   Shield,
   Award,
   Sparkles,
-  ArrowRight,
 } from "lucide-react";
 
 const portalFeatures = [
@@ -77,18 +76,6 @@ export default function ChapterResources() {
               <p className="text-base text-gray-500 mb-14 tracking-wide">
                 Available only to verified Chapter Leaders.
               </p>
-              <div className="flex flex-col sm:flex-row gap-5 justify-center mb-12">
-                <Button
-                  size="lg"
-                  className="text-lg px-12 py-7 bg-blue-600 text-white hover:bg-blue-700 font-medium shadow-md hover:shadow-lg transition-all"
-                  asChild
-                >
-                  <a href="#portal" className="flex items-center gap-2">
-                    Access Chapter Resources
-                    <ArrowRight className="h-5 w-5" />
-                  </a>
-                </Button>
-              </div>
               <div className="max-w-3xl mx-auto">
                 <Image
                   src="/chapterportal.svg"
@@ -279,16 +266,6 @@ export default function ChapterResources() {
               </p>
 
               <div className="mt-14 flex flex-col sm:flex-row gap-5 justify-center">
-                <Button
-                  size="lg"
-                  className="text-lg px-12 py-7 bg-blue-600 text-white hover:bg-blue-700 font-medium shadow-md hover:shadow-lg transition-all"
-                  asChild
-                >
-                  <a href="#!" className="flex items-center gap-2">
-                    Access Chapter Resources
-                    <ArrowRight className="h-5 w-5" />
-                  </a>
-                </Button>
                 <Button
                   size="lg"
                   variant="outline"

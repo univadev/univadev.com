@@ -1,5 +1,9 @@
+"use client";
+
+import * as React from "react";
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
+import { ChapterCreationModal } from "@/components/ChapterCreationModal";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import {
@@ -99,8 +103,14 @@ const faqs = [
 ];
 
 export default function ChapterRegistration() {
+  const [chapterModalOpen, setChapterModalOpen] = React.useState(false);
+
   return (
     <div className="min-h-screen bg-[#F8F8F8]">
+      <ChapterCreationModal
+        open={chapterModalOpen}
+        onOpenChange={setChapterModalOpen}
+      />
       <NavigationHeader />
       <main className="pt-20">
         {/* Hero Section */}
@@ -113,7 +123,7 @@ export default function ChapterRegistration() {
                 Transform Your Community
               </h1>
               <p className="text-lg md:text-xl font-medium text-gray-700 mb-6 max-w-3xl mx-auto">
-                Join the world's largest youth STEM movement — powered by
+                Powered by
                 cutting-edge technology, global training programs, and direct
                 support from our central HQ.
               </p>
@@ -125,16 +135,16 @@ export default function ChapterRegistration() {
                 <Button
                   size="lg"
                   className="bg-black text-white rounded-full h-[58px] px-10 text-base font-bold hover:bg-gray-900 transition-colors"
-                  asChild
+                  onClick={() => setChapterModalOpen(true)}
                 >
-                  <a href="#apply">Apply to Start a Chapter</a>
+                  Apply to Start a Chapter
                 </Button>
                 <Button
                   size="lg"
                   className="bg-white text-black rounded-full h-[58px] px-10 text-base font-bold border-2 border-black hover:bg-gray-100 transition-colors"
                   asChild
                 >
-                  <a href="#contact">Schedule an Info Call</a>
+                  <a href="mailto:univadev0@gmail.com">Schedule an Info Call</a>
                 </Button>
               </div>
               <div className="max-w-3xl mx-auto">
@@ -277,16 +287,13 @@ export default function ChapterRegistration() {
                 <Button
                   size="lg"
                   className="text-lg px-12 py-7 bg-white text-black hover:bg-gray-100 font-semibold shadow-2xl hover:shadow-3xl transition-all"
-                  asChild
+                  onClick={() => setChapterModalOpen(true)}
                 >
-                  <a href="https://forms.google.com/your-chapter-application-form">
-                    Apply to Start a Chapter
-                  </a>
+                  Apply to Start a Chapter
                 </Button>
                 <Button
                   size="lg"
                   className="text-lg px-12 py-7 bg-black text-white hover:bg-gray-900 border-2 border-white font-semibold transition-all"
-                  id="contact"
                   asChild
                 >
                   <a href="mailto:univadev0@gmail.com">Schedule an Info Call</a>

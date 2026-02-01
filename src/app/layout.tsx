@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Script from "next/script";
 import { ThemeProvider } from "next-themes";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Univa Dev | The Future of STEM Leadership",
@@ -72,6 +73,7 @@ export default function RootLayout({
           storageKey="theme"
         >
           {children}
+          <Toaster richColors position="top-center" />
         </ThemeProvider>
       </body>
     </html>
