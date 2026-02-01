@@ -251,7 +251,7 @@ const NavigationHeader = () => {
                 </div>
               </nav>
             </div>
-
+{/*}
             <div className="px-5 sm:px-8 pb-8 flex-shrink-0">
               <Button
                 variant="default"
@@ -262,7 +262,7 @@ const NavigationHeader = () => {
                   Get Started
                 </a>
               </Button>
-            </div>
+            </div>*/}
           </div>
 
           {/* Tab 2: Submenu */}

@@ -19,6 +19,8 @@ export default function Team() {
             programs, run events, and support chapter success around the world.
             Our team is committed to accessibility, professionalism, and
             high-quality student experiences.
+            <br/>
+            This is not the full team. We are still hiring and onboarding new memebrs!
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">

@@ -108,7 +108,7 @@ const Footer = () => {
           <p className="text-sm text-[#525252] order-3 lg:order-1">
             Copyright © 2026 Univa Dev
           </p>
-          <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm order-2 lg:order-2">
+          <nav className="flex flex-wrap hidden items-center justify-center gap-x-6 gap-y-2 text-sm order-2 lg:order-2">
             <a href="/terms-and-conditions" className="hover:underline">
               Terms & Conditions
             </a>
