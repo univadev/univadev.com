@@ -272,7 +272,7 @@ export default function Impact() {
           <div className="relative z-10 max-w-screen-lg mx-auto px-5 sm:px-10 py-16 sm:py-24">
             <div className="text-center">
               <h2 className="text-[32px] md:text-[48px] font-bold tracking-[-2px] leading-tight text-white mb-6">
-                Ready to Join 1,000+ Innovators?
+                Ready to Join?
               </h2>
               <p className="text-lg text-white/90 mb-10 max-w-2xl mx-auto">
                 Your journey starts here. Connect, learn, and build the future
