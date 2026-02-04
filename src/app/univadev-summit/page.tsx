@@ -11,7 +11,7 @@ export default function UnivaDevSummit() {
             Univa Dev Summit
           </h1>
           <p className="text-lg text-center">
-            This is the Univa Dev Summit page.
+            Coming soon!
           </p>
         </div>
       </main>
