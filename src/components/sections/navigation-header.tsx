@@ -19,7 +19,7 @@ const navLinks = [
     label: "Events",
     items: [
       { href: "/ravenhacks/", label: "Raven Hacks" },
-      { href: "/univadev-summit/", label: "Univa Dev Summit" },
+      /*{ href: "/univadev-summit/", label: "Univa Dev Summit" },*/
       { href: "/events/", label: "All events" },
     ],
   },
