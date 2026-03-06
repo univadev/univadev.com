@@ -57,6 +57,14 @@ export const team: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/chandan-nir-280a0433b/",
   },
   {
+    name: "Alex Zhou",
+    slug: "alex-zhou",
+    role: "Director of Marketing",
+    image: "/univadev.svg",
+    bio: "Alex Zhou is currently a Grade 11 IB student at Merivale High School who lives for STEM and community building. Whether he’s working through a technical project or organizing an event, he’s at his best when he’s promoting new ideas and bringing people together.",
+    linkedin: "https://www.linkedin.com/in/alex-zhou-0198243b0/",
+  },
+  {
     name: "Yash Trivedi",
     slug: "yash-trivedi",
     role: "Director of Growth",
