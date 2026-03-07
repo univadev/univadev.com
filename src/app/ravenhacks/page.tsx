@@ -90,7 +90,7 @@ export default function RavenHacks() {
                   Low/No Code
                 </span>
                 <span className="px-4 py-2 bg-[#ff7f50]/10 text-[#ff7f50] rounded-full text-sm font-medium">
-                  Machine Learning/AI
+                  AI
                 </span>
               </div>
             </div>
@@ -148,6 +148,76 @@ export default function RavenHacks() {
                   <Image
                     src="/elevenlabs-logo-black.svg"
                     alt="ElevenLabs"
+                    width={200}
+                    height={60}
+                    className="h-12 w-auto object-contain md:h-14"
+                  />
+                </a>
+                <a
+                  href="https://artofproblemsolving.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity"
+                >
+                  <Image
+                    src="/aops.png"
+                    alt="Art of Problem Solving"
+                    width={200}
+                    height={60}
+                    className="h-12 w-auto object-contain md:h-14"
+                  />
+                </a>
+                <a
+                  href="https://codecrafters.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity"
+                >
+                  <Image
+                    src="/codecrafters.png"
+                    alt="CodeCrafters"
+                    width={200}
+                    height={60}
+                    className="h-12 w-auto object-contain md:h-14"
+                  />
+                </a>
+                <a
+                  href="https://gen.xyz/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity"
+                >
+                  <Image
+                    src="/xyz.png"
+                    alt="gen.xyz"
+                    width={200}
+                    height={60}
+                    className="h-12 w-auto object-contain md:h-14"
+                  />
+                </a>
+                <a
+                  href="https://www.yriscience.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity"
+                >
+                  <Image
+                    src="/yri.jpg"
+                    alt="YRI Fellowship"
+                    width={200}
+                    height={60}
+                    className="h-12 w-auto object-contain md:h-14"
+                  />
+                </a>
+                <a
+                  href="https://www.interviewcake.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity"
+                >
+                  <Image
+                    src="/interviewcake.png"
+                    alt="Interview Cake"
                     width={200}
                     height={60}
                     className="h-12 w-auto object-contain md:h-14"
@@ -265,8 +335,6 @@ export default function RavenHacks() {
                       <p className="text-gray-700">
                         A 2-3 minute video walkthrough (hosted on YouTube,
                         Vimeo, or similar) showing your project in action.
-                        Screen recordings with narration are fine—no fancy
-                        editing required.
                       </p>
                     </div>
                   </div>

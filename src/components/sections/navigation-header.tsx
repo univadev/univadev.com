@@ -5,6 +5,10 @@ import Image from "next/image";
 import { Menu, X, ChevronDown, ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import {
+  RavenHacksBanner,
+  RAVEN_HACKS_BANNER_HEIGHT,
+} from "@/components/sections/raven-hacks-banner";
 
 const navLinks = [
   {
@@ -46,6 +50,7 @@ const NavigationHeader = () => {
   const [selectedMobileLink, setSelectedMobileLink] = useState<
     (typeof navLinks)[0] | null
   >(null);
+  const [bannerVisible, setBannerVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,6 +72,17 @@ const NavigationHeader = () => {
     };
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    if (bannerVisible) {
+      document.body.style.paddingTop = `${RAVEN_HACKS_BANNER_HEIGHT}px`;
+    } else {
+      document.body.style.paddingTop = "";
+    }
+    return () => {
+      document.body.style.paddingTop = "";
+    };
+  }, [bannerVisible]);
+
   const handleMobileLinkClick = (link: (typeof navLinks)[0]) => {
     setSelectedMobileLink(link);
     setMobileTab("submenu");
@@ -85,11 +101,16 @@ const NavigationHeader = () => {
 
   const logoUrl = "/univadev.svg";
 
+  const headerTop = bannerVisible ? RAVEN_HACKS_BANNER_HEIGHT : 0;
+  const mobileMenuTop = 74 + headerTop;
+
   return (
     <>
+      <RavenHacksBanner onDismissChange={setBannerVisible} />
       <header
+        style={{ top: headerTop }}
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+          "fixed left-0 right-0 z-50 transition-all duration-300",
           isScrolled || isMenuOpen
             ? "bg-white/80 backdrop-blur-md shadow-sm"
             : "bg-transparent"
@@ -209,7 +230,10 @@ const NavigationHeader = () => {
 
       {/* Mobile Menu - Full Screen Overlay */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed top-[74px] left-0 right-0 bottom-0 bg-white z-40 flex flex-col overflow-hidden">
+        <div
+          className="lg:hidden fixed left-0 right-0 bottom-0 bg-white z-40 flex flex-col overflow-hidden"
+          style={{ top: mobileMenuTop }}
+        >
           {/* Tab 1: Main Links */}
           <div
             className={cn(
