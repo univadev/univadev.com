@@ -65,6 +65,14 @@ export const team: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/alex-zhou-0198243b0/",
   },
   {
+    name: "Theo Kim",
+    slug: "theo-kim",
+    role: "Head of Outreach",
+    image: "/univadev.svg",
+    bio: "Theo Kim is a Grade 11 student from Earl of March Secondary School with a strong interest in business, finance, and entrepreneurship. He enjoys building projects that bring people together while learning about technology and innovation. Outside of school, Theo is involved in many leadership activities involving the business world. He’s excited to contribute to Univa Dev and see the ideas, collaborations and community that come out of the event.",
+    linkedin: "https://www.linkedin.com/in/theo-kim-894b843b5/",
+  },
+  {
     name: "Yash Trivedi",
     slug: "yash-trivedi",
     role: "Director of Growth",
