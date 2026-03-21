@@ -73,6 +73,14 @@ export const team: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/theo-kim-894b843b5/",
   },
   {
+    name: "Audrib Amin",
+    slug: "audrib-amin",
+    role: "Director of Finance",
+    image: "/univadev.svg",
+    bio: "My name is Audrib Amin, and I am a Grade 11 student who is passionate about helping others. I am driven by an interest in the STEM field and offer non-profit leadership experience. I am excited to help Univa Dev have a positive impact on all!",
+    linkedin: "https://www.linkedin.com/in/audrib-amin-73478335a/",
+  },
+  {
     name: "Yash Trivedi",
     slug: "yash-trivedi",
     role: "Director of Growth",
