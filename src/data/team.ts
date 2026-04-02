@@ -81,6 +81,14 @@ export const team: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/audrib-amin-73478335a/",
   },
   {
+    name: "Eric Wang",
+    slug: "eric-wang",
+    role: "Director of Marketing",
+    image: "/univadev.svg",
+    bio: "Eric Wang is a Grade 11 IB student at Merivale High School. He has a diverse background in leadership and caretaking roles, passionate about empowering students and is so excited to learn and contribute in this STEM environment!",
+    linkedin: "https://www.linkedin.com/in/eric-wang-53676b376/",
+  },
+  {
     name: "Yash Trivedi",
     slug: "yash-trivedi",
     role: "Director of Growth",
