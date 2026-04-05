@@ -81,6 +81,14 @@ export const team: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/audrib-amin-73478335a/",
   },
   {
+    name: "Kyle Cheng",
+    slug: "kyle-cheng",
+    role: "Director of Finance",
+    image: "/univadev.svg",
+    bio: "My name is Kyle Cheng and I am currently a Grade 11 IB student at Merivale High School. I am interested in biomedical engineering, cancer research and machine learning. I regularly compete in science fairs and am excited to helps others develop a passion for STEM.",
+    linkedin: "https://www.linkedin.com/in/kyle-cheng-0ab60835a/",
+  },
+  {
     name: "Eric Wang",
     slug: "eric-wang",
     role: "Director of Marketing",
