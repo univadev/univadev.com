@@ -112,6 +112,14 @@ export const team: TeamMember[] = [
     bio: "Hi my name is Ryan, I’m a grade 11 student at LDHSS with a passion for coding, technology and problem solving. I love turning ideas into projects and exploring new challenges.",
     linkedin: "https://www.linkedin.com/in/ryanmmah/",
   },
+  {
+    name: "Jayden Lee",
+    slug: "jayden-lee",
+    role: "Software Developer",
+    image: "/univadev.svg",
+    bio: "Jayden Lee is a software developer and a student at Abbey Park High School (APHS) with a strong passion for mathematics and artificial intelligence. He enjoys applying logic, creativity, and problem-solving to build meaningful software, and he is especially interested in how math can be used to power intelligent systems and real-world innovation. Through Univa Dev, Jayden is excited to keep learning, collaborate with other driven students, and contribute to projects that combine technology, curiosity, and impact.",
+    linkedin: "https://www.linkedin.com/in/jayden-lee-821097383/",
+  },
   
 ];
 
