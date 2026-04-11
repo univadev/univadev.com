@@ -5,10 +5,6 @@ import Image from "next/image";
 import { Menu, X, ChevronDown, ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import {
-  RavenHacksBanner,
-  RAVEN_HACKS_BANNER_HEIGHT,
-} from "@/components/sections/raven-hacks-banner";
 
 const navLinks = [
   {
@@ -50,7 +46,6 @@ const NavigationHeader = () => {
   const [selectedMobileLink, setSelectedMobileLink] = useState<
     (typeof navLinks)[0] | null
   >(null);
-  const [bannerVisible, setBannerVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,17 +67,6 @@ const NavigationHeader = () => {
     };
   }, [isMenuOpen]);
 
-  useEffect(() => {
-    if (bannerVisible) {
-      document.body.style.paddingTop = `${RAVEN_HACKS_BANNER_HEIGHT}px`;
-    } else {
-      document.body.style.paddingTop = "";
-    }
-    return () => {
-      document.body.style.paddingTop = "";
-    };
-  }, [bannerVisible]);
-
   const handleMobileLinkClick = (link: (typeof navLinks)[0]) => {
     setSelectedMobileLink(link);
     setMobileTab("submenu");
@@ -100,15 +84,11 @@ const NavigationHeader = () => {
   };
 
   const logoUrl = "/univadev.svg";
-
-  const headerTop = bannerVisible ? RAVEN_HACKS_BANNER_HEIGHT : 0;
-  const mobileMenuTop = 74 + headerTop;
+  const mobileMenuTop = 74;
 
   return (
     <>
-      <RavenHacksBanner onDismissChange={setBannerVisible} />
       <header
-        style={{ top: headerTop }}
         className={cn(
           "fixed left-0 right-0 z-50 transition-all duration-300",
           isScrolled || isMenuOpen

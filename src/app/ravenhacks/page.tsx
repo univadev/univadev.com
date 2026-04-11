@@ -14,7 +14,35 @@ import {
   Presentation,
   Palette,
   TrendingUp,
+  Trophy,
+  Award,
 } from "lucide-react";
+
+const winners = [
+  {
+    place: "1st",
+    project: "Project SignBridge",
+    href: "https://devpost.com/software/project-signbridge",
+  },
+  {
+    place: "2nd",
+    project: "echoOS",
+    href: "https://devpost.com/software/echoos",
+  },
+  {
+    place: "3rd",
+    project: "VoiceForge",
+    href: "https://devpost.com/software/voiceforge-eivful",
+  },
+];
+
+const specialAwards = [
+  {
+    award: "Best Use of ElevenLabs",
+    project: "VoiceForge",
+    href: "https://devpost.com/software/voiceforge-eivful",
+  },
+];
 
 export default function RavenHacks() {
   return (
@@ -29,7 +57,12 @@ export default function RavenHacks() {
                 Raven Hacks VTL
               </h1>
               <p className="text-2xl md:text-3xl font-medium mb-8 text-gray-700">
-                Empowering the next generation of STEM leaders
+                Raven Hacks VTL has ended
+              </p>
+              <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Thank you to the 120 participants who built, shipped, and
+                shared projects across the virtual hackathon. Prizes were valued
+                at over $35,000.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <Button
@@ -43,7 +76,7 @@ export default function RavenHacks() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
-                    Join Hackathon
+                    View Hackathon
                     <ExternalLink className="h-5 w-5" />
                   </a>
                 </Button>
@@ -66,18 +99,30 @@ export default function RavenHacks() {
               </div>
 
               {/* Event Details */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 max-w-2xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 max-w-5xl mx-auto">
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
                   <Calendar className="h-8 w-8 text-[#ff7f50] mb-3 mx-auto" />
                   <div className="text-sm text-gray-600 mb-1">Dates</div>
                   <div className="text-lg font-bold text-gray-900">
-                    Mar 14 – 22, 2026
+                    Mar 14 - 22, 2026
                   </div>
                 </div>
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
                   <Users className="h-8 w-8 text-[#ff7f50] mb-3 mx-auto" />
                   <div className="text-sm text-gray-600 mb-1">Format</div>
                   <div className="text-lg font-bold text-gray-900">Online</div>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <Trophy className="h-8 w-8 text-[#ff7f50] mb-3 mx-auto" />
+                  <div className="text-sm text-gray-600 mb-1">Prizes</div>
+                  <div className="text-lg font-bold text-gray-900">$35K+</div>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <Users className="h-8 w-8 text-[#ff7f50] mb-3 mx-auto" />
+                  <div className="text-sm text-gray-600 mb-1">
+                    Participants
+                  </div>
+                  <div className="text-lg font-bold text-gray-900">120</div>
                 </div>
               </div>
 
@@ -92,6 +137,9 @@ export default function RavenHacks() {
                 <span className="px-4 py-2 bg-[#ff7f50]/10 text-[#ff7f50] rounded-full text-sm font-medium">
                   AI
                 </span>
+                <span className="px-4 py-2 bg-[#ff7f50]/10 text-[#ff7f50] rounded-full text-sm font-medium">
+                  Event Ended
+                </span>
               </div>
             </div>
           </div>
@@ -102,8 +150,10 @@ export default function RavenHacks() {
           <div className="container mx-auto px-5 sm:px-8 lg:px-12">
             <div className="max-w-4xl mx-auto">
               <p className="text-center text-gray-700">
-                <strong>Notice:</strong> All participants are required to join
-                the official Discord server for updates, workshops, and support:{" "}
+                <strong>Event update:</strong> Raven Hacks VTL has ended.
+                Thank you to every participant, sponsor, judge, and supporter
+                who helped make the hackathon possible. The community Discord
+                remains available here:{" "}
                 <a
                   href="https://discord.gg/PRndM3ha66"
                   target="_blank"
@@ -113,6 +163,76 @@ export default function RavenHacks() {
                   https://discord.gg/PRndM3ha66
                 </a>
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Winners Section */}
+        <section className="py-20 md:py-28 bg-white">
+          <div className="container mx-auto px-5 sm:px-8 lg:px-12">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 text-center">
+                The Winners of RavenHacks VTL
+              </h2>
+              <p className="text-xl text-gray-700 mb-12 text-center">
+                Congratulations to the teams recognized in the final standings.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                {winners.map((winner) => (
+                  <a
+                    key={winner.place}
+                    href={winner.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+                  >
+                    <div className="flex items-center justify-between mb-8">
+                      <span className="text-sm font-semibold text-[#ff7f50] uppercase">
+                        {winner.place} Place
+                      </span>
+                      <Trophy className="h-7 w-7 text-[#ff7f50]" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      {winner.project}
+                    </h3>
+                    <span className="inline-flex items-center gap-2 text-[#ff7f50] font-medium group-hover:underline">
+                      View on Devpost
+                      <ExternalLink className="h-4 w-4" />
+                    </span>
+                  </a>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {specialAwards.map((specialAward) => (
+                  <a
+                    key={specialAward.award}
+                    href={specialAward.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="p-3 bg-[#ff7f50]/10 rounded-lg flex-shrink-0">
+                        <Award className="h-6 w-6 text-[#ff7f50]" />
+                      </div>
+                      <div>
+                        <div className="text-sm font-semibold text-[#ff7f50] uppercase mb-1">
+                          {specialAward.award}
+                        </div>
+                        <h3 className="text-xl font-bold text-gray-900">
+                          {specialAward.project}
+                        </h3>
+                      </div>
+                    </div>
+                    <span className="inline-flex items-center gap-2 text-[#ff7f50] font-medium mt-5 group-hover:underline">
+                      View on Devpost
+                      <ExternalLink className="h-4 w-4" />
+                    </span>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -260,7 +380,7 @@ export default function RavenHacks() {
                       Format
                     </h3>
                     <p className="text-gray-700">
-                      Fully virtual – join from anywhere!
+                      Fully virtual - join from anywhere!
                     </p>
                   </div>
                   <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
@@ -282,10 +402,9 @@ export default function RavenHacks() {
                 </div>
 
                 <p className="text-lg text-gray-700 mt-8 leading-relaxed">
-                  Whether you're a beginner coder or an experienced developer,
-                  Raven Hacks VTL is your chance to ideate, prototype, and
-                  showcase your ideas. Network with peers, learn from workshops,
-                  and gain valuable experience.
+                  Raven Hacks VTL brought together 120 participants to ideate,
+                  prototype, and showcase their ideas in a supportive virtual
+                  environment.
                 </p>
               </div>
             </div>
@@ -560,10 +679,10 @@ export default function RavenHacks() {
               </h2>
               <div className="bg-gray-50 border border-gray-200 rounded-lg p-10">
                 <p className="text-xl text-gray-700 mb-6">
-                  <strong>Looking for judges!</strong>
+                  <strong>Thank you to the Raven Hacks VTL judges.</strong>
                 </p>
                 <p className="text-lg text-gray-600 mb-6">
-                  Email{" "}
+                  For follow-up questions, email{" "}
                   <a
                     href="mailto:univadev0@gmail.com"
                     className="text-[#ff7f50] hover:underline font-medium"
@@ -581,10 +700,10 @@ export default function RavenHacks() {
           <div className="container mx-auto px-5 sm:px-8 lg:px-12">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                Ready to Build Something Amazing?
+                Raven Hacks VTL Has Ended
               </h2>
               <p className="text-xl text-gray-700 mb-10">
-                Join Raven Hacks VTL and showcase your skills
+                Explore the submissions and winning projects on Devpost.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
@@ -598,7 +717,7 @@ export default function RavenHacks() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
-                    Join Hackathon on Devpost
+                    View Hackathon on Devpost
                     <ExternalLink className="h-5 w-5" />
                   </a>
                 </Button>
@@ -614,7 +733,7 @@ export default function RavenHacks() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
-                    Join Discord Community
+                    Visit Discord Community
                     <ExternalLink className="h-5 w-5" />
                   </a>
                 </Button>
