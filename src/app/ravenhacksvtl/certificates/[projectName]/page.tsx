@@ -188,8 +188,8 @@ export default async function RavenHacksCertificatePage({
           <div className="pointer-events-none absolute inset-7 rounded-md border border-gray-200 sm:inset-10" />
 
           <div className="relative z-10 flex h-full flex-col">
-            <header className="flex items-start justify-between gap-4 border-b border-gray-200 pb-4 sm:pb-6">
-              <div className="flex items-center gap-3">
+            <header className="flex items-start justify-between gap-4 border-b border-gray-200 px-3 pb-4 pt-1 sm:px-4 sm:pb-6">
+              <div className="flex min-w-0 items-center gap-3">
                 <Image
                   src="/univadev.svg"
                   alt="Univa Dev"
@@ -202,11 +202,11 @@ export default async function RavenHacksCertificatePage({
                   Univa Dev
                 </span>
               </div>
-              <div className="text-right">
-                <p className="mb-0 text-sm font-bold text-gray-900 sm:text-base">
+              <div className="min-w-0 shrink-0 pl-2 text-right sm:pl-4">
+                <p className="mb-0 whitespace-nowrap text-sm font-bold leading-tight text-gray-900 sm:text-base">
                   {certificate.eventName}
                 </p>
-                <p className="mb-0 text-xs text-gray-500 sm:text-sm">
+                <p className="mb-0 whitespace-nowrap text-xs leading-tight text-gray-500 sm:text-sm">
                   {certificate.eventDates}
                 </p>
               </div>

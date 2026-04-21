@@ -436,14 +436,14 @@ async function renderCertificateCanvas(certificate: RavenHacksCertificate) {
     fillStyle: "#111827",
   });
 
-  drawText(context, certificate.eventName, 992, 120, {
+  drawText(context, certificate.eventName, 968, 120, {
     fontSize: 18,
     fontWeight: "700",
     fontFamily: FONT_DISPLAY,
     fillStyle: "#111827",
     align: "right",
   });
-  drawText(context, certificate.eventDates, 992, 145, {
+  drawText(context, certificate.eventDates, 968, 145, {
     fontSize: 13,
     fillStyle: "#6b7280",
     align: "right",
