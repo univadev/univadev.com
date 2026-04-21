@@ -26,7 +26,8 @@ type DrawTextOptions = {
 
 type DetailItem = {
   label: string;
-  value: string;
+  value?: string;
+  values?: string[];
 };
 
 function loadImage(src: string) {
@@ -269,9 +270,34 @@ function drawDetailBox(
     fontFamily: FONT_DISPLAY,
     fillStyle: "#111827",
   };
+
+  if (item.values?.length) {
+    const listFontSize = item.values.length > 3 ? 11 : 13;
+    const listLineHeight = item.values.length > 3 ? 13 : 15;
+
+    item.values.forEach((value, index) => {
+      drawFittedText(
+        context,
+        value,
+        x + 18,
+        y + 56 + index * listLineHeight,
+        width - 36,
+        {
+          fontSize: listFontSize,
+          fontWeight: "700",
+          fontFamily: FONT_DISPLAY,
+          fillStyle: "#111827",
+        },
+        9
+      );
+    });
+
+    return;
+  }
+
   const valueFit = getWrappedTextFit(
     context,
-    item.value,
+    item.value ?? "",
     width - 44,
     2,
     valueOptions,
@@ -510,13 +536,15 @@ async function renderCertificateCanvas(certificate: RavenHacksCertificate) {
 
   const detailItems: DetailItem[] = [
     { label: "Project", value: certificate.projectName },
-    { label: "Team", value: certificate.teamMembers.join(", ") },
+    { label: "Team", values: certificate.teamMembers },
     { label: "Issued", value: certificate.issueDate },
     { label: "Certificate ID", value: certificate.certificateId },
   ];
 
+  const detailBoxHeight = certificate.teamMembers.length > 3 ? 118 : 96;
+
   detailItems.forEach((item, index) => {
-    drawDetailBox(context, item, 98 + index * 238, 584, 214, 96);
+    drawDetailBox(context, item, 98 + index * 238, 584, 214, detailBoxHeight);
   });
 
   context.strokeStyle = "#111827";

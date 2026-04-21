@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import type { LucideIcon } from "lucide-react";
 import {
   Award,
   CalendarDays,
@@ -14,6 +15,13 @@ import {
   getRavenHacksCertificate,
   ravenHacksCertificates,
 } from "@/data/ravenhacksvtl-certificates";
+
+type CertificateDetail = {
+  label: string;
+  value?: string;
+  values?: string[];
+  icon: LucideIcon;
+};
 
 type CertificatePageProps = {
   params: Promise<{
@@ -57,7 +65,7 @@ export default async function RavenHacksCertificatePage({
     notFound();
   }
 
-  const details = [
+  const details: CertificateDetail[] = [
     {
       label: "Project",
       value: certificate.projectName,
@@ -65,7 +73,7 @@ export default async function RavenHacksCertificatePage({
     },
     {
       label: "Team",
-      value: certificate.teamMembers.join(", "),
+      values: certificate.teamMembers,
       icon: UsersRound,
     },
     {
@@ -246,9 +254,22 @@ export default async function RavenHacksCertificatePage({
                         {detail.label}
                       </p>
                     </div>
-                    <p className="mb-0 min-w-0 break-words text-sm font-bold leading-snug text-gray-900 [overflow-wrap:anywhere] sm:text-[15px]">
-                      {detail.value}
-                    </p>
+                    {detail.values ? (
+                      <ul className="mb-0 flex min-w-0 list-none flex-col gap-0.5 p-0 text-sm font-bold leading-tight text-gray-900 sm:text-[13px]">
+                        {detail.values.map((value) => (
+                          <li
+                            key={value}
+                            className="min-w-0 break-words [overflow-wrap:anywhere]"
+                          >
+                            {value}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="mb-0 min-w-0 break-words text-sm font-bold leading-snug text-gray-900 [overflow-wrap:anywhere] sm:text-[15px]">
+                        {detail.value}
+                      </p>
+                    )}
                   </div>
                 );
               })}
