@@ -58,6 +58,98 @@ const benefits = [
   },
 ];
 
+const benefitRevealLayouts = [
+  {
+    benefitIndex: 0,
+    step: 0,
+    position: "left-0 top-0 w-[46%]",
+    visibleMotion: "translate3d(0, 0, 0) rotate(-1deg)",
+    enterMotion: "translate3d(-2.5rem, -1rem, 0) scale(0.98) rotate(-1deg)",
+  },
+  {
+    benefitIndex: 1,
+    step: 0,
+    position: "right-0 top-16 w-[46%]",
+    visibleMotion: "translate3d(0, 0, 0) rotate(1deg)",
+    enterMotion: "translate3d(2.5rem, 1rem, 0) scale(0.98) rotate(1deg)",
+  },
+  {
+    benefitIndex: 2,
+    step: 1,
+    position: "right-0 top-0 w-[46%]",
+    visibleMotion: "translate3d(0, 0, 0) rotate(1deg)",
+    enterMotion: "translate3d(3rem, -1rem, 0) scale(0.98) rotate(1deg)",
+  },
+  {
+    benefitIndex: 3,
+    step: 1,
+    position: "left-0 top-16 w-[46%]",
+    visibleMotion: "translate3d(0, 0, 0) rotate(-1deg)",
+    enterMotion: "translate3d(-3rem, 1rem, 0) scale(0.98) rotate(-1deg)",
+  },
+  {
+    benefitIndex: 4,
+    step: 2,
+    position: "left-0 top-0 w-[52%]",
+    visibleMotion: "translate3d(0, 0, 0) rotate(0deg)",
+    enterMotion: "translate3d(-2.5rem, 1.5rem, 0) scale(0.98)",
+  },
+] as const;
+
+function BenefitCard({
+  benefit,
+  className = "",
+  style,
+  ariaHidden,
+  compact = false,
+}: {
+  benefit: (typeof benefits)[number];
+  className?: string;
+  style?: React.CSSProperties;
+  ariaHidden?: boolean;
+  compact?: boolean;
+}) {
+  const IconComponent = benefit.icon;
+
+  return (
+    <div
+      aria-hidden={ariaHidden}
+      className={`rounded-[1.25rem] border border-black/[0.04] bg-[#F8F8F8] shadow-[0_18px_60px_rgba(0,0,0,0.04)] transition-all duration-700 ease-out hover:-translate-y-1 hover:bg-white hover:shadow-[0_20px_70px_rgba(0,0,0,0.08)] ${
+        compact ? "p-4 md:min-h-[150px]" : "p-6 md:min-h-[220px] md:p-7"
+      } ${className}`}
+      style={style}
+    >
+      <div
+        className={`flex items-center justify-center rounded-full bg-white shadow-[inset_0_0_0_1px_rgba(0,0,0,0.06)] ${
+          compact ? "mb-2 h-9 w-9" : "mb-5 h-12 w-12"
+        }`}
+      >
+        <IconComponent
+          className={compact ? "h-5 w-5 text-black" : "h-7 w-7 text-black"}
+        />
+      </div>
+      <h3
+        className={
+          compact
+            ? "mb-1.5 text-base font-bold leading-tight text-black"
+            : "mb-3 text-xl font-bold text-black"
+        }
+      >
+        {benefit.title}
+      </h3>
+      <p
+        className={
+          compact
+            ? "m-0 text-[13px] leading-[1.4] text-gray-700"
+            : "m-0 text-[15px] leading-relaxed text-gray-700 md:text-base"
+        }
+      >
+        {benefit.description}
+      </p>
+    </div>
+  );
+}
+
 const chapterBenefits = [
   "Full access to our AI curriculum & workshop toolkits",
   "Exclusive chapter portal with analytics, content, and support",
@@ -104,6 +196,58 @@ const faqs = [
 
 export default function ChapterRegistration() {
   const [chapterModalOpen, setChapterModalOpen] = React.useState(false);
+  const [benefitRevealStep, setBenefitRevealStep] = React.useState(0);
+  const benefitsScrollRef = React.useRef<HTMLElement | null>(null);
+
+  React.useEffect(() => {
+    const section = benefitsScrollRef.current;
+
+    if (!section) {
+      return;
+    }
+
+    let frame = 0;
+
+    const updateBenefitReveal = () => {
+      frame = 0;
+
+      if (window.innerWidth < 768) {
+        setBenefitRevealStep(0);
+        return;
+      }
+
+      const rect = section.getBoundingClientRect();
+      const scrollDistance = Math.max(1, section.offsetHeight - window.innerHeight);
+      const progress = Math.min(Math.max(-rect.top / scrollDistance, 0), 1);
+      const nextRevealStep =
+        progress < 0.25 ? 0 : progress < 0.5 ? 1 : progress < 0.75 ? 2 : 3;
+
+      setBenefitRevealStep((currentStep) =>
+        currentStep === nextRevealStep ? currentStep : nextRevealStep,
+      );
+    };
+
+    const requestUpdate = () => {
+      if (frame) {
+        return;
+      }
+
+      frame = window.requestAnimationFrame(updateBenefitReveal);
+    };
+
+    updateBenefitReveal();
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+
+    return () => {
+      if (frame) {
+        window.cancelAnimationFrame(frame);
+      }
+
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#F8F8F8]">
@@ -111,7 +255,7 @@ export default function ChapterRegistration() {
         open={chapterModalOpen}
         onOpenChange={setChapterModalOpen}
       />
-      <NavigationHeader />
+      <NavigationHeader disableBackdropBlur />
       <main className="pt-20">
         {/* Hero Section */}
         <section className="relative isolate h-[calc(100vh-5rem)] min-h-[560px] w-full overflow-hidden bg-[#F8F8F8]">
@@ -129,7 +273,6 @@ export default function ChapterRegistration() {
               type="video/mp4"
             />
           </video>
-          <div className="absolute inset-0 -z-10 bg-white/20" />
           <div className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-black/45 via-black/20 to-transparent" />
           <div className="absolute bottom-8 left-5 right-5 sm:left-8 sm:right-auto md:bottom-12 md:left-12">
             <div className="max-w-5xl">
@@ -188,10 +331,78 @@ export default function ChapterRegistration() {
         </section>
 
         {/* Why Start a Chapter */}
-        <section className="py-16 md:py-24 bg-white">
+        <section ref={benefitsScrollRef} className="relative hidden bg-white md:block md:h-[420vh]">
+          <div className="md:sticky md:top-20 md:flex md:min-h-[calc(100svh-5rem)] md:items-center md:py-10">
+            <div className="container mx-auto px-5 sm:px-8 md:px-12">
+              <div className="mx-auto mb-8 max-w-4xl text-center">
+                <h2 className="mb-4 text-[32px] font-bold leading-tight tracking-[-2px] md:text-[48px]">
+                  Why Start a Chapter?
+                </h2>
+                <p className="text-lg text-gray-600">
+                  Tech-First. Impact-Driven. Built for Global Scale.
+                </p>
+              </div>
+
+              <div className="relative mx-auto hidden min-h-[560px] max-w-5xl md:block lg:min-h-[520px]">
+                <div
+                  className={`absolute inset-x-0 top-0 min-h-[360px] transition-opacity duration-300 lg:min-h-[380px] ${
+                    benefitRevealStep === 3
+                      ? "pointer-events-none opacity-0"
+                      : "opacity-100"
+                  }`}
+                >
+                  {benefitRevealStep < 3 &&
+                    benefitRevealLayouts
+                      .filter((layout) => layout.step === benefitRevealStep)
+                      .map((layout, idx) => (
+                        <BenefitCard
+                          key={layout.benefitIndex}
+                          benefit={benefits[layout.benefitIndex]}
+                          className={`absolute ${layout.position} animate-[benefit-card-enter_700ms_ease-out_both]`}
+                          style={
+                            {
+                              animationDelay: idx % 2 === 1 ? "110ms" : "0ms",
+                              "--benefit-card-enter": layout.enterMotion,
+                              "--benefit-card-visible": layout.visibleMotion,
+                            } as React.CSSProperties
+                          }
+                        />
+                      ))}
+                </div>
+
+                <div
+                  className={`absolute inset-x-0 top-0 mx-auto grid max-w-5xl grid-cols-2 gap-4 transition-all duration-700 ease-out ${
+                    benefitRevealStep === 3
+                      ? "translate-y-0 opacity-100"
+                      : "pointer-events-none translate-y-8 opacity-0"
+                  }`}
+                >
+                  {benefits.map((benefit, idx) => (
+                    <BenefitCard
+                      key={idx}
+                      benefit={benefit}
+                      compact
+                      className={
+                        idx === benefits.length - 1
+                          ? "col-span-2 mx-auto w-[calc(50%-0.5rem)]"
+                          : ""
+                      }
+                      style={{
+                        transitionDelay:
+                          benefitRevealStep === 3 ? `${idx * 75}ms` : "0ms",
+                      }}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-16 md:hidden">
           <div className="container mx-auto px-5 sm:px-8 md:px-12">
-            <div className="text-center mb-16">
-              <h2 className="text-[32px] md:text-[48px] font-bold tracking-[-2px] leading-tight mb-4">
+            <div className="mx-auto mb-10 max-w-4xl text-center md:hidden">
+              <h2 className="mb-4 text-[32px] font-bold leading-tight tracking-[-2px]">
                 Why Start a Chapter?
               </h2>
               <p className="text-lg text-gray-600">
@@ -199,26 +410,18 @@ export default function ChapterRegistration() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              {benefits.map((benefit, idx) => {
-                const IconComponent = benefit.icon;
-                return (
-                  <div
-                    key={idx}
-                    className="bg-[#F8F8F8] rounded-2xl p-8 hover:bg-gray-200 transition-colors"
-                  >
-                    <div className="mb-6">
-                      <IconComponent className="h-10 w-10 text-black" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-4 text-black">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      {benefit.description}
-                    </p>
-                  </div>
-                );
-              })}
+            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
+              {benefits.map((benefit, idx) => (
+                <BenefitCard
+                  key={idx}
+                  benefit={benefit}
+                  className={
+                    idx === benefits.length - 1
+                      ? "md:col-span-2 md:mx-auto md:w-[calc(50%-0.75rem)]"
+                      : ""
+                  }
+                />
+              ))}
             </div>
           </div>
         </section>
