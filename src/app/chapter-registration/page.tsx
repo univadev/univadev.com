@@ -114,24 +114,31 @@ export default function ChapterRegistration() {
       <NavigationHeader />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="bg-[#F8F8F8] py-16 md:py-24">
-          <div className="container mx-auto px-5 sm:px-8 md:px-12">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-[42px] md:text-[72px] lg:text-[80px] font-medium leading-[0.9] tracking-tighter mb-8">
-                Univa Dev Chapters
-                <br />
-                Transform Your Community
-              </h1>
-              <p className="text-lg md:text-xl font-medium text-gray-700 mb-6 max-w-3xl mx-auto">
-                Powered by
-                cutting-edge technology, global training programs, and direct
-                support from our central HQ.
+        <section className="relative isolate h-[calc(100vh-5rem)] min-h-[560px] w-full overflow-hidden bg-[#F8F8F8]">
+          <video
+            className="absolute left-1/2 top-1/2 -z-20 h-full w-[108%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            aria-hidden="true"
+          >
+            <source
+              src="/videos/chapter-registration-hero.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div className="absolute inset-0 -z-10 bg-white/20" />
+          <div className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-black/45 via-black/20 to-transparent" />
+          <div className="absolute bottom-8 left-5 right-5 sm:left-8 sm:right-auto md:bottom-12 md:left-12">
+            <div className="max-w-5xl">
+              <p className="mb-6 max-w-5xl font-['Cormorant_Garamond',Georgia,serif] text-[32px] font-semibold leading-none text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] sm:whitespace-nowrap md:text-[44px] lg:text-[54px]">
+                Transform your{" "}
+                <span className="text-[#ffd166]">community</span> through{" "}
+                <span className="text-[#ffd166]">STEM</span>
               </p>
-              <p className="text-base text-gray-600 mb-10 max-w-3xl mx-auto">
-                Help bring advanced AI education to your school, region, and
-                country. Become a catalyst for innovation.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <div className="flex flex-col gap-4 sm:flex-row">
                 <Button
                   size="lg"
                   className="bg-black text-white rounded-full h-[58px] px-10 text-base font-bold hover:bg-gray-900 transition-colors"
@@ -147,16 +154,35 @@ export default function ChapterRegistration() {
                   <a href="mailto:univadev0@gmail.com">Schedule an Info Call</a>
                 </Button>
               </div>
-              <div className="max-w-3xl mx-auto">
-                <Image
-                  src="/chapters.svg"
-                  alt="Univa Dev Chapters"
-                  width={800}
-                  height={522}
-                  className="w-full h-auto"
-                  priority
-                />
-              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#F8F8F8] py-12 md:py-16">
+          <div className="container mx-auto px-5 sm:px-8 md:px-12">
+            <div className="max-w-4xl mx-auto text-center mb-12">
+              <h1 className="text-[42px] md:text-[72px] lg:text-[80px] font-medium leading-[0.9] tracking-tighter mb-8">
+                Univa Dev Chapters Makes A Groundbreaking Impact
+              </h1>
+              <p className="text-lg md:text-xl font-medium text-gray-700 mb-6 max-w-3xl mx-auto">
+                Powered by
+                cutting-edge technology, global training programs, and direct
+                support from our central HQ.
+              </p>
+              <p className="text-base text-gray-600 mb-10 max-w-3xl mx-auto">
+                Help bring advanced AI education to your school, region, and
+                country. Become a catalyst for innovation.
+              </p>
+            </div>
+            <div className="max-w-3xl mx-auto">
+              <Image
+                src="/chapters.svg"
+                alt="Univa Dev Chapters"
+                width={800}
+                height={522}
+                className="w-full h-auto"
+                priority
+              />
             </div>
           </div>
         </section>
