@@ -67,7 +67,7 @@ export const team: TeamMember[] = [
   {
     name: "Theo Kim",
     slug: "theo-kim",
-    role: "Head of Outreach",
+    role: "Director of Outreach",
     image: "/univadev.svg",
     bio: "Theo Kim is a Grade 11 student from Earl of March Secondary School with a strong interest in business, finance, and entrepreneurship. He enjoys building projects that bring people together while learning about technology and innovation. Outside of school, Theo is involved in many leadership activities involving the business world. He’s excited to contribute to Univa Dev and see the ideas, collaborations and community that come out of the event.",
     linkedin: "https://www.linkedin.com/in/theo-kim-894b843b5/",
@@ -115,10 +115,18 @@ export const team: TeamMember[] = [
   {
     name: "Jayden Lee",
     slug: "jayden-lee",
-    role: "Software Developer",
+    role: "Director of Technology",
     image: "/univadev.svg",
     bio: "Jayden Lee is a software developer and a student at Abbey Park High School (APHS) with a strong passion for mathematics and artificial intelligence. He enjoys applying logic, creativity, and problem-solving to build meaningful software, and he is especially interested in how math can be used to power intelligent systems and real-world innovation. Through Univa Dev, Jayden is excited to keep learning, collaborate with other driven students, and contribute to projects that combine technology, curiosity, and impact.",
     linkedin: "https://www.linkedin.com/in/jayden-lee-821097383/",
+  },
+  {
+    name: "Shirley Li",
+    slug: "shirley-li",
+    role: "Director of Growth and Outreach",
+    image: "/univadev.svg",
+    bio: "Shirley Li is a Grade 11 student at St. Theresa of Lisieux CHS with strong interests in health sciences and business. She is actively involved in her school and community through leadership roles, volunteering, and extracurriculars such as DECA and lifeguarding. Outside of working, she enjoys spending time with friends, watching movies, and listening to music.",
+    linkedin: "https://www.linkedin.com/in/shirley-li-a658b9365",
   },
   
 ];
