@@ -3,6 +3,7 @@ import "./globals.css";
 import Script from "next/script";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/sonner";
+import CrimsonTracker from '@/components/CrimsonTracker';
 
 export const metadata: Metadata = {
   title: "Univa Dev | The Future of STEM Leadership",
@@ -69,6 +70,7 @@ export default function RootLayout({
           disableTransitionOnChange
           storageKey="theme"
         >
+          <CrimsonTracker />
           {children}
           <Toaster richColors position="top-center" />
         </ThemeProvider>
