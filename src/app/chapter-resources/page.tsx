@@ -1,51 +1,14 @@
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
+import PortalGlimpseSection from "@/components/sections/portal-glimpse-section";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import {
   Lock,
-  Brain,
-  Layers,
-  Network,
-  Calendar,
-  TrendingUp,
   Shield,
   Award,
   Sparkles,
 } from "lucide-react";
-
-const portalFeatures = [
-  {
-    icon: Brain,
-    title: "Leadership Intelligence",
-    description:
-      "Tools designed to amplify your chapter's impact — tracking growth, engagement, and regional influence.",
-  },
-  {
-    icon: Layers,
-    title: "Curriculum Engine",
-    description:
-      "A living ecosystem of AI modules, workshops, and project pathways unlocked once your chapter is approved.",
-  },
-  {
-    icon: Network,
-    title: "Global Network",
-    description:
-      "Connect with other leaders, access private forums, and participate in international leadership circles.",
-  },
-  {
-    icon: Calendar,
-    title: "Event Infrastructure",
-    description:
-      "Professional templates and frameworks used to host world-class bootcamps, hackathons, and summits.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Performance Analytics",
-    description:
-      "A powerful dashboard mapping your chapter's progress and positioning on the global leaderboard.",
-  },
-];
 
 export default function ChapterResources() {
   return (
@@ -90,43 +53,7 @@ export default function ChapterResources() {
           </div>
         </section>
 
-        {/* A Glimpse Into the Portal */}
-        <section className="py-24 lg:py-32 bg-gray-50">
-          <div className="container mx-auto px-5 sm:px-8 lg:px-12">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-20">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                  A Glimpse Into the Portal
-                </h2>
-                <p className="text-xl text-gray-600 font-normal">
-                  Sleek tools. Powerful systems. Reserved for leaders.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {portalFeatures.map((feature, idx) => {
-                  const IconComponent = feature.icon;
-                  return (
-                    <div
-                      key={idx}
-                      className="group bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-all duration-300"
-                    >
-                      <div className="mb-6 p-4 bg-blue-50 rounded-lg w-fit group-hover:bg-blue-100 transition-all duration-300">
-                        <IconComponent className="h-8 w-8 text-blue-600" />
-                      </div>
-                      <h3 className="text-xl font-bold mb-4 text-gray-900">
-                        {feature.title}
-                      </h3>
-                      <p className="text-gray-600 leading-relaxed text-base">
-                        {feature.description}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </section>
+        <PortalGlimpseSection />
 
         {/* The Leader Advantage */}
         <section className="py-24 lg:py-32 bg-white">

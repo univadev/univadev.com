@@ -1,28 +1,8 @@
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
+import ServicesOfferSection from "@/components/sections/services-offer-section";
 import { Button } from "@/components/ui/button";
-import { Code, Globe, Users, TrendingUp, CheckCircle2, ArrowRight } from "lucide-react";
-
-const services = [
-  {
-    icon: Globe,
-    title: "Website Development",
-    description:
-      "Build your digital identity from the ground up. We create professional, production-grade websites that build trust and engage your audience.",
-  },
-  {
-    icon: Code,
-    title: "Custom Software Tools",
-    description:
-      "Develop tailored software solutions that streamline your operations and amplify your impact. From concept to deployment.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Design & UX Refinement",
-    description:
-      "Transform AI-generated designs into polished, professional interfaces that increase user engagement and build credibility.",
-  },
-];
+import { Code, Users, CheckCircle2, ArrowRight } from "lucide-react";
 
 const benefits = [
   "Professional UI/UX that builds trust",
@@ -59,43 +39,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Services Grid */}
-        <section className="py-24 lg:py-32 bg-gray-50">
-          <div className="container mx-auto px-5 sm:px-8 lg:px-12">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-20">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                  What We Offer
-                </h2>
-                <p className="text-xl text-gray-600 font-normal">
-                  Comprehensive tech solutions for nonprofits
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {services.map((service, idx) => {
-                  const IconComponent = service.icon;
-                  return (
-                    <div
-                      key={idx}
-                      className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-all duration-300"
-                    >
-                      <div className="mb-6 p-4 bg-[#ff7f50]/10 rounded-lg w-fit">
-                        <IconComponent className="h-8 w-8 text-[#ff7f50]" />
-                      </div>
-                      <h3 className="text-xl font-bold mb-4 text-gray-900">
-                        {service.title}
-                      </h3>
-                      <p className="text-gray-600 leading-relaxed text-base">
-                        {service.description}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </section>
+        <ServicesOfferSection />
 
         {/* Impact Stats */}
         <section className="py-24 lg:py-32 bg-white">
