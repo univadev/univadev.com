@@ -38,7 +38,11 @@ const utilityLinks = [
   { href: "/impact/", label: "Community" },
 ];
 
-const NavigationHeader = () => {
+const NavigationHeader = ({
+  disableBackdropBlur = false,
+}: {
+  disableBackdropBlur?: boolean;
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -92,7 +96,10 @@ const NavigationHeader = () => {
         className={cn(
           "fixed left-0 right-0 z-50 transition-all duration-300",
           isScrolled || isMenuOpen
-            ? "bg-white/80 backdrop-blur-md shadow-sm"
+            ? cn(
+                "shadow-sm",
+                disableBackdropBlur ? "bg-white/95" : "bg-white/80 backdrop-blur-md"
+              )
             : "bg-transparent"
         )}
       >
