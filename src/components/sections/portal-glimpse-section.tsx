@@ -121,7 +121,7 @@ function PortalFeatureCard({
 
   return (
     <article
-      className={`portal-feature-card group relative isolate flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-[0_1px_0_rgba(15,23,42,0.03)] transition-colors duration-300 ${cardSize} ${className}`}
+      className={`portal-feature-card relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-[0_1px_0_rgba(15,23,42,0.03)] ${cardSize} ${className}`}
     >
       <div
         className={`flex items-start justify-between gap-6 ${
@@ -129,7 +129,7 @@ function PortalFeatureCard({
         }`}
       >
         <div
-          className={`portal-feature-icon flex items-center justify-center rounded-lg bg-[var(--portal-soft)] text-[var(--portal-accent)] ${iconSize}`}
+          className={`portal-feature-icon flex items-center justify-center text-orange-500 ${iconSize}`}
         >
           <IconComponent
             aria-hidden="true"

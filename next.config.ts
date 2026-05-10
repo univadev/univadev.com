@@ -14,7 +14,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  outputFileTracingRoot: path.resolve(__dirname, '../../'),
+  outputFileTracingRoot: path.resolve(__dirname, '../../../'),
+  turbopack: {
+    root: path.resolve(__dirname, '../../../'),
+  },
   typescript: {
     ignoreBuildErrors: true,
   },
