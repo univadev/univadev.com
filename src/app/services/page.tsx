@@ -98,7 +98,7 @@ export default function ServicesPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Developers Track */}
                 <div className="bg-white border-2 border-gray-200 rounded-lg p-10 hover:border-[#ff7f50] transition-all duration-300">
-                  <div className="mb-6 p-4 bg-[#ff7f50]/10 rounded-lg w-fit">
+                  <div className="mb-6 w-fit">
                     <Code className="h-10 w-10 text-[#ff7f50]" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">
@@ -123,7 +123,7 @@ export default function ServicesPage() {
 
                 {/* Partners Track */}
                 <div className="bg-white border-2 border-gray-200 rounded-lg p-10 hover:border-[#ff7f50] transition-all duration-300">
-                  <div className="mb-6 p-4 bg-[#ff7f50]/10 rounded-lg w-fit">
+                  <div className="mb-6 w-fit">
                     <Users className="h-10 w-10 text-[#ff7f50]" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">

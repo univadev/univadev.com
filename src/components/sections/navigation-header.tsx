@@ -106,7 +106,7 @@ const NavigationHeader = ({
         <div className="container mx-auto px-5 sm:px-8 lg:px-12">
           <div className="relative flex h-[74px] items-center">
             {/* Mobile Header */}
-            <div className="flex flex-1 items-center justify-between lg:hidden">
+            <div className="flex flex-1 items-center justify-between nav:hidden">
               <a href="/">
                 <Image
                   src={logoUrl}
@@ -130,7 +130,7 @@ const NavigationHeader = ({
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:grid lg:grid-cols-3 lg:items-center w-full">
+            <div className="hidden nav:grid nav:grid-cols-3 nav:items-center w-full">
               <nav className="flex gap-x-8 justify-self-start">
                 {navLinks.map((link) => (
                   <div
@@ -202,13 +202,7 @@ const NavigationHeader = ({
                     {link.label}
                   </a>
                 ))}
-                <Button
-                  variant="default"
-                  className="rounded-full bg-black text-white px-6 py-2 h-auto text-base font-semibold font-sans hover:bg-neutral-800"
-                  asChild
-                >
-                  <a href="#">Get Started</a>
-                </Button>
+
               </nav>
             </div>
           </div>
@@ -218,7 +212,7 @@ const NavigationHeader = ({
       {/* Mobile Menu - Full Screen Overlay */}
       {isMenuOpen && (
         <div
-          className="lg:hidden fixed left-0 right-0 bottom-0 bg-white z-40 flex flex-col overflow-hidden"
+          className="nav:hidden fixed left-0 right-0 bottom-0 bg-white z-40 flex flex-col overflow-hidden"
           style={{ top: mobileMenuTop }}
         >
           {/* Tab 1: Main Links */}

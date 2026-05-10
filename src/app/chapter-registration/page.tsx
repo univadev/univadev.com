@@ -258,28 +258,13 @@ export default function ChapterRegistration() {
       <NavigationHeader disableBackdropBlur />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative isolate h-[calc(100vh-5rem)] min-h-[560px] w-full overflow-hidden bg-[#F8F8F8]">
-          <video
-            className="absolute left-1/2 top-1/2 -z-20 h-full w-[108%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover"
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            aria-hidden="true"
-          >
-            <source
-              src="/videos/chapter-registration-hero.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <div className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-black/45 via-black/20 to-transparent" />
-          <div className="absolute bottom-8 left-5 right-5 sm:left-8 sm:right-auto md:bottom-12 md:left-12">
+        <section className="relative isolate h-[calc(100vh-5rem)] min-h-[560px] w-full overflow-hidden bg-[#F8F8F8] flex items-center">
+          <div className="px-5 sm:px-8 md:px-12">
             <div className="max-w-5xl">
-              <p className="mb-6 max-w-5xl font-['Cormorant_Garamond',Georgia,serif] text-[32px] font-semibold leading-none text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] sm:whitespace-nowrap md:text-[44px] lg:text-[54px]">
+              <p className="mb-6 max-w-5xl font-['Cormorant_Garamond',Georgia,serif] text-[32px] font-semibold leading-none text-black sm:whitespace-nowrap md:text-[44px] lg:text-[54px]">
                 Transform your{" "}
-                <span className="text-[#ffd166]">community</span> through{" "}
-                <span className="text-[#ffd166]">STEM</span>
+                <span className="text-[#B8860B]">community</span> through{" "}
+                <span className="text-[#B8860B]">STEM</span>
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Button

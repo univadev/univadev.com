@@ -19,16 +19,6 @@ export default function ChapterResources() {
         <section className="relative py-32 lg:py-48 bg-white overflow-hidden">
           <div className="container mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="mb-10 flex justify-center">
-                <div className="p-6 bg-blue-600 rounded-full shadow-md">
-                  <Lock className="h-16 w-16 text-white" />
-                </div>
-              </div>
-              <div className="inline-block mb-6 px-5 py-2 bg-blue-50 border border-blue-200 rounded-full">
-                <span className="text-sm font-semibold text-blue-700 tracking-widest uppercase">
-                  Exclusive Access
-                </span>
-              </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.1] text-gray-900">
                 The Global Chapter Portal
               </h1>
@@ -71,8 +61,8 @@ export default function ChapterResources() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center group">
                   <div className="mb-8 flex justify-center">
-                    <div className="p-6 bg-blue-50 border border-blue-200 rounded-lg group-hover:bg-blue-100 group-hover:shadow-md transition-all duration-300">
-                      <Shield className="h-12 w-12 text-blue-600" />
+                    <div className="p-6">
+                      <Shield className="h-12 w-12 text-orange-500" />
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold mb-5 text-gray-900">
@@ -90,8 +80,8 @@ export default function ChapterResources() {
 
                 <div className="text-center group">
                   <div className="mb-8 flex justify-center">
-                    <div className="p-6 bg-blue-50 border border-blue-200 rounded-lg group-hover:bg-blue-100 group-hover:shadow-md transition-all duration-300">
-                      <Award className="h-12 w-12 text-blue-600" />
+                    <div className="p-6">
+                      <Award className="h-12 w-12 text-orange-500" />
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold mb-5 text-gray-900">
@@ -107,8 +97,8 @@ export default function ChapterResources() {
 
                 <div className="text-center group">
                   <div className="mb-8 flex justify-center">
-                    <div className="p-6 bg-blue-50 border border-blue-200 rounded-lg group-hover:bg-blue-100 group-hover:shadow-md transition-all duration-300">
-                      <Sparkles className="h-12 w-12 text-blue-600" />
+                    <div className="p-6">
+                      <Sparkles className="h-12 w-12 text-orange-500" />
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold mb-5 text-gray-900">

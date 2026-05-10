@@ -60,7 +60,7 @@ function ServiceOfferCard({
         settled ? "min-h-[330px] p-8 lg:min-h-[360px] lg:p-9" : "min-h-[300px] p-9"
       }`}
     >
-      <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-lg bg-[#ff7f50]/10 text-[#ff7f50] transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-105">
+      <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-lg bg-[#ff7f50]/10 text-[#ff7f50]">
         <IconComponent aria-hidden="true" className="h-8 w-8" strokeWidth={2.4} />
       </div>
       <h3 className="mb-5 text-xl font-bold text-gray-950">{offer.title}</h3>
