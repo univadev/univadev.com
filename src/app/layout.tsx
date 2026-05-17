@@ -3,7 +3,7 @@ import "./globals.css";
 import Script from "next/script";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/sonner";
-import CrimsonTracker from '@/components/CrimsonTracker';
+import CrimsonTracker from "@/components/CrimsonTracker";
 
 export const metadata: Metadata = {
   title: "Univa Dev | The Future of STEM Leadership",
@@ -30,7 +30,10 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet"
+        ></link>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -61,6 +64,26 @@ export default function RootLayout({
 
           gtag('config', 'G-9JJE0HEMVP');`}
         </script>
+        <script>
+          {`window.CrimsonConfig = {
+  siteName: "Univa Dev",
+  pfpURL: "https://univadev.com/univadev.svg",
+  font: "Inter, sans-serif",
+  colors: {
+    introBg: "#2e211a",
+    introText: "#fff2e0",
+    panelBg: "#fafafa",
+    tabsBg: "#e9d9d8",
+    accent: "#e9380c",
+    accentHover: "#981f01",
+    accentText: "#ffffff",
+    focus: "#613400",
+    focusRing: "#61340040",
+  },
+};`}
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="https://cdn.jsdelivr.net/gh/EldiiarBekbolotov/CrimsonJS@latest/js/crimson.min.js"></script>
       </head>
       <body className="antialiased">
         <ThemeProvider
