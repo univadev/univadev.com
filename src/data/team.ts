@@ -129,8 +129,5 @@ export const team: TeamMember[] = [
     bio: "Hi my name is Ryan, I’m a grade 11 student at LDHSS with a passion for coding, technology and problem solving. I love turning ideas into projects and exploring new challenges.",
     linkedin: "https://www.linkedin.com/in/ryanmmah/",
   },
-  
- 
-  
 ];
 
