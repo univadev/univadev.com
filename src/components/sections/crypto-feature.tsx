@@ -22,9 +22,8 @@ const CryptoFeature = () => {
               Master the skills that matter
             </h2>
             <p className="text-lg text-black leading-relaxed max-w-md mx-auto md:mx-0 mb-8">
-              From AI and machine learning to software development and data
-              science—build expertise through hands-on projects and expert-led
-              workshops that prepare you for the future of tech.
+              From AI and machine learning to software development, data
+              science, and product design.
             </p>
             <a
               href="/events"

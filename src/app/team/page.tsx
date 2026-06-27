@@ -14,14 +14,6 @@ export default function Team() {
             Meet the Team
           </h1>
 
-          <p className="max-w-3xl mx-auto text-lg text-center text-muted-foreground mb-10">
-            A talented group of students, mentors, and professionals who build
-            programs, run events, and support chapter success around the world.
-            Our team is committed to accessibility, professionalism, and
-            high-quality student experiences.
-            <br/>
-            This is not the full team. We are still hiring and onboarding new memebrs!
-          </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {team.map((member) => (

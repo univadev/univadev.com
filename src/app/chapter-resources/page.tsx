@@ -72,8 +72,7 @@ export default function ChapterResources() {
                     Not everyone gets access.
                     <br />
                     <span className="text-gray-500">
-                      Only official chapter leaders can enter the portal — and
-                      that's what keeps the community world-class.
+                      Only official chapter leaders can enter the portal.
                     </span>
                   </p>
                 </div>
@@ -108,8 +107,7 @@ export default function ChapterResources() {
                     Competitions. Grants. Summits.
                     <br />
                     <span className="text-gray-500">
-                      All released to chapters first — sometimes only to
-                      chapters.
+                      All released to chapters first.
                     </span>
                   </p>
                 </div>

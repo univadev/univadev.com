@@ -29,7 +29,7 @@ const TeenBankingSection = () => {
             <p className="text-lg text-black max-w-[450px] mx-auto lg:mx-0 mb-8 leading-relaxed">
               We believe every student deserves the chance to build meaningful
               projects and make a positive impact on the world through
-              technology—regardless of background or resources.
+              technology and that one's background or access to resources shouldn't be a barrier.
             </p>
             {/*<a
               href="/about"
