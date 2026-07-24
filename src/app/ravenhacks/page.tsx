@@ -1,36 +1,31 @@
 import Image from "next/image";
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
-import { Button } from "@/components/ui/button";
-import {
-  Calendar,
-  Users,
-  Code,
-  Video,
-  FileText,
-  ExternalLink,
-  Sparkles,
-  Target,
-  Presentation,
-  Palette,
-  TrendingUp,
-  Trophy,
-  Award,
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+
+const DEVPOST_URL = "https://raven-hacks-vtl.devpost.com/";
+const DISCORD_URL = "https://discord.gg/PRndM3ha66";
+
+const eventFacts = [
+  { label: "Dates", value: "March 14–22, 2026" },
+  { label: "Format", value: "Fully virtual" },
+  { label: "Participants", value: "120" },
+  { label: "Prize pool", value: "$35,000+" },
+];
 
 const winners = [
   {
-    place: "1st",
+    place: "1st place",
     project: "Project SignBridge",
     href: "https://devpost.com/software/project-signbridge",
   },
   {
-    place: "2nd",
+    place: "2nd place",
     project: "echoOS",
     href: "https://devpost.com/software/echoos",
   },
   {
-    place: "3rd",
+    place: "3rd place",
     project: "VoiceForge",
     href: "https://devpost.com/software/voiceforge-eivful",
   },
@@ -44,192 +39,287 @@ const specialAwards = [
   },
 ];
 
+const sponsors = [
+  {
+    href: "https://featherless.ai",
+    src: "/featherlessai-transparent.png",
+    alt: "featherless.ai",
+  },
+  {
+    href: "https://elevenlabs.io",
+    src: "/elevenlabs-logo-black.svg",
+    alt: "ElevenLabs",
+  },
+  {
+    href: "https://artofproblemsolving.com/",
+    src: "/aops.png",
+    alt: "Art of Problem Solving",
+  },
+  {
+    href: "https://codecrafters.io/",
+    src: "/codecrafters.png",
+    alt: "CodeCrafters",
+  },
+  { href: "https://gen.xyz/", src: "/xyz.png", alt: "gen.xyz" },
+  {
+    href: "https://www.yriscience.com/",
+    src: "/yri.jpg",
+    alt: "YRI Fellowship",
+  },
+  {
+    href: "https://www.interviewcake.com/",
+    src: "/interviewcake.png",
+    alt: "Interview Cake",
+  },
+];
+
+const aboutFacts = [
+  {
+    label: "Eligibility",
+    value: "Open exclusively to participants aged 13–18.",
+  },
+  {
+    label: "Theme",
+    value:
+      "AI, STEM, and creative problem-solving — projects that address real-world challenges using technology.",
+  },
+  {
+    label: "Submissions closed",
+    value: "11:59 PM Eastern, March 22, 2026.",
+  },
+];
+
+const requirements = [
+  {
+    title: "Project title and description",
+    description:
+      "A clear name and a 200–500 word overview explaining the problem it solves, how it works, technologies used, and challenges overcome.",
+  },
+  {
+    title: "Demo video",
+    description:
+      "A 2–3 minute walkthrough hosted on YouTube, Vimeo, or similar, showing the project in action.",
+  },
+  {
+    title: "Code repository",
+    description:
+      "A link to a public GitHub repo (or equivalent) with source code and a README covering setup instructions.",
+  },
+  {
+    title: "Team info",
+    description: "All team members and their roles.",
+  },
+  {
+    title: "Anything else (optional)",
+    description: "Slides, prototypes, or additional documentation.",
+  },
+];
+
+const judgingCriteria = [
+  {
+    title: "Innovation & originality",
+    weight: 25,
+    description:
+      "How novel is the solution, and does it offer a fresh perspective on an existing problem?",
+  },
+  {
+    title: "Real-world impact",
+    weight: 25,
+    description:
+      "Does it address a genuine problem with clearly defined, meaningful impact?",
+  },
+  {
+    title: "Technical implementation",
+    weight: 20,
+    description:
+      "Quality of execution, and whether the chosen tools were applied appropriately.",
+  },
+  {
+    title: "Presentation",
+    weight: 10,
+    description:
+      "Clarity of the documentation, and how well the demo communicates the core concept.",
+  },
+  {
+    title: "Design",
+    weight: 10,
+    description:
+      "Whether the interface or process flow is intuitive and aligned with the solution's purpose.",
+  },
+  {
+    title: "Feasibility & scalability",
+    weight: 10,
+    description:
+      "Whether the solution can realistically be built on and scaled beyond the hackathon.",
+  },
+];
+
 export default function RavenHacks() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-m3-surface text-m3-on-surface">
       <NavigationHeader />
       <main className="pt-20">
-        {/* Hero Section */}
-        <section className="py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white">
+        <section className="pb-12 pt-16 md:pb-16 md:pt-24">
           <div className="container mx-auto px-5 sm:px-8 lg:px-12">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.1] text-gray-900">
+            <div className="max-w-3xl">
+              <p className="m3-chip mb-6">Event ended</p>
+              <h1 className="m3-display-large mb-6 text-m3-on-surface">
                 Raven Hacks VTL
               </h1>
-              <p className="text-2xl md:text-3xl font-medium mb-8 text-gray-700">
-                Raven Hacks VTL has ended
+              <p className="m3-body-large max-w-2xl text-m3-on-surface-variant">
+                A student-led virtual hackathon from Univa Dev. Over nine days,
+                120 teenagers built, shipped, and demoed projects for a prize
+                pool worth more than $35,000. Every submission is still up on
+                Devpost.
               </p>
-              <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Thank you to the 120 participants who built, shipped, and
-                shared projects across the virtual hackathon. Prizes were valued
-                at over $35,000.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-                <Button
-                  size="lg"
-                  className="text-lg px-8 py-7 bg-[#ff7f50] text-white hover:bg-[#ff6b3d] font-medium shadow-md hover:shadow-lg transition-all"
-                  asChild
-                >
-                  <a
-                    href="https://raven-hacks-vtl.devpost.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    View Hackathon
-                    <ExternalLink className="h-5 w-5" />
-                  </a>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="text-lg px-8 py-7 border-2 border-gray-300 hover:border-[#ff7f50] hover:text-[#ff7f50] font-medium"
-                  asChild
-                >
-                  <a
-                    href="https://discord.gg/PRndM3ha66"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    Join Discord
-                    <ExternalLink className="h-5 w-5" />
-                  </a>
-                </Button>
-              </div>
-
-              {/* Event Details */}
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 max-w-5xl mx-auto">
-                <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <Calendar className="h-8 w-8 text-[#ff7f50] mb-3 mx-auto" />
-                  <div className="text-sm text-gray-600 mb-1">Dates</div>
-                  <div className="text-lg font-bold text-gray-900">
-                    Mar 14 - 22, 2026
-                  </div>
-                </div>
-                <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <Users className="h-8 w-8 text-[#ff7f50] mb-3 mx-auto" />
-                  <div className="text-sm text-gray-600 mb-1">Format</div>
-                  <div className="text-lg font-bold text-gray-900">Online</div>
-                </div>
-                <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <Trophy className="h-8 w-8 text-[#ff7f50] mb-3 mx-auto" />
-                  <div className="text-sm text-gray-600 mb-1">Prizes</div>
-                  <div className="text-lg font-bold text-gray-900">$35K+</div>
-                </div>
-                <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <Users className="h-8 w-8 text-[#ff7f50] mb-3 mx-auto" />
-                  <div className="text-sm text-gray-600 mb-1">
-                    Participants
-                  </div>
-                  <div className="text-lg font-bold text-gray-900">120</div>
-                </div>
-              </div>
-
-              {/* Tags */}
-              <div className="flex flex-wrap gap-3 justify-center mt-8">
-                <span className="px-4 py-2 bg-[#ff7f50]/10 text-[#ff7f50] rounded-full text-sm font-medium">
-                  Beginner Friendly
-                </span>
-                <span className="px-4 py-2 bg-[#ff7f50]/10 text-[#ff7f50] rounded-full text-sm font-medium">
-                  Low/No Code
-                </span>
-                <span className="px-4 py-2 bg-[#ff7f50]/10 text-[#ff7f50] rounded-full text-sm font-medium">
-                  AI
-                </span>
-                <span className="px-4 py-2 bg-[#ff7f50]/10 text-[#ff7f50] rounded-full text-sm font-medium">
-                  Event Ended
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Notice Banner */}
-        <section className="bg-[#ff7f50]/10 border-y border-[#ff7f50]/20 py-6">
-          <div className="container mx-auto px-5 sm:px-8 lg:px-12">
-            <div className="max-w-4xl mx-auto">
-              <p className="text-center text-gray-700">
-                <strong>Event update:</strong> Raven Hacks VTL has ended.
-                Thank you to every participant, sponsor, judge, and supporter
-                who helped make the hackathon possible. The community Discord
-                remains available here:{" "}
+              <div className="mt-10 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="https://discord.gg/PRndM3ha66"
+                  href={DEVPOST_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#ff7f50] hover:underline font-medium"
+                  className="m3-btn m3-btn-lg m3-btn-filled"
                 >
-                  https://discord.gg/PRndM3ha66
+                  Browse submissions
+                  <ArrowUpRight aria-hidden="true" className="h-5 w-5" />
                 </a>
-              </p>
+                <a
+                  href={DISCORD_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="m3-btn m3-btn-lg m3-btn-outlined"
+                >
+                  Join the Discord
+                  <ArrowUpRight aria-hidden="true" className="h-5 w-5" />
+                </a>
+              </div>
             </div>
+
+            <dl className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-m3-md border border-m3-outline-variant bg-m3-outline-variant md:grid-cols-4">
+              {eventFacts.map((fact) => (
+                <div
+                  key={fact.label}
+                  className="bg-m3-surface-container-lowest px-5 py-6"
+                >
+                  <dt className="m3-label-medium mb-2 uppercase text-m3-on-surface-variant">
+                    {fact.label}
+                  </dt>
+                  <dd className="m3-title-large text-m3-on-surface">
+                    {fact.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </section>
 
-        {/* Winners Section */}
-        <section className="py-20 md:py-28 bg-white">
+        <section className="border-t border-m3-outline-variant bg-m3-surface-container-low py-16 md:py-24">
           <div className="container mx-auto px-5 sm:px-8 lg:px-12">
-            <div className="max-w-5xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 text-center">
-                The Winners of RavenHacks VTL
+            <div className="mx-auto max-w-5xl">
+              <h2 className="m3-headline-large mb-2 text-m3-on-surface">
+                Results
               </h2>
-              <p className="text-xl text-gray-700 mb-12 text-center">
-                Congratulations to the teams recognized in the final standings.
+              <p className="m3-body-large mb-10 text-m3-on-surface-variant">
+                Final standings as judged at the close of submissions.
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                {winners.map((winner) => (
-                  <a
+              <ol className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                {winners.map((winner, index) => (
+                  <li
                     key={winner.place}
-                    href={winner.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+                    className={index === 0 ? "md:col-span-2" : ""}
                   >
-                    <div className="flex items-center justify-between mb-8">
-                      <span className="text-sm font-semibold text-[#ff7f50] uppercase">
-                        {winner.place} Place
+                    <a
+                      href={winner.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`group flex h-full flex-col rounded-m3-md no-underline transition-colors ${
+                        index === 0
+                          ? "bg-m3-primary p-6 text-m3-on-primary hover:bg-m3-inverse-surface md:p-10"
+                          : "border border-m3-outline-variant bg-m3-surface-container-lowest p-6 hover:bg-m3-surface-container md:p-7"
+                      }`}
+                    >
+                      <span
+                        className={`m3-label-medium uppercase ${
+                          index === 0
+                            ? "text-m3-on-primary/70"
+                            : "text-m3-on-surface-variant"
+                        }`}
+                      >
+                        {winner.place}
                       </span>
-                      <Trophy className="h-7 w-7 text-[#ff7f50]" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      {winner.project}
-                    </h3>
-                    <span className="inline-flex items-center gap-2 text-[#ff7f50] font-medium group-hover:underline">
-                      View on Devpost
-                      <ExternalLink className="h-4 w-4" />
-                    </span>
-                  </a>
+                      <span
+                        className={`mt-3 ${
+                          index === 0
+                            ? "m3-display-medium"
+                            : "m3-headline-small text-m3-on-surface"
+                        }`}
+                      >
+                        {winner.project}
+                      </span>
+                      <span
+                        className={`m3-label-large mt-auto inline-flex items-center gap-1 pt-6 ${
+                          index === 0
+                            ? "text-m3-on-primary"
+                            : "text-m3-on-surface-variant group-hover:text-m3-on-surface"
+                        }`}
+                      >
+                        View on Devpost
+                        <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+                      </span>
+                    </a>
+                  </li>
                 ))}
-              </div>
+              </ol>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <h3 className="m3-title-small mt-12 mb-4 uppercase tracking-wide text-m3-on-surface-variant">
+                Special awards
+              </h3>
+              <ul className="divide-y divide-m3-outline-variant border-y border-m3-outline-variant">
                 {specialAwards.map((specialAward) => (
+                  <li key={specialAward.award}>
+                    <a
+                      href={specialAward.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-5 no-underline"
+                    >
+                      <span className="m3-title-medium text-m3-on-surface">
+                        {specialAward.award}
+                      </span>
+                      <span className="m3-body-large inline-flex items-center gap-1 text-m3-on-surface-variant group-hover:text-m3-on-surface">
+                        {specialAward.project}
+                        <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-m3-outline-variant py-16 md:py-20">
+          <div className="container mx-auto px-5 sm:px-8 lg:px-12">
+            <div className="mx-auto max-w-5xl">
+              <h2 className="m3-title-small mb-10 text-center uppercase tracking-wide text-m3-on-surface-variant">
+                Sponsored by
+              </h2>
+              <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 md:gap-x-16">
+                {sponsors.map((sponsor) => (
                   <a
-                    key={specialAward.award}
-                    href={specialAward.href}
+                    key={sponsor.alt}
+                    href={sponsor.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+                    className="opacity-70 transition-opacity hover:opacity-100"
                   >
-                    <div className="flex items-center gap-4">
-                      <div className="p-3 bg-[#ff7f50]/10 rounded-lg flex-shrink-0">
-                        <Award className="h-6 w-6 text-[#ff7f50]" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-semibold text-[#ff7f50] uppercase mb-1">
-                          {specialAward.award}
-                        </div>
-                        <h3 className="text-xl font-bold text-gray-900">
-                          {specialAward.project}
-                        </h3>
-                      </div>
-                    </div>
-                    <span className="inline-flex items-center gap-2 text-[#ff7f50] font-medium mt-5 group-hover:underline">
-                      View on Devpost
-                      <ExternalLink className="h-4 w-4" />
-                    </span>
+                    <Image
+                      src={sponsor.src}
+                      alt={sponsor.alt}
+                      width={200}
+                      height={60}
+                      className="h-10 w-auto object-contain md:h-12"
+                    />
                   </a>
                 ))}
               </div>
@@ -237,507 +327,148 @@ export default function RavenHacks() {
           </div>
         </section>
 
-        {/* Sponsors Section */}
-        <section className="py-16 md:py-20 bg-white">
+        <section className="border-t border-m3-outline-variant bg-m3-surface-container-low py-16 md:py-24">
           <div className="container mx-auto px-5 sm:px-8 lg:px-12">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-10 text-gray-900 text-center">
-                Sponsors
-              </h2>
-              <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16">
-                <a
-                  href="https://featherless.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity"
-                >
-                  <Image
-                    src="/featherlessai-transparent.png"
-                    alt="featherless.ai"
-                    width={200}
-                    height={60}
-                    className="h-12 w-auto object-contain md:h-14"
-                  />
-                </a>
-                <a
-                  href="https://elevenlabs.io"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity"
-                >
-                  <Image
-                    src="/elevenlabs-logo-black.svg"
-                    alt="ElevenLabs"
-                    width={200}
-                    height={60}
-                    className="h-12 w-auto object-contain md:h-14"
-                  />
-                </a>
-                <a
-                  href="https://artofproblemsolving.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity"
-                >
-                  <Image
-                    src="/aops.png"
-                    alt="Art of Problem Solving"
-                    width={200}
-                    height={60}
-                    className="h-12 w-auto object-contain md:h-14"
-                  />
-                </a>
-                <a
-                  href="https://codecrafters.io/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity"
-                >
-                  <Image
-                    src="/codecrafters.png"
-                    alt="CodeCrafters"
-                    width={200}
-                    height={60}
-                    className="h-12 w-auto object-contain md:h-14"
-                  />
-                </a>
-                <a
-                  href="https://gen.xyz/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity"
-                >
-                  <Image
-                    src="/xyz.png"
-                    alt="gen.xyz"
-                    width={200}
-                    height={60}
-                    className="h-12 w-auto object-contain md:h-14"
-                  />
-                </a>
-                <a
-                  href="https://www.yriscience.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity"
-                >
-                  <Image
-                    src="/yri.jpg"
-                    alt="YRI Fellowship"
-                    width={200}
-                    height={60}
-                    className="h-12 w-auto object-contain md:h-14"
-                  />
-                </a>
-                <a
-                  href="https://www.interviewcake.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity"
-                >
-                  <Image
-                    src="/interviewcake.png"
-                    alt="Interview Cake"
-                    width={200}
-                    height={60}
-                    className="h-12 w-auto object-contain md:h-14"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* About Section */}
-        <section className="py-20 md:py-28 bg-white">
-          <div className="container mx-auto px-5 sm:px-8 lg:px-12">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900 text-center">
-                About
-              </h2>
-              <div className="prose prose-lg max-w-none">
-                <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                  Raven Hacks VTL is a student-led hackathon presented by{" "}
-                  <strong>Univa Dev</strong>, a nonprofit organization dedicated
-                  to empowering the next generation of leaders in STEM and
-                  preparing them to succeed in the AI age. This event is
-                  designed <strong>for students, by students</strong>, fostering
-                  innovation, collaboration, and skill-building in a supportive
-                  virtual environment.
-                </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                    <h3 className="font-bold text-lg mb-3 text-gray-900">
-                      Eligibility
-                    </h3>
-                    <p className="text-gray-700">
-                      Open exclusively to participants aged 13-18.
-                    </p>
-                  </div>
-                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                    <h3 className="font-bold text-lg mb-3 text-gray-900">
-                      Format
-                    </h3>
-                    <p className="text-gray-700">
-                      Fully virtual - join from anywhere!
-                    </p>
-                  </div>
-                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                    <h3 className="font-bold text-lg mb-3 text-gray-900">
-                      Dates
-                    </h3>
-                    <p className="text-gray-700">March 14 - 11:59PM March 22, 2026</p>
-                  </div>
-                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                    <h3 className="font-bold text-lg mb-3 text-gray-900">
-                      Theme
-                    </h3>
-                    <p className="text-gray-700">
-                      Explore AI, STEM, and creative problem-solving. Build
-                      projects that address real-world challenges using
-                      technology.
-                    </p>
-                  </div>
+            <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-[minmax(0,1fr)_20rem] md:gap-16">
+              <div>
+                <h2 className="m3-headline-large mb-6 text-m3-on-surface">
+                  About the event
+                </h2>
+                <div className="m3-body-large space-y-4 text-m3-on-surface-variant">
+                  <p className="m3-body-large">
+                    Raven Hacks VTL was presented by{" "}
+                    <strong className="font-semibold text-m3-on-surface">
+                      Univa Dev
+                    </strong>
+                    , a nonprofit working to prepare the next generation of STEM
+                    leaders for the AI age. It was run for students, by
+                    students.
+                  </p>
+                  <p className="m3-body-large">
+                    Teams had nine days to go from an idea to a working demo,
+                    with mentors, workshops, and sponsor tooling available
+                    throughout. Judging happened after submissions closed, and
+                    the results are listed above.
+                  </p>
                 </div>
+              </div>
 
-                <p className="text-lg text-gray-700 mt-8 leading-relaxed">
-                  Raven Hacks VTL brought together 120 participants to ideate,
-                  prototype, and showcase their ideas in a supportive virtual
-                  environment.
+              <dl className="divide-y divide-m3-outline-variant border-t border-m3-outline-variant">
+                {aboutFacts.map((fact) => (
+                  <div key={fact.label} className="py-4">
+                    <dt className="m3-label-medium mb-1 uppercase text-m3-on-surface-variant">
+                      {fact.label}
+                    </dt>
+                    <dd className="m3-body-large text-m3-on-surface">
+                      {fact.value}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-m3-outline-variant py-16 md:py-24">
+          <div className="container mx-auto px-5 sm:px-8 lg:px-12">
+            <div className="mx-auto grid max-w-5xl gap-12 md:grid-cols-2 md:gap-16">
+              <div>
+                <h2 className="m3-headline-medium mb-2 text-m3-on-surface">
+                  What teams submitted
+                </h2>
+                <p className="m3-body-large mb-8 text-m3-on-surface-variant">
+                  Every entry went through Devpost with the following.
                 </p>
+                <ol className="divide-y divide-m3-outline-variant border-y border-m3-outline-variant">
+                  {requirements.map((item, index) => (
+                    <li key={item.title} className="flex gap-4 py-5">
+                      <span
+                        aria-hidden="true"
+                        className="m3-label-large mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-m3-secondary-container tabular-nums text-m3-on-secondary-container"
+                      >
+                        {index + 1}
+                      </span>
+                      <div>
+                        <h3 className="m3-title-medium mb-1 text-m3-on-surface">
+                          {item.title}
+                        </h3>
+                        <p className="m3-body-medium text-m3-on-surface-variant">
+                          {item.description}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              <div>
+                <h2 className="m3-headline-medium mb-2 text-m3-on-surface">
+                  How they were judged
+                </h2>
+                <p className="m3-body-large mb-8 text-m3-on-surface-variant">
+                  Six criteria, weighted as shown.
+                </p>
+                <ul className="divide-y divide-m3-outline-variant border-y border-m3-outline-variant">
+                  {judgingCriteria.map((item) => (
+                    <li key={item.title} className="py-5">
+                      <div className="mb-1 flex items-baseline justify-between gap-4">
+                        <h3 className="m3-title-medium text-m3-on-surface">
+                          {item.title}
+                        </h3>
+                        <span className="m3-label-large shrink-0 tabular-nums text-m3-on-surface-variant">
+                          {item.weight}%
+                        </span>
+                      </div>
+                      <p className="m3-body-medium text-m3-on-surface-variant">
+                        {item.description}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Requirements Section */}
-        <section className="py-20 md:py-28 bg-gray-50">
+        <section className="border-t border-m3-outline-variant bg-m3-surface-container-low py-16 md:py-24">
           <div className="container mx-auto px-5 sm:px-8 lg:px-12">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold mb-12 text-gray-900 text-center">
-                Requirements
+            <div className="mx-auto max-w-3xl rounded-m3-xl bg-m3-surface-container-highest p-10 text-center md:p-14">
+              <h2 className="m3-headline-large mb-4 text-m3-on-surface">
+                The projects are still online
               </h2>
-              <p className="text-xl text-gray-700 mb-10 text-center">
-                To submit your project, use the DevPost submission form by the
-                deadline (11:59 PM March 22, 2026 Eastern Time). Include:
+              <p className="m3-body-large mb-8 text-m3-on-surface-variant">
+                Browse every submission on Devpost, or stay in touch with the
+                community on Discord.
               </p>
-
-              <div className="space-y-6">
-                <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-[#ff7f50]/10 rounded-lg flex-shrink-0">
-                      <FileText className="h-6 w-6 text-[#ff7f50]" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2 text-gray-900">
-                        Project Title and Description
-                      </h3>
-                      <p className="text-gray-700">
-                        A clear name and a 200-500-word overview explaining the
-                        problem it solves, how it works, technologies used, and
-                        challenges overcome.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-[#ff7f50]/10 rounded-lg flex-shrink-0">
-                      <Video className="h-6 w-6 text-[#ff7f50]" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2 text-gray-900">
-                        Demo Video
-                      </h3>
-                      <p className="text-gray-700">
-                        A 2-3 minute video walkthrough (hosted on YouTube,
-                        Vimeo, or similar) showing your project in action.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-[#ff7f50]/10 rounded-lg flex-shrink-0">
-                      <Code className="h-6 w-6 text-[#ff7f50]" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2 text-gray-900">
-                        Code Repository
-                      </h3>
-                      <p className="text-gray-700">
-                        Link to a public GitHub repo (or equivalent) with your
-                        source code. Include a README.md with setup
-                        instructions.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-[#ff7f50]/10 rounded-lg flex-shrink-0">
-                      <Users className="h-6 w-6 text-[#ff7f50]" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2 text-gray-900">
-                        Team Info
-                      </h3>
-                      <p className="text-gray-700">
-                        List all team members and their roles.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-[#ff7f50]/10 rounded-lg flex-shrink-0">
-                      <FileText className="h-6 w-6 text-[#ff7f50]" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2 text-gray-900">
-                        Optional
-                      </h3>
-                      <p className="text-gray-700">
-                        Slides, prototypes, or additional docs.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div className="flex flex-col justify-center gap-3 sm:flex-row">
+                <a
+                  href={DEVPOST_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="m3-btn m3-btn-lg m3-btn-filled"
+                >
+                  Browse submissions
+                  <ArrowUpRight aria-hidden="true" className="h-5 w-5" />
+                </a>
+                <a
+                  href={DISCORD_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="m3-btn m3-btn-lg m3-btn-outlined"
+                >
+                  Join the Discord
+                  <ArrowUpRight aria-hidden="true" className="h-5 w-5" />
+                </a>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Judging Criteria Section */}
-        <section className="py-20 md:py-28 bg-gray-50">
-          <div className="container mx-auto px-5 sm:px-8 lg:px-12">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold mb-12 text-gray-900 text-center">
-                Judging Criteria
-              </h2>
-              <div className="space-y-6">
-                <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-[#ff7f50]/10 rounded-lg flex-shrink-0">
-                      <Sparkles className="h-6 w-6 text-[#ff7f50]" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-gray-900">
-                          Innovation & Originality
-                        </h3>
-                        <span className="text-lg font-semibold text-[#ff7f50]">
-                          25%
-                        </span>
-                      </div>
-                      <p className="text-gray-700">
-                        How novel and original is the solution? Does it offer a
-                        fresh perspective on existing problems? Is the approach
-                        creative and outside-the-box?
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-[#ff7f50]/10 rounded-lg flex-shrink-0">
-                      <Target className="h-6 w-6 text-[#ff7f50]" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-gray-900">
-                          Real-World Impact
-                        </h3>
-                        <span className="text-lg font-semibold text-[#ff7f50]">
-                          25%
-                        </span>
-                      </div>
-                      <p className="text-gray-700">
-                        Does the solution address a genuine and significant
-                        problem? How many people or systems could benefit from
-                        this solution? Is the potential impact clearly defined
-                        and meaningful? Does the solution promote broader goals
-                        such as inclusion or improved access?
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-[#ff7f50]/10 rounded-lg flex-shrink-0">
-                      <Code className="h-6 w-6 text-[#ff7f50]" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-gray-900">
-                          Technical Implementation
-                        </h3>
-                        <span className="text-lg font-semibold text-[#ff7f50]">
-                          20%
-                        </span>
-                      </div>
-                      <p className="text-gray-700">
-                        What is the quality of the execution, whether through
-                        code, logic, or other technical methods? Were the chosen
-                        tools and methodologies applied appropriately and
-                        effectively?
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-[#ff7f50]/10 rounded-lg flex-shrink-0">
-                      <Presentation className="h-6 w-6 text-[#ff7f50]" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-gray-900">
-                          Presentation
-                        </h3>
-                        <span className="text-lg font-semibold text-[#ff7f50]">
-                          10%
-                        </span>
-                      </div>
-                      <p className="text-gray-700">
-                        How clear and concise is the written documentation? Does
-                        the demo material effectively communicate the core
-                        concept? Is the communication professional and easy for
-                        the audience to follow?
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-[#ff7f50]/10 rounded-lg flex-shrink-0">
-                      <Palette className="h-6 w-6 text-[#ff7f50]" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-gray-900">
-                          Design
-                        </h3>
-                        <span className="text-lg font-semibold text-[#ff7f50]">
-                          10%
-                        </span>
-                      </div>
-                      <p className="text-gray-700">
-                        Does the design facilitate a better understanding of the
-                        solution? Is the interface or process flow intuitive and
-                        user-friendly? Does the design enhance overall
-                        engagement with the project? How well does the form of
-                        the solution follow its function?
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-[#ff7f50]/10 rounded-lg flex-shrink-0">
-                      <TrendingUp className="h-6 w-6 text-[#ff7f50]" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-gray-900">
-                          Feasibility & Scalability
-                        </h3>
-                        <span className="text-lg font-semibold text-[#ff7f50]">
-                          10%
-                        </span>
-                      </div>
-                      <p className="text-gray-700">
-                        Can this solution be realistically implemented in a
-                        real-world setting? Is there a logical path to expanding
-                        or scaling the solution? Have potential obstacles or
-                        limitations been identified and addressed?
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Judges Section */}
-        <section className="py-20 md:py-28 bg-white">
-          <div className="container mx-auto px-5 sm:px-8 lg:px-12">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-gray-900">
-                Judges
-              </h2>
-              <div className="bg-gray-50 border border-gray-200 rounded-lg p-10">
-                <p className="text-xl text-gray-700 mb-6">
-                  <strong>Thank you to the Raven Hacks VTL judges.</strong>
-                </p>
-                <p className="text-lg text-gray-600 mb-6">
-                  For follow-up questions, email{" "}
-                  <a
-                    href="mailto:univadev0@gmail.com"
-                    className="text-[#ff7f50] hover:underline font-medium"
-                  >
-                    univadev0@gmail.com
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white">
-          <div className="container mx-auto px-5 sm:px-8 lg:px-12">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                Raven Hacks VTL Has Ended
-              </h2>
-              <p className="text-xl text-gray-700 mb-10">
-                Explore the submissions and winning projects on Devpost.
+              <p className="m3-body-medium mt-8 text-m3-on-surface-variant">
+                Questions for the organizers or judges?{" "}
+                <a
+                  href="mailto:univadev0@gmail.com"
+                  className="font-medium text-m3-on-surface underline underline-offset-2"
+                >
+                  univadev0@gmail.com
+                </a>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  size="lg"
-                  className="text-lg px-8 py-7 bg-[#ff7f50] text-white hover:bg-[#ff6b3d] font-medium shadow-md hover:shadow-lg transition-all"
-                  asChild
-                >
-                  <a
-                    href="https://raven-hacks-vtl.devpost.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    View Hackathon on Devpost
-                    <ExternalLink className="h-5 w-5" />
-                  </a>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="text-lg px-8 py-7 border-2 border-gray-300 hover:border-[#ff7f50] hover:text-[#ff7f50] font-medium"
-                  asChild
-                >
-                  <a
-                    href="https://discord.gg/PRndM3ha66"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    Visit Discord Community
-                    <ExternalLink className="h-5 w-5" />
-                  </a>
-                </Button>
-              </div>
             </div>
           </div>
         </section>

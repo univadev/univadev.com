@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const BANNER_DISMISSED_KEY = "univadev-raven-hacks-banner-dismissed";
 const BANNER_HEIGHT = 48;
@@ -42,28 +41,24 @@ export function RavenHacksBanner({
 
   return (
     <div
-      className="fixed left-0 right-0 top-0 z-[100] flex h-12 items-center justify-center gap-4 bg-[#ff7f50] px-4 py-2 text-white shadow-sm"
+      className="fixed left-0 right-0 top-0 z-[100] flex items-center justify-center gap-4 border-b border-m3-outline-variant bg-m3-surface-container-high px-4 text-m3-on-surface"
       style={{ height: BANNER_HEIGHT }}
     >
-      <div className="flex flex-wrap items-center justify-center gap-4">
-        <p className="m-0 text-center text-sm font-medium leading-none sm:text-base">
-          Join Raven Hacks VTL now!
+      <div className="flex flex-wrap items-center justify-center gap-3">
+        <p className="m3-body-medium text-center text-m3-on-surface-variant">
+          Raven Hacks VTL has ended
         </p>
-        <Button
-          size="sm"
-          variant="secondary"
-          className="h-8 shrink-0 rounded-full bg-white px-4 text-[#ff7f50] hover:bg-white/90"
-          asChild
+        <Link
+          href="/ravenhacks"
+          className="m3-btn m3-btn-filled h-8 shrink-0 px-4"
         >
-          <Link href="/ravenhacks" className="flex items-center">
-            Join now
-          </Link>
-        </Button>
+          View recap
+        </Link>
       </div>
       <button
         type="button"
         onClick={handleDismiss}
-        className="absolute right-3 top-1/2 -translate-y-1/2 rounded p-1 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50"
+        className="absolute right-2 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full text-m3-on-surface-variant transition-colors hover:bg-m3-on-surface/8 focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-m3-primary"
         aria-label="Dismiss banner"
       >
         <X className="h-5 w-5" />
