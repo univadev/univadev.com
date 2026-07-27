@@ -15,9 +15,6 @@ const CryptoFeature = () => {
             />
           </div>
           <div className="md:col-span-5 text-center md:text-left">
-            <p className="text-sm font-semibold tracking-wider text-black uppercase mb-4">
-              TECHNICAL EXCELLENCE
-            </p>
             <h2 className="text-[32px] md:text-[48px] font-bold tracking-[-0.01em] leading-[1.2] text-black mb-4">
               Master the skills that matter
             </h2>

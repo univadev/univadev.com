@@ -5,14 +5,7 @@ import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
 import { ChapterCreationModal } from "@/components/ChapterCreationModal";
 import Image from "next/image";
-import {
-  Globe,
-  Cpu,
-  Calendar,
-  Award,
-  BarChart3,
-  Check,
-} from "lucide-react";
+import { Check } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -22,31 +15,26 @@ import {
 
 const benefits = [
   {
-    icon: Cpu,
     title: "AI Curriculum Platform",
     description:
       "Access a full suite of interactive AI modules powered by simulations, hands-on projects, real-time analytics, and adaptive learning.",
   },
   {
-    icon: Globe,
     title: "Global Community Platform",
     description:
       "Every chapter operates through our unified dashboard: track membership, submit reports, access content, chat with mentors, and monitor progress across the global network.",
   },
   {
-    icon: Calendar,
     title: "Automated Event Tools",
     description:
       "Host world-class AI workshops, hackathons, bootcamps, and community events using our guided, tech-enabled event templates.",
   },
   {
-    icon: Award,
     title: "Certification System",
     description:
       "Earn recognized certifications for Chapter Leaders, Officers, and Members through our automated learning management engine.",
   },
   {
-    icon: BarChart3,
     title: "Impact Analytics",
     description:
       "Leaders receive monthly insights and growth metrics powered by our internal data systems.",
@@ -97,22 +85,6 @@ const faqs = [
   },
 ];
 
-function BenefitCard({ benefit }: { benefit: (typeof benefits)[number] }) {
-  const IconComponent = benefit.icon;
-
-  return (
-    <article className="flex h-full flex-col rounded-m3-md border border-m3-outline-variant bg-m3-surface-container-lowest p-6 md:p-7">
-      <span className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-m3-primary-container text-m3-on-primary-container">
-        <IconComponent aria-hidden="true" className="h-5 w-5" strokeWidth={2} />
-      </span>
-      <h3 className="m3-title-large mb-2 text-m3-on-surface">{benefit.title}</h3>
-      <p className="m3-body-large text-m3-on-surface-variant">
-        {benefit.description}
-      </p>
-    </article>
-  );
-}
-
 export default function ChapterRegistration() {
   const [chapterModalOpen, setChapterModalOpen] = React.useState(false);
 
@@ -124,30 +96,31 @@ export default function ChapterRegistration() {
       />
       <NavigationHeader disableBackdropBlur />
       <main className="pt-20">
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-5 sm:px-8 md:px-12">
-            <div className="max-w-3xl">
+        {/* 1. Hero — bare white, no panel */}
+        <section className="pt-16 pb-14 md:pt-24 md:pb-24">
+          <div className="mx-auto max-w-[1280px] px-6 md:px-12">
+            <div className="max-w-[820px]">
               <p className="m3-label-large mb-4 text-m3-on-surface-variant">
                 Chapter Program
               </p>
               <h1 className="m3-display-large mb-6 text-m3-on-surface">
                 Transform your community through STEM
               </h1>
-              <p className="m3-body-large mb-10 max-w-2xl text-m3-on-surface-variant">
+              <p className="m3-body-large mb-10 max-w-[560px] text-m3-on-surface-variant">
                 Bring advanced AI education to your school, region, or community
                 with support from our global team.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <button
                   type="button"
-                  className="m3-btn m3-btn-lg m3-btn-filled"
+                  className="m3-btn m3-btn-lg m3-btn-filled w-full sm:w-auto"
                   onClick={() => setChapterModalOpen(true)}
                 >
                   Apply to start a chapter
                 </button>
                 <a
                   href="mailto:univadev0@gmail.com"
-                  className="m3-btn m3-btn-lg m3-btn-outlined"
+                  className="m3-btn m3-btn-lg m3-btn-tonal w-full sm:w-auto"
                 >
                   Schedule an info call
                 </a>
@@ -156,33 +129,41 @@ export default function ChapterRegistration() {
           </div>
         </section>
 
-        <section className="border-t border-m3-outline-variant bg-m3-surface-container-low py-16 md:py-24">
-          <div className="container mx-auto px-5 sm:px-8 md:px-12">
-            <div className="mx-auto mb-12 max-w-2xl text-center">
-              <h2 className="m3-headline-large mb-4 text-m3-on-surface">
-                Univa Dev chapters make a groundbreaking impact
-              </h2>
-              <p className="m3-body-large text-m3-on-surface-variant">
-                Powered by cutting-edge technology, global training programs, and
-                direct support from our central HQ.
-              </p>
-            </div>
-            <div className="mx-auto max-w-3xl">
-              <Image
-                src="/chapters.svg"
-                alt="Univa Dev Chapters"
-                width={800}
-                height={522}
-                className="h-auto w-full"
-                priority
-              />
+        {/* 2. Impact — tonal panel with text + media well */}
+        <section className="pb-14 md:pb-24">
+          <div className="mx-auto max-w-[1280px] px-6 md:px-12">
+            <div className="m3-panel mx-auto max-w-[1180px] bg-m3-surface-container">
+              <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
+                <div className="lg:col-span-5">
+                  <h2 className="m3-headline-large mb-4 max-w-[20ch] text-m3-on-surface">
+                    Univa Dev chapters make a groundbreaking impact
+                  </h2>
+                  <p className="m3-body-large text-m3-on-surface-variant">
+                    Powered by cutting-edge technology, global training
+                    programs, and direct support from our central HQ.
+                  </p>
+                </div>
+                <div className="lg:col-span-7">
+                  <div className="rounded-m3-md bg-m3-surface p-5 lg:rounded-m3-lg lg:p-8">
+                    <Image
+                      src="/chapters.svg"
+                      alt="Univa Dev Chapters"
+                      width={800}
+                      height={522}
+                      className="h-auto w-full grayscale"
+                      priority
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="border-t border-m3-outline-variant py-16 md:py-24">
-          <div className="container mx-auto px-5 sm:px-8 md:px-12">
-            <div className="mx-auto mb-12 max-w-2xl text-center">
+        {/* 3. Why start a chapter — bare white bento, index numerals instead of icons */}
+        <section className="pb-14 md:pb-24">
+          <div className="mx-auto max-w-[1280px] px-6 md:px-12">
+            <div className="mx-auto mb-14 max-w-[640px] text-center">
               <h2 className="m3-headline-large mb-4 text-m3-on-surface">
                 Why start a chapter?
               </h2>
@@ -191,65 +172,65 @@ export default function ChapterRegistration() {
               </p>
             </div>
 
-            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-3 md:grid-cols-6 md:gap-4">
               {benefits.map((benefit, idx) => (
-                <div
+                <article
                   key={benefit.title}
-                  className={
-                    idx === benefits.length - 1
-                      ? "md:col-span-2 md:mx-auto md:max-w-[calc(50%-0.5rem)]"
-                      : ""
-                  }
+                  className={`flex min-h-[216px] flex-col rounded-m3-xl bg-m3-surface-container p-8 ${
+                    idx < 2 ? "md:col-span-3" : "md:col-span-2"
+                  }`}
                 >
-                  <BenefitCard benefit={benefit} />
-                </div>
+                  <span
+                    aria-hidden="true"
+                    className="m3-label-medium mb-6 block text-m3-outline"
+                  >
+                    {String(idx + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="m3-title-large mb-2 text-m3-on-surface">
+                    {benefit.title}
+                  </h3>
+                  <p className="m3-body-large text-m3-on-surface-variant">
+                    {benefit.description}
+                  </p>
+                </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="border-t border-m3-outline-variant bg-m3-surface-container-low py-16 md:py-24">
-          <div className="container mx-auto px-5 sm:px-8 lg:px-12">
-            <div className="mx-auto max-w-5xl">
-              <div className="mb-12 text-center">
-                <h2 className="m3-headline-large mb-4 text-m3-on-surface">
-                  What chapters receive
-                </h2>
-                <p className="m3-body-large text-m3-on-surface-variant">
-                  Everything you need to lead with impact.
-                </p>
-              </div>
-
-              <div className="rounded-m3-lg bg-m3-surface-container-highest p-8 md:p-10">
-                <p className="m3-title-medium mb-8 text-m3-on-surface">
-                  Every approved chapter receives
-                </p>
-
-                <ul className="grid grid-cols-1 gap-x-8 gap-y-5 md:grid-cols-2">
-                  {chapterBenefits.map((benefit) => (
-                    <li key={benefit} className="flex items-start gap-3">
-                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-m3-primary text-m3-on-primary">
-                        <Check
-                          aria-hidden="true"
-                          className="h-3.5 w-3.5"
-                          strokeWidth={2.5}
-                        />
-                      </span>
-                      <span className="m3-body-large text-m3-on-surface-variant">
-                        {benefit}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+        {/* 4. What chapters receive — the page's one inverse moment */}
+        <section className="pb-14 md:pb-24">
+          <div className="mx-auto max-w-[1280px] px-6 md:px-12">
+            <div className="m3-panel m3-inverse mx-auto max-w-[1180px] bg-m3-inverse-surface">
+              <h2 className="m3-display-small mb-3 text-m3-on-inverse-surface">
+                What chapters receive
+              </h2>
+              <p className="m3-body-large mb-10 text-m3-inverse-on-variant">
+                Every approved chapter receives:
+              </p>
+              <ul className="grid grid-cols-1 gap-x-12 gap-y-5 md:grid-cols-2">
+                {chapterBenefits.map((benefit) => (
+                  <li key={benefit} className="flex items-start gap-3">
+                    <Check
+                      aria-hidden="true"
+                      className="mt-1 h-[18px] w-[18px] shrink-0 text-white"
+                      strokeWidth={2.25}
+                    />
+                    <span className="m3-body-large text-[#e5e5e5]">
+                      {benefit}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
 
-        <section className="border-t border-m3-outline-variant py-16 md:py-24">
-          <div className="container mx-auto px-5 sm:px-8 lg:px-12">
-            <div className="mx-auto max-w-3xl">
-              <div className="mb-12 text-center">
+        {/* 5. FAQ — editorial split: static rail + shape-morph accordion */}
+        <section className="pb-14 md:pb-24">
+          <div className="mx-auto max-w-[1280px] px-6 md:px-12">
+            <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
+              <div className="lg:col-span-4">
                 <h2 className="m3-headline-large mb-4 text-m3-on-surface">
                   Frequently asked questions
                 </h2>
@@ -258,50 +239,53 @@ export default function ChapterRegistration() {
                 </p>
               </div>
 
-              <Accordion type="single" collapsible className="space-y-2">
-                {faqs.map((faq, idx) => (
-                  <AccordionItem
-                    key={faq.question}
-                    value={`item-${idx}`}
-                    className="overflow-hidden rounded-m3-md border border-m3-outline-variant bg-m3-surface-container-lowest px-6 last:border-b"
-                  >
-                    <AccordionTrigger className="m3-title-medium cursor-pointer py-5 text-left text-m3-on-surface hover:no-underline">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="m3-body-large pb-5 text-m3-on-surface-variant">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
+              <div className="lg:col-span-7 lg:col-start-6">
+                <Accordion type="single" collapsible className="space-y-2">
+                  {faqs.map((faq, idx) => (
+                    <AccordionItem
+                      key={faq.question}
+                      value={`item-${idx}`}
+                      className="m3-faq-item border-b-0 px-6"
+                    >
+                      <AccordionTrigger className="m3-faq-trigger m3-title-medium min-h-16 cursor-pointer items-center text-left text-[1.0625rem] text-m3-on-surface hover:no-underline rounded-2xl focus-visible:ring-0 focus-visible:outline-solid focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-m3-primary [&>svg]:hidden">
+                        {faq.question}
+                        <span aria-hidden="true" className="m3-faq-plus">
+                          +
+                        </span>
+                      </AccordionTrigger>
+                      <AccordionContent className="m3-body-large pb-6 text-m3-on-surface-variant">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
             </div>
           </div>
         </section>
 
-        <section
-          id="apply"
-          className="border-t border-m3-outline-variant bg-m3-surface-container-low py-16 md:py-24"
-        >
-          <div className="container mx-auto px-5 sm:px-8 lg:px-12">
-            <div className="mx-auto max-w-3xl rounded-m3-xl bg-m3-surface-container-highest p-10 text-center md:p-14">
-              <h2 className="m3-headline-large mb-4 text-m3-on-surface">
+        {/* 6. Final CTA — emphasized tonal panel */}
+        <section id="apply" className="pb-14 md:pb-24">
+          <div className="mx-auto max-w-[1280px] px-6 md:px-12">
+            <div className="m3-panel mx-auto max-w-[1180px] bg-m3-surface-container-high text-center">
+              <h2 className="m3-display-small mb-4 text-m3-on-surface">
                 Ready to start?
               </h2>
-              <p className="m3-body-large mb-8 text-m3-on-surface-variant">
+              <p className="m3-body-large mx-auto mb-10 max-w-[520px] text-m3-on-surface-variant">
                 Apply now to launch your chapter and bring world-class STEM and
                 AI education to your community.
               </p>
               <div className="flex flex-col justify-center gap-3 sm:flex-row">
                 <button
                   type="button"
-                  className="m3-btn m3-btn-lg m3-btn-filled"
+                  className="m3-btn m3-btn-lg m3-btn-filled w-full sm:w-auto"
                   onClick={() => setChapterModalOpen(true)}
                 >
                   Apply to start a chapter
                 </button>
                 <a
                   href="mailto:univadev0@gmail.com"
-                  className="m3-btn m3-btn-lg m3-btn-outlined"
+                  className="m3-btn m3-btn-lg m3-btn-white w-full sm:w-auto"
                 >
                   Schedule an info call
                 </a>

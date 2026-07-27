@@ -20,9 +20,6 @@ const CreditBuildingSection = () => {
 
           {/* Text Column */}
           <div className="lg:col-span-6 flex flex-col justify-center">
-            <p className="font-semibold text-black text-xs tracking-wider uppercase mb-4 !whitespace-pre-line">
-              OUR MISSION
-            </p>
             <h2 className="font-bold text-black text-[32px] lg:text-5xl leading-[1.2] tracking-tight mb-6 !whitespace-pre-line">
               Empowering students with the skills to succeed in the future of
               STEM

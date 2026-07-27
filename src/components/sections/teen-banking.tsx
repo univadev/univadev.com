@@ -19,10 +19,6 @@ const TeenBankingSection = () => {
 
           {/* Text Column */}
           <div className="text-center lg:text-left">
-            <p className="text-[14px] font-semibold text-black tracking-[0.05em] uppercase mb-4">
-              OUR VISION
-            </p>
-
             <h2 className="text-[32px] leading-[1.2] lg:text-[48px] font-bold text-black tracking-[-0.01em] mb-6">
               A future where every student can innovate
             </h2>

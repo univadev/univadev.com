@@ -40,25 +40,23 @@ export function RavenHacksBanner({
   if (!mounted || !isVisible) return null;
 
   return (
-    <div
-      className="fixed left-0 right-0 top-0 z-[100] flex items-center justify-center gap-4 border-b border-m3-outline-variant bg-m3-surface-container-high px-4 text-m3-on-surface"
-      style={{ height: BANNER_HEIGHT }}
-    >
-      <div className="flex flex-wrap items-center justify-center gap-3">
-        <p className="m3-body-medium text-center text-m3-on-surface-variant">
-          Raven Hacks VTL has ended
-        </p>
-        <Link
-          href="/ravenhacks"
-          className="m3-btn m3-btn-filled h-8 shrink-0 px-4"
-        >
-          View recap
-        </Link>
-      </div>
+    <div className="fixed left-0 right-0 top-0 z-[100] flex h-12 items-center justify-center gap-4 bg-m3-inverse-surface px-14 text-m3-on-inverse-surface">
+      <p className="m3-body-medium hidden min-[440px]:block">
+        Raven Hacks VTL has ended
+      </p>
+      <p className="m3-body-medium hidden min-[380px]:block min-[440px]:hidden">
+        Raven Hacks has ended
+      </p>
+      <Link
+        href="/ravenhacks"
+        className="m3-focus-inset relative inline-flex h-8 shrink-0 items-center rounded-full bg-m3-surface px-4 font-m3 text-[13px] font-medium text-m3-on-surface no-underline [transition:background-color_150ms_var(--ease-m3),border-radius_250ms_var(--ease-m3)] after:absolute after:inset-x-0 after:-inset-y-2 hover:bg-[#ebebeb] active:rounded-[12px] active:bg-[#e0e0e0] focus-visible:outline-3 focus-visible:outline-m3-on-surface motion-reduce:transition-none motion-reduce:active:rounded-full"
+      >
+        View recap
+      </Link>
       <button
         type="button"
         onClick={handleDismiss}
-        className="absolute right-2 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full text-m3-on-surface-variant transition-colors hover:bg-m3-on-surface/8 focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-m3-primary"
+        className="m3-focus-inset absolute right-2 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full text-m3-inverse-on-variant transition-colors duration-150 ease-m3 hover:bg-white/8 hover:text-white active:bg-white/12 focus-visible:outline-3 focus-visible:outline-white motion-reduce:transition-none"
         aria-label="Dismiss banner"
       >
         <X className="h-5 w-5" />

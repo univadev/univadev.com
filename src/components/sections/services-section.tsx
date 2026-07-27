@@ -1,77 +1,65 @@
-import { Code, Globe, TrendingUp, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+
+const services = [
+  {
+    title: "Website Development",
+    description: "Build your digital identity from the ground up",
+  },
+  {
+    title: "Custom Software",
+    description: "Tailored solutions that streamline operations",
+  },
+  {
+    title: "Design Refinement",
+    description: "Transform concepts into production-grade apps",
+  },
+];
 
 const ServicesSection = () => {
   return (
-    <section className="bg-white py-20 md:py-28">
-      <div className="container mx-auto px-5 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+    <section className="bg-white py-14 md:py-24">
+      <div className="mx-auto max-w-[1280px] px-6 md:px-12">
+        <div className="m3-panel mx-auto max-w-[1180px] bg-m3-surface-container">
+          <div className="mx-auto mb-14 max-w-[640px] text-center">
+            <h2 className="m3-headline-large text-m3-on-surface">
               We build software for socially impactful initiatives
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We've worked with 6 nonprofits, totaling an average of 100k+ monthly
-              views on the websites we've built.
+            <p className="m3-body-large mt-4 text-m3-on-surface-variant">
+              We've worked with 6 nonprofits, totaling an average of 100k+
+              monthly views on the websites we've built.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <div className="mb-6 flex justify-center">
-                <div className="p-4 bg-[#ff7f50]/10 rounded-lg">
-                  <Globe className="h-8 w-8 text-[#ff7f50]" />
-                </div>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">
-                Website Development
-              </h3>
-              <p className="text-gray-600">
-                Build your digital identity from the ground up
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="mb-6 flex justify-center">
-                <div className="p-4 bg-[#ff7f50]/10 rounded-lg">
-                  <Code className="h-8 w-8 text-[#ff7f50]" />
-                </div>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">
-                Custom Software
-              </h3>
-              <p className="text-gray-600">
-                Tailored solutions that streamline operations
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="mb-6 flex justify-center">
-                <div className="p-4 bg-[#ff7f50]/10 rounded-lg">
-                  <TrendingUp className="h-8 w-8 text-[#ff7f50]" />
-                </div>
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">
-                Design Refinement
-              </h3>
-              <p className="text-gray-600">
-                Transform concepts into production-grade apps
-              </p>
-            </div>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, index) => (
+              <article
+                key={service.title}
+                className={
+                  index === services.length - 1
+                    ? "rounded-m3-lg bg-m3-surface p-7 md:col-span-2 lg:col-span-1"
+                    : "rounded-m3-lg bg-m3-surface p-7"
+                }
+              >
+                <span
+                  aria-hidden="true"
+                  className="m3-label-medium block text-m3-outline"
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="m3-title-large mt-6 text-m3-on-surface">
+                  {service.title}
+                </h3>
+                <p className="m3-body-large mt-2 text-m3-on-surface-variant">
+                  {service.description}
+                </p>
+              </article>
+            ))}
           </div>
 
-          <div className="text-center">
-            <Button
-              size="lg"
-              className="text-lg px-12 py-7 bg-[#ff7f50] text-white hover:bg-[#ff6b3d] font-medium shadow-md hover:shadow-lg transition-all"
-              asChild
-            >
-              <Link href="/services" className="flex items-center gap-2">
-                Learn More About Our Services
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </Button>
+          <div className="mt-10 text-center">
+            <Link href="/services" className="m3-btn m3-btn-lg m3-btn-filled">
+              Learn more about our services
+            </Link>
           </div>
         </div>
       </div>
