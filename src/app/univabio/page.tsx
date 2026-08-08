@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     q: "Can I use AI tools?",
-    a: "Yes — you're encouraged to. We want the technical barrier low enough that beginners with ambitious ideas can actually ship them. What matters is that you understand what you built and can explain it. Be prepared to walk judges through your own code.",
+    a: "Yes, you're encouraged to. We want the technical barrier low enough that beginners with ambitious ideas can actually ship them. What matters is that you understand what you built and can explain it. Be prepared to walk judges through your own code.",
   },
   {
     q: "Is it free?",
@@ -85,7 +85,7 @@ const faqs = [
   },
   {
     q: "Can I work in a team?",
-    a: "Yes. Work individually or in a team — whichever suits your project.",
+    a: "Yes. Work individually or in a team, whichever suits your project.",
   },
   {
     q: "How does judging work?",
@@ -93,7 +93,7 @@ const faqs = [
   },
   {
     q: "What are the prizes?",
-    a: "$5,420 in total. First place takes $2,790 in value (Momen credits, a two-year CodeCrafters membership, and InterviewBuddy credits), second $405, third $225 — plus a $2,000 special prize for the best no-code AI app built with Momen.",
+    a: "$5,420 in total. First place takes $2,790 in value (Momen credits, a two-year CodeCrafters membership, and InterviewBuddy credits), second $405, and third $225. There is also a $2,000 special prize for the best no-code AI app built with Momen.",
   },
   {
     q: "When is the deadline?",
@@ -425,11 +425,10 @@ export default function UnivaBioPage() {
               <p className="kicker">Judging</p>
               <h3>Scored by people who ship for a living</h3>
               <p>
-                Ryan Ahn (Hackathon Director), Sudheer Pratap (Lead Software
-                Engineer), and Aditya Shrivastava (Software Engineer at
-                Barclays) score projects on idea and innovation,
-                implementation, health impact and rigor, design and usability,
-                and presentation.
+                Sudheer Pratap (Lead Software Engineer) and Aditya Shrivastava
+                (Software Engineer at Barclays) score projects on idea and
+                innovation, implementation, health impact and rigor, design and
+                usability, and presentation.
               </p>
               <a
                 className="text-link"
@@ -493,7 +492,7 @@ export default function UnivaBioPage() {
               <h3>Four things to hand in</h3>
               <ul className="rules-list">
                 <li>
-                  A project — a website, app, or other coding prototype with
+                  A project: a website, app, or other coding prototype with
                   real user interaction.
                 </li>
                 <li>
@@ -523,15 +522,15 @@ export default function UnivaBioPage() {
               <p>
                 Technology for Human Health. Build something that helps people
                 detect illness earlier, understand it better, or live with it
-                more easily — an app, a website, a simulation, a system, or an
+                more easily: an app, a website, a simulation, a system, or an
                 algorithm.
               </p>
             </article>
             <article className="strip-item">
               <h3>Prizes</h3>
               <p>
-                $5,420 across three places — Momen credits, CodeCrafters
-                memberships, and InterviewBuddy credits — plus a $2,000 special
+                $5,420 across three places: Momen credits, CodeCrafters
+                memberships, and InterviewBuddy credits, plus a $2,000 special
                 prize for the best no-code AI app built with Momen.
               </p>
             </article>
@@ -539,7 +538,7 @@ export default function UnivaBioPage() {
               <h3>AI-friendly</h3>
               <p>
                 AI assistants are encouraged, so beginners with ambitious ideas
-                can actually ship them. Just understand what you built — be
+                can actually ship them. Just understand what you built and be
                 ready to walk judges through your own code.
               </p>
             </article>
@@ -644,8 +643,8 @@ export default function UnivaBioPage() {
               Ask on the{" "}
               <a href={DEVPOST_URL} target="_blank" rel="noopener noreferrer">
                 Devpost page
-              </a>{" "}
-              — the hackathon manager is a message away.
+              </a>
+              . The hackathon manager is a message away.
             </p>
           </div>
         </section>

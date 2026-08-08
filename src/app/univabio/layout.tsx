@@ -17,7 +17,7 @@ const sourceSans = Source_Sans_3({
 export const metadata: Metadata = {
   title: "UnivaBio | Univa Dev",
   description:
-    "UnivaBio is a global student hackathon hosted by Univa Dev and BioCataalysis. Build technology for human health — $5,420 in prizes, fully online, submissions due October 6, 2026.",
+    "UnivaBio is a global student hackathon hosted by Univa Dev and BioCataalysis. Build technology for human health. $5,420 in prizes, fully online, submissions due October 6, 2026.",
 };
 
 export default function UnivaBioLayout({
