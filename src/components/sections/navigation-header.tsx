@@ -18,6 +18,7 @@ const navLinks = [
   {
     label: "Events",
     items: [
+      { href: "/univabio/", label: "Univa Bio" },
       { href: "/ravenhacks/", label: "Raven Hacks" },
       /*{ href: "/univadev-summit/", label: "Univa Dev Summit" },*/
       { href: "/events/", label: "All events" },
@@ -107,7 +108,7 @@ const NavigationHeader = ({
           <div className="relative flex h-[74px] items-center">
             {/* Mobile Header */}
             <div className="flex flex-1 items-center justify-between nav:hidden">
-              <a href="/">
+              <a href="/" className="flex items-center gap-2.5">
                 <Image
                   src={logoUrl}
                   alt="Univa Dev Logo"
@@ -115,6 +116,9 @@ const NavigationHeader = ({
                   height={23}
                   priority
                 />
+                <span className="font-display text-lg font-medium leading-none tracking-tight whitespace-nowrap text-black">
+                  Univa Dev
+                </span>
               </a>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -177,7 +181,7 @@ const NavigationHeader = ({
               </nav>
 
               <div className="justify-self-center">
-                <a href="/">
+                <a href="/" className="flex items-center gap-2.5">
                   <Image
                     src={logoUrl}
                     alt="Univa Dev Logo"
@@ -185,6 +189,9 @@ const NavigationHeader = ({
                     height={23}
                     priority
                   />
+                  <span className="font-display text-lg font-medium leading-none tracking-tight whitespace-nowrap text-black">
+                    Univa Dev
+                  </span>
                 </a>
               </div>
 
