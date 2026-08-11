@@ -19,6 +19,7 @@ const navLinks = [
     label: "Events",
     items: [
       { href: "/univabio/", label: "Univa Bio" },
+      { href: "https://eurekadev.netlify.app/", label: "Eureka Dev" },
       { href: "/ravenhacks/", label: "Raven Hacks" },
       /*{ href: "/univadev-summit/", label: "Univa Dev Summit" },*/
       { href: "/events/", label: "All events" },
@@ -168,6 +169,8 @@ const NavigationHeader = ({
                             <a
                               key={item.href}
                               href={item.href}
+                              target={item.href.startsWith("http") ? "_blank" : "_self"}
+                              rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                               className="block px-6 py-3 text-base text-black hover:bg-black/5 transition-colors duration-200"
                             >
                               {item.label}
@@ -299,6 +302,8 @@ const NavigationHeader = ({
                     <a
                       key={item.href}
                       href={item.href}
+                      target={item.href.startsWith("http") ? "_blank" : "_self"}
+                      rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                       className="block px-6 py-4 text-lg text-black hover:bg-black/5 transition-colors border-b border-black/5 last:border-b-0"
                       onClick={handleMobileMenuClose}
                     >
