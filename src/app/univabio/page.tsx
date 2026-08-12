@@ -19,8 +19,8 @@ const navLinks = [
 ];
 
 const stats = [
-  { value: "$5,420", label: "in prizes" },
-  { value: "42", label: "participants" },
+  { value: "$35K+", label: "in prizes" },
+  { value: "80+", label: "participants" },
   { value: "13+", label: "ages, students only" },
   { value: "100%", label: "online" },
 ];
@@ -93,7 +93,7 @@ const faqs = [
   },
   {
     q: "What are the prizes?",
-    a: "$5,420 in total. First place takes $2,790 in value (Momen credits, a two-year CodeCrafters membership, and InterviewBuddy credits), second $405, and third $225. There is also a $2,000 special prize for the best no-code AI app built with Momen.",
+    a: "Over $35K in total. First place takes $2,790 in value (Momen credits, a two-year CodeCrafters membership, and InterviewBuddy credits), second $405, and third $225. There is a $2,000 special prize for the best no-code AI app built with Momen, and 100 winners will each receive $299 in Tin Computer Growth Credits ($29,900 in total; these are sponsor-provided credits, not cash). More prizes are coming soon.",
   },
   {
     q: "When is the deadline?",
@@ -529,9 +529,10 @@ export default function UnivaBioPage() {
             <article className="strip-item">
               <h3>Prizes</h3>
               <p>
-                $5,420 across three places: Momen credits, CodeCrafters
-                memberships, and InterviewBuddy credits, plus a $2,000 special
-                prize for the best no-code AI app built with Momen.
+                $35K+ in prizes: cash-value placements for the top three, a
+                $2,000 special prize for the best no-code AI app built with
+                Momen, and $299 in Tin Computer Growth Credits for each of 100
+                winners. More prizes coming soon.
               </p>
             </article>
             <article className="strip-item">
