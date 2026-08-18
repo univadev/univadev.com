@@ -60,6 +60,7 @@ const sponsors = [
     alt: "CodeCrafters",
   },
   { href: "https://interviewbuddy.net/", word: "InterviewBuddy" },
+  { href: "https://tincomputer.com/", word: "Tin Computer" },
 ];
 
 const faqs = [
@@ -90,10 +91,6 @@ const faqs = [
   {
     q: "How does judging work?",
     a: "Judges score five things: idea and innovation, implementation, health impact and rigor, design and usability, and presentation.",
-  },
-  {
-    q: "What are the prizes?",
-    a: "Over $35K in total. First place takes $2,790 in value (Momen credits, a two-year CodeCrafters membership, and InterviewBuddy credits), second $405, and third $225. There is a $2,000 special prize for the best no-code AI app built with Momen, and 100 winners will each receive $299 in Tin Computer Growth Credits ($29,900 in total; these are sponsor-provided credits, not cash). More prizes are coming soon.",
   },
   {
     q: "When is the deadline?",

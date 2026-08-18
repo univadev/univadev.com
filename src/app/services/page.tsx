@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
 import ServicesOfferSection from "@/components/sections/services-offer-section";
@@ -37,6 +38,9 @@ const tracks = [
 ];
 
 export default function ServicesPage() {
+  // Temporarily hidden: remove this redirect to bring the services page back.
+  redirect("/");
+
   return (
     <div className="min-h-screen bg-m3-surface text-m3-on-surface">
       <NavigationHeader />
