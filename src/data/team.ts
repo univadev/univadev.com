@@ -4,7 +4,7 @@ export interface TeamMember {
   role: string;
   image: string;
   bio: string;
-  linkedin: string;
+  linkedin?: string;
 }
 
 export const team: TeamMember[] = [
@@ -40,11 +40,18 @@ export const team: TeamMember[] = [
     bio: "Alex Zhou is currently a Grade 12 IB student at Merivale High School who lives for STEM and community building. Whether he’s working through a technical project or organizing an event, he’s at his best when he’s promoting new ideas and bringing people together.",
     linkedin: "https://www.linkedin.com/in/alex-zhou-0198243b0/",
   },
+  {
+    name: "Vishwesh Chinthukumar",
+    slug: "vishwesh-chinthukumar",
+    role: "Director of Technology",
+    image: "/univadev.svg",
+    bio: "Vishwesh Chinthukumar is a Grade 10 student at Lynbrook High School with a strong interest in computer science and AI/ML. He has built projects across web development, machine learning, robotics, and electrical engineering, including real-time systems. Through research and robotics, he focuses on creating practical technology that solves real-world problems.",
+  },
 
   {
     name: "Alireza Nouhehkhan",
     slug: "alireza-nouhehkhan",
-    role: "Chief Science Officer",
+    role: "Science",
     image: "/univadev.svg",
     bio: "Alireza Nouhehkhan is a Grade 12 student at Longfields-Davidson Heights Secondary School with a strong commitment to STEM, particularly biomedical data analysis and computational research. He serves as Chief Science Officer at Univa Dev, contributing to data-driven and technical initiatives, and works as an Independent Biomedical Data Analysis Researcher, conducting project-based analyses in ophthalmology and vision science using Python, statistical reasoning, and data visualization. Through hands-on professional experience in fast-paced, team-oriented environments and leadership roles, he has developed a disciplined, motivated approach to problem-solving, collaboration, and continuous learning.",
     linkedin: "https://www.linkedin.com/in/alireza-n-00a993324/",
@@ -52,7 +59,7 @@ export const team: TeamMember[] = [
   {
     name: "Chandan Nir",
     slug: "chandan-nir",
-    role: "Chief Logistics Officer",
+    role: "Logistics",
     image: "/univadev.svg",
     bio: "Hi, my name is Chandan, I am Grade 12 student at Longfields-Davidson Heights Secondary School. I have a passion for coding, chess and robotics! I am excited to see the future of Univa Dev!",
     linkedin: "https://www.linkedin.com/in/chandan-nir-280a0433b/",
@@ -60,7 +67,7 @@ export const team: TeamMember[] = [
   {
     name: "Anosh Dayananthan",
     slug: "anosh-daya",
-    role: "Chief Growth Officer",
+    role: "Growth",
     image: "/univadev.svg",
     bio: "I’m Anosh, a Grade 11 student at Longfields-Davidson Heights Secondary School student who’s passionate about tech, leadership, and real growth. As Univa Dev’s CGO, I’m focused on expanding our community and developing meaningful opportunities. Outside the classroom, I like to code projects and I have big passion for finance and I love to invest/trade.",
     linkedin: "https://www.linkedin.com/",
@@ -68,7 +75,7 @@ export const team: TeamMember[] = [
   {
     name: "Jayden Lee",
     slug: "jayden-lee",
-    role: "Director of Technology",
+    role: "Technology",
     image: "/univadev.svg",
     bio: "Jayden Lee is a software developer and a student at Abbey Park High School (APHS) with a strong passion for mathematics and artificial intelligence. He enjoys applying logic, creativity, and problem-solving to build meaningful software, and he is especially interested in how math can be used to power intelligent systems and real-world innovation. Through Univa Dev, Jayden is excited to keep learning, collaborate with other driven students, and contribute to projects that combine technology, curiosity, and impact.",
     linkedin: "https://www.linkedin.com/in/jayden-lee-821097383/",
@@ -76,7 +83,7 @@ export const team: TeamMember[] = [
   {
     name: "Shirley Li",
     slug: "shirley-li",
-    role: "Director of Growth and Outreach",
+    role: "Growth and Outreach",
     image: "/univadev.svg",
     bio: "Shirley Li is a Grade 12 student at St. Theresa of Lisieux CHS with strong interests in health sciences and business. She is actively involved in her school and community through leadership roles, volunteering, and extracurriculars such as DECA and lifeguarding. Outside of working, she enjoys spending time with friends, watching movies, and listening to music.",
     linkedin: "https://www.linkedin.com/in/shirley-li-a658b9365",
@@ -84,7 +91,7 @@ export const team: TeamMember[] = [
   {
     name: "Theo Kim",
     slug: "theo-kim",
-    role: "Director of Outreach",
+    role: "Outreach",
     image: "/univadev.svg",
     bio: "Theo Kim is a Grade 12 student from Earl of March Secondary School with a strong interest in business, finance, and entrepreneurship. He enjoys building projects that bring people together while learning about technology and innovation. Outside of school, Theo is involved in many leadership activities involving the business world. He’s excited to contribute to Univa Dev and see the ideas, collaborations and community that come out of the event.",
     linkedin: "https://www.linkedin.com/in/theo-kim-894b843b5/",
@@ -92,7 +99,7 @@ export const team: TeamMember[] = [
   {
     name: "Audrib Amin",
     slug: "audrib-amin",
-    role: "Director of Finance",
+    role: "Finance",
     image: "/univadev.svg",
     bio: "My name is Audrib Amin, and I am a Grade 12 student who is passionate about helping others. I am driven by an interest in the STEM field and offer non-profit leadership experience. I am excited to help Univa Dev have a positive impact on all!",
     linkedin: "https://www.linkedin.com/in/audrib-amin-73478335a/",

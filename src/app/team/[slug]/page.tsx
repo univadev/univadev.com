@@ -65,21 +65,23 @@ export default function TeamMemberPage({ params }: TeamMemberPageProps) {
                   {member.bio}
                 </p>
 
-                <Button
-                  variant="default"
-                  className="w-fit"
-                  asChild
-                >
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
+                {member.linkedin ? (
+                  <Button
+                    variant="default"
+                    className="w-fit"
+                    asChild
                   >
-                    <Linkedin className="h-5 w-5" />
-                    Connect on LinkedIn
-                  </a>
-                </Button>
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      <Linkedin className="h-5 w-5" />
+                      Connect on LinkedIn
+                    </a>
+                  </Button>
+                ) : null}
               </div>
             </div>
           </div>
