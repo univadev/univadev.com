@@ -13,7 +13,7 @@ export const team: TeamMember[] = [
     slug: "eldiiar-bekbolotov",
     role: "Chief Executive Officer",
     image: "/eldiiar.png",
-    bio: "Eldiiar Bekbolotov is a Grade 12 student at Longfields-Davidson Heights Secondary School. Driven by a passion for developing projects that connect STEM and education, he has experience in nonprofit leadership, freelance software development, and organizing hackathons offering prizes totaling six figures.",
+    bio: "Eldiiar Bekbolotov is a Grade 12 student at Longfields-Davidson Heights Secondary School and the co-founder of Univa Dev. Driven by a passion for entrepreneurship and technology, he is excited to lead Univa Dev to new heights.",
     linkedin: "https://www.linkedin.com/in/eldiiar/",
   },
   {
@@ -21,7 +21,7 @@ export const team: TeamMember[] = [
     slug: "kanuck-shah",
     role: "Chief Operations Officer",
     image: "/kanuck.png",
-    bio: "Kanuck Shah is a Grade 12 student who loves supporting his community and bringing people together. He’s passionate about tech, leadership, and trying new things. When he’s not working on something creative, he’s playing basketball, having fun, and bringing his usual energy. He’s been involved in many ventures but always knows how to lighten the mood.",
+    bio: "Kanuck Shah is a Grade 12 student at Longfields-Davidson Heights Secondary School and the co-founder of Univa Dev. He is passionate about tech, leadership, and trying new things. When he’s not working on something creative, he’s playing basketball, having fun, and bringing his usual energy. He’s been involved in many ventures but always knows how to lighten the mood.",
     linkedin: "https://www.linkedin.com/in/kanuck-shah-4959922bb/",
   },
   {
@@ -29,7 +29,7 @@ export const team: TeamMember[] = [
     slug: "matteo-maina",
     role: "Chief Financial Officer",
     image: "/matteo.jpeg",
-    bio: "My name is Matteo Maina, and I am currently a Grade 12 IB student at Merivale High School. Although being new to the STEM field, I have had previous leadership/management experience in overseeing non profits across business and educational fields. I am excited to see what awaits us and the impact Univa Dev will bring!",
+    bio: "Matteo Maina is a Grade 12 IB student at Merivale High School and the co-founder of Univa Dev. Although being new to the STEM field, he has had previous leadership/management experience in overseeing non profits across business and educational fields. He is excited to see what awaits us and the impact Univa Dev will bring!",
     linkedin: "https://www.linkedin.com/in/matteo-maina-3713422ab/",
   },
   {
