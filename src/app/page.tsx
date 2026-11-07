@@ -18,6 +18,18 @@ export default function Home() {
       <NavigationHeader />
       <main>
         <HeroSection />
+        <section aria-label="Our impact" className="bg-white border-b border-black/10">
+          <dl className="container mx-auto grid grid-cols-2 gap-6 px-5 py-10 text-center sm:px-8 md:py-14">
+            <div>
+              <dt className="text-base text-black/60 md:text-lg">Participants</dt>
+              <dd className="mt-2 text-4xl font-bold tracking-tight text-black md:text-5xl">1,600+</dd>
+            </div>
+            <div>
+              <dt className="text-base text-black/60 md:text-lg">In prizes</dt>
+              <dd className="mt-2 text-4xl font-bold tracking-tight text-black md:text-5xl">$94K+</dd>
+            </div>
+          </dl>
+        </section>
         <PaycheckFeatures />
         <CreditBuildingSection />
         <TestimonialsCarousel />
