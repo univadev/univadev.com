@@ -3,7 +3,6 @@ import HeroSection from '@/components/sections/hero-section';
 import PaycheckFeatures from '@/components/sections/paycheck-features';
 import CreditBuildingSection from '@/components/sections/credit-building';
 import TestimonialsCarousel from '@/components/sections/testimonials-carousel';
-import BankAnywhere from '@/components/sections/bank-anywhere';
 // Temporarily hidden: services messaging
 // import ServicesSection from '@/components/sections/services-section';
 import SavingsFeature from '@/components/sections/savings-feature';
@@ -22,7 +21,6 @@ export default function Home() {
         <PaycheckFeatures />
         <CreditBuildingSection />
         <TestimonialsCarousel />
-        <BankAnywhere />
         {/* <ServicesSection /> */}
         <SavingsFeature />
         <CryptoFeature />

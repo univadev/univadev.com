@@ -19,8 +19,8 @@ const navLinks = [
 ];
 
 const stats = [
-  { value: "$35K+", label: "in prizes" },
-  { value: "80+", label: "participants" },
+  { value: "$38K+", label: "in prizes" },
+  { value: "930+", label: "participants" },
   { value: "13+", label: "ages, students only" },
   { value: "100%", label: "online" },
 ];
@@ -526,7 +526,7 @@ export default function UnivaBioPage() {
             <article className="strip-item">
               <h3>Prizes</h3>
               <p>
-                $35K+ in prizes: cash-value placements for the top three, a
+                $38K+ in prizes: cash-value placements for the top three, a
                 $2,000 special prize for the best no-code AI app built with
                 Momen, and $299 in Tin Computer Growth Credits for each of 100
                 winners. More prizes coming soon.
