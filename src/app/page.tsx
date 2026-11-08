@@ -2,7 +2,8 @@ import NavigationHeader from '@/components/sections/navigation-header';
 import HeroSection from '@/components/sections/hero-section';
 import PaycheckFeatures from '@/components/sections/paycheck-features';
 import CreditBuildingSection from '@/components/sections/credit-building';
-import TestimonialsCarousel from '@/components/sections/testimonials-carousel';
+// Temporarily hidden: anonymous testimonials
+// import TestimonialsCarousel from '@/components/sections/testimonials-carousel';
 // Temporarily hidden: services messaging
 // import ServicesSection from '@/components/sections/services-section';
 import SavingsFeature from '@/components/sections/savings-feature';
@@ -32,7 +33,7 @@ export default function Home() {
         </section>
         <PaycheckFeatures />
         <CreditBuildingSection />
-        <TestimonialsCarousel />
+        {/* <TestimonialsCarousel /> */}
         {/* <ServicesSection /> */}
         <SavingsFeature />
         <CryptoFeature />

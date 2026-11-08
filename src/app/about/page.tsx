@@ -6,7 +6,6 @@ import Image from "next/image";
 const metrics = [
   { label: "Projects completed", value: "10" },
   { label: "Hackathon partners", value: "4" },
-  { label: "Monthly views", value: "100k" },
 ];
 
 export default function About() {
@@ -45,7 +44,7 @@ export default function About() {
             We've grown rapidly since our inception in Fall 2025.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
             {metrics.map((m) => (
               <div
                 key={m.label}
