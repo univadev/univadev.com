@@ -9,7 +9,7 @@ export default function CareersPage() {
 
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 mt-20 md:mt-32">Shape the future of STEM</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 mt-20 md:mt-32">Shape the future of entrepreneurship</h1>
 
           <p className="text-lg md:text-xl text-gray-700 mb-12">
             Univa Dev has opened core team applications for high school students worldwide!

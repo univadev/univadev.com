@@ -6,8 +6,8 @@ import { Toaster } from "@/components/ui/sonner";
 import CrimsonTracker from "@/components/CrimsonTracker";
 
 export const metadata: Metadata = {
-  title: "Univa Dev | The Future of STEM Leadership",
-  description: "Empowering the next generation of STEM leaders",
+  title: "Univa Dev | The Future of Entrepreneurial Leadership",
+  description: "Empowering the next generation of young entrepreneurs",
   icons: {
     icon: "/favicon/favicon-32x32.png",
     shortcut: "/favicon/favicon-16x16.png",

@@ -6,7 +6,7 @@ const features = [
     imageSrc: "/leadershipprograms.png",
     title: "Leadership Programs",
     description:
-      "Develop the skills to lead teams, manage projects, and drive innovation in STEM fields through hands-on experience.",
+      "Develop the skills to lead teams, manage projects, and drive innovation in business and entrepreneurship through hands-on experience.",
     ariaLabel: "Leadership Programs",
   },
   {
@@ -30,7 +30,7 @@ const PaycheckFeatures = () => {
     <section className="bg-white py-20 lg:py-24">
       <div className="container mx-auto">
         <h2 className="text-center text-[32px] lg:text-[48px] font-bold text-black mb-12 lg:mb-16 leading-[1.2] tracking-[-0.01em] !whitespace-pre-line">
-          Building the Future of STEM Leadership
+          Building the Future of Entrepreneurial Leadership
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (

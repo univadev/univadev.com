@@ -7,7 +7,7 @@ import EmailSignupForm from "@/components/forms/email-signup-form";
 
 const slides = [
   {
-    headline: ["Empowering the next generation of STEM leaders"],
+    headline: ["Empowering the next generation of young entrepreneurs"],
     subtext: "Student-led. Professionally guided. Globally connected.",
     desktopImage:
       "standout.svg",

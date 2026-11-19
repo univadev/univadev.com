@@ -20,7 +20,7 @@ export default function About() {
           <p className="max-w-3xl mx-auto text-xl text-center text-muted-foreground mb-6">
             Univa Dev is a multinational student-led
             nonprofit organization backed by Hack Club that empowers the next generation of leaders
-            in Science, Technology, Engineering, and Mathematics. 
+            in technology and software development.
           </p>
 
           {/* Responsive Image */}

@@ -104,7 +104,7 @@ export default function ChapterRegistration() {
                 Chapter Program
               </p>
               <h1 className="m3-display-large mb-6 text-m3-on-surface">
-                Transform your community through STEM
+                Transform your community through entrepreneurship
               </h1>
               <p className="m3-body-large mb-10 max-w-[560px] text-m3-on-surface-variant">
                 Bring advanced AI education to your school, region, or community
@@ -272,7 +272,7 @@ export default function ChapterRegistration() {
                 Ready to start?
               </h2>
               <p className="m3-body-large mx-auto mb-10 max-w-[520px] text-m3-on-surface-variant">
-                Apply now to launch your chapter and bring world-class STEM and
+                Apply now to launch your chapter and bring world-class entrepreneurship and
                 AI education to your community.
               </p>
               <div className="flex flex-col justify-center gap-3 sm:flex-row">

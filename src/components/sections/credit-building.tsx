@@ -22,7 +22,7 @@ const CreditBuildingSection = () => {
           <div className="lg:col-span-6 flex flex-col justify-center">
             <h2 className="font-bold text-black text-[32px] lg:text-5xl leading-[1.2] tracking-tight mb-6 !whitespace-pre-line">
               Empowering students with the skills to succeed in the future of
-              STEM
+              entrepreneurship
             </h2>
             <p className="text-lg text-black mb-10 flex items-center flex-wrap !whitespace-pre-line">
               We provide world-class technical training, leadership development,

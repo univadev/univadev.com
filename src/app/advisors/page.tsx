@@ -62,7 +62,7 @@ export default function Advisors() {
                   </div>
                   <h3 className="text-xl font-bold mb-2">Become an Advisor</h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Share your expertise and help shape the future of STEM
+                    Share your expertise and help shape the future of entrepreneurship
                     education
                   </p>
                   <p className="text-xs text-primary font-medium">

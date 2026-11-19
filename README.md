@@ -1,5 +1,5 @@
 # Univa Dev Official Website
-Empowering the next generation of STEM leaders
+Empowering the next generation of young entrepreneurs
 
 Follow us on Instagram:
 [@univadev](https://www.instagram.com/univadev/)

@@ -34,7 +34,7 @@ const SavingsFeature = () => {
             <p className="text-lg text-black max-w-[450px] mx-auto lg:mx-0 mb-8 leading-relaxed">
               Connect with ambitious students from around the world. Collaborate
               on projects, share knowledge, and build lasting relationships in
-              our global STEM community.
+              our global entrepreneurial community.
             </p>
             <a
               href="/impact"

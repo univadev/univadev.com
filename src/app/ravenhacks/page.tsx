@@ -209,7 +209,7 @@ export default function RavenHacks() {
               <div className="space-y-6 lg:col-span-7 lg:col-start-6">
                 <p className="m3-body-large max-w-[560px] text-m3-on-surface-variant">
                   Raven Hacks VTL was presented by Univa Dev, a nonprofit
-                  preparing the next generation of STEM leaders for the AI age.
+                  preparing the next generation of entrepreneurial leaders for the AI age.
                   It was run for students, by students — open exclusively to
                   participants aged 13–18.
                 </p>

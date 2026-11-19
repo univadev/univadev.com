@@ -17,7 +17,7 @@ const FinalCta = () => {
         <div className="grid grid-cols-4 md:grid-cols-12 gap-x-4 gap-y-10 items-center">
           <div className="col-span-full md:col-span-6">
             <h2 className="text-[32px] md:text-[48px] font-bold tracking-[-2px] leading-tight text-white">
-              Ready to lead the future of STEM?
+              Ready to lead the future of entrepreneurship?
             </h2>
             <p className="text-s mt-4 tracking-tight text-white">
               Join thousands of students building meaningful projects, competing
